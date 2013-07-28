@@ -20,11 +20,15 @@ Makefile.in
 missing
 stamp-h1
 test-driver
+test-suite.log
+tests/*
+!tests/*.c
 
 # -- Misc built stuff ----------------
 AUTHORS
 *.lo
 *.la
+*.o
 
 # -- Temp editor files ---------------
 *.swp
