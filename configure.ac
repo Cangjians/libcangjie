@@ -12,6 +12,8 @@ m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 # Initialize libtool
 LT_INIT([disable-static])
 
+PKG_CHECK_MODULES(sqlite3, [sqlite3])
+
 # Define these substitions here to keep all version information in one place.
 # For information on how to properly maintain the library version information,
 # refer to the libtool manual, section "Updating library version information":
