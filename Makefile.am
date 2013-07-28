@@ -1,7 +1,23 @@
 # Point to our macro directory and pick up user flags from the environment
 ACLOCAL_AMFLAGS  = -I m4 ${ACLOCAL_FLAGS}
 
+
+# -- Library -------------------------
+lib_LTLIBRARIES = libcangjie.la
+
+libcangjie_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION)
+libcangjie_la_SOURCES = \
+	src/cangjiechar.c \
+	$(NULL)
+libcangjie_la_include_HEADERS = \
+	src/cangjiechar.h \
+	$(NULL)
+libcangjie_la_includedir = $(includedir)/cangjie
+
+
 # -- Common --------------------------
+AM_CPPFLAGS = -I$(top_srcdir)/src
+
 AUTHORS:
 	@if test -d "$(srcdir)/.git"; then \
 	    echo Creating $@ && \
