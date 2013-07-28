@@ -17,6 +17,9 @@
  */
 
 
+#include <stdint.h>
+
+
 typedef enum CangjieVersion {
     CANGJIE_VERSION_3 = 3,
     CANGJIE_VERSION_5 = 5,
@@ -35,3 +38,13 @@ typedef enum CangjieFilter {
     CANGJIE_FILTER_HIRAGANA    = 1 << 8,
     CANGJIE_FILTER_SYMBOLS     = 1 << 9,
 } CangjieFilter;
+
+
+typedef struct Cangjie {
+    uint32_t version;
+    uint32_t filter_flags;
+} Cangjie;
+
+Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags);
+
+int cangjie_free(Cangjie *cj);

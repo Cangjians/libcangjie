@@ -7,6 +7,7 @@ lib_LTLIBRARIES = libcangjie.la
 
 libcangjie_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION)
 libcangjie_la_SOURCES = \
+	src/cangjie.c \
 	src/cangjiechar.c \
 	src/cangjiecharlist.c \
 	$(NULL)
