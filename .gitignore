@@ -18,5 +18,8 @@ missing
 stamp-h1
 test-driver
 
+# -- Misc built stuff ----------------
+AUTHORS
+
 # -- Temp editor files ---------------
 *.swp
