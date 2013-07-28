@@ -11,6 +11,7 @@ libcangjie_la_SOURCES = \
 	src/cangjiecharlist.c \
 	$(NULL)
 libcangjie_la_include_HEADERS = \
+	src/cangjie.h \
 	src/cangjiechar.h \
 	src/cangjiecharlist.h \
 	$(NULL)
