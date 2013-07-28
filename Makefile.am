@@ -15,6 +15,15 @@ libcangjie_la_include_HEADERS = \
 libcangjie_la_includedir = $(includedir)/cangjie
 
 
+# -- Unit tests ----------------------
+check_PROGRAMS = \
+	tests/test_cangjiechar \
+	$(NULL)
+
+tests_test_cangjiechar_LDADD = libcangjie.la
+TESTS = $(check_PROGRAMS)
+
+
 # -- Common --------------------------
 AM_CPPFLAGS = -I$(top_srcdir)/src
 
