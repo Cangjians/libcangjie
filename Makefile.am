@@ -17,6 +17,22 @@ libcangjie_la_include_HEADERS = \
 libcangjie_la_includedir = $(includedir)/cangjie
 
 
+# -- Tools ---------------------------
+bin_PROGRAMS = bin/libcangjie_dbbuilder
+bin_libcangjie_dbbuilder_SOURCES = src/dbbuilder.c
+bin_libcangjie_dbbuilder_LDADD = $(sqlite3_LIBS)
+
+
+# -- Data ----------------------------
+data/cangjie.db: bin/libcangjie_dbbuilder data/table.txt
+	rm -f $@
+	$(MKDIR_P) data
+	$^ $@ >/dev/null
+
+libcangjie_data_DATA = data/cangjie.db
+libcangjie_datadir = $(pkgdatadir)
+
+
 # -- Unit tests ----------------------
 check_PROGRAMS = \
 	tests/test_cangjiechar \
@@ -47,6 +63,7 @@ AUTHORS:
 
 CLEANFILES = \
 	AUTHORS \
+	data/cangjie.db \
 	$(NULL)
 
 EXTRA_DIST = \

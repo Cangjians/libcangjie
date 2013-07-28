@@ -26,6 +26,8 @@ tests/*
 
 # -- Misc built stuff ----------------
 AUTHORS
+bin
+*.db
 *.lo
 *.la
 *.o
