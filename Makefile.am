@@ -20,9 +20,11 @@ libcangjie_la_includedir = $(includedir)/cangjie
 # -- Unit tests ----------------------
 check_PROGRAMS = \
 	tests/test_cangjiechar \
+	tests/test_cangjiecharlist \
 	$(NULL)
 
 tests_test_cangjiechar_LDADD = libcangjie.la
+tests_test_cangjiecharlist_LDADD = libcangjie.la
 TESTS = $(check_PROGRAMS)
 
 
