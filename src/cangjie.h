@@ -17,6 +17,12 @@
  */
 
 
+typedef enum CangjieVersion {
+    CANGJIE_VERSION_3 = 3,
+    CANGJIE_VERSION_5 = 5,
+} CangjieVersion;
+
+
 typedef enum CangjieFilter {
     CANGJIE_FILTER_BIG5        = 1 << 0,
     CANGJIE_FILTER_HKSCS       = 1 << 1,
