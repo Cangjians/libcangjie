@@ -1,0 +1,6 @@
+# This is temporary data, for development purpose.
+
+# char trad_zh simpl_zh big5 hkscs zhuyin kanji hiragana katakana punct symbol cj3_codes cj5_codes classic_freq
+椏 1 0 1 0 0 1 0 0 0 0 dmlm dmlm 10253
+椐 1 1 0 1 0 1 0 0 0 0 dsjr dsjr 10246
+椑 1 1 0 1 0 1 0 0 0 0 dhhj dhhj,dhwj 10238

@@ -51,6 +51,7 @@ CLEANFILES = \
 
 EXTRA_DIST = \
 	autogen.sh \
+	data/table.txt \
 	README.rst \
 	$(NULL)
 
