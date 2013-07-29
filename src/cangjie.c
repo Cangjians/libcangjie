@@ -143,7 +143,7 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     cj->version = version;
     cj->filter_flags = filter_flags;
 
-    cj->base_query = calloc(strlen(BASE_QUERY), sizeof(char));
+    cj->base_query = calloc(strlen(BASE_QUERY) + 1, sizeof(char));
     strcat(cj->base_query, BASE_QUERY);
 
     char *filter_query = cangjie_get_filter_query(cj);
