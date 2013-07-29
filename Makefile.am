@@ -10,11 +10,13 @@ libcangjie_la_SOURCES = \
 	src/cangjie.c \
 	src/cangjiechar.c \
 	src/cangjiecharlist.c \
+	src/utils.c \
 	$(NULL)
 libcangjie_la_include_HEADERS = \
 	src/cangjie.h \
 	src/cangjiechar.h \
 	src/cangjiecharlist.h \
+	src/utils.h \
 	$(NULL)
 libcangjie_la_includedir = $(includedir)/cangjie
 
