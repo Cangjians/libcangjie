@@ -17,6 +17,7 @@
  */
 
 #include <assert.h>
+#include <stdlib.h> // For the setenv function
 
 #include <cangjie.h>
 
@@ -32,5 +33,8 @@ void test_cangjie_new() {
 
 
 int main() {
+    // FIXME: Can this be passed to all tests through some Autotools magic?
+    setenv("CANGJIE_DB", CANGJIE_DB, 1);
+
     test_cangjie_new();
 }

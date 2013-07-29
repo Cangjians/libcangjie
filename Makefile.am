@@ -46,6 +46,9 @@ check_PROGRAMS = \
 	tests/test_cangjiecharlist \
 	$(NULL)
 
+# FIXME: Find a way to pass this as an envvar for all the tests
+tests_test_cangjie_CFLAGS = -DCANGJIE_DB='"$(srcdir)/data/cangjie.db"'
+
 tests_test_cangjie_LDADD = libcangjie.la
 tests_test_cangjiechar_LDADD = libcangjie.la
 tests_test_cangjiecharlist_LDADD = libcangjie.la
