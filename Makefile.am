@@ -24,9 +24,16 @@ libcangjie_la_includedir = $(includedir)/cangjie
 
 
 # -- Tools ---------------------------
-bin_PROGRAMS = bin/libcangjie_dbbuilder
+bin_PROGRAMS = \
+	bin/libcangjie_cli \
+	bin/libcangjie_dbbuilder \
+	$(NULL)
+
 bin_libcangjie_dbbuilder_SOURCES = src/dbbuilder.c
 bin_libcangjie_dbbuilder_LDADD = $(sqlite3_LIBS)
+
+bin_libcangjie_cli_SOURCES = src/cli.c
+bin_libcangjie_cli_LDADD = libcangjie.la
 
 
 # -- Data ----------------------------
