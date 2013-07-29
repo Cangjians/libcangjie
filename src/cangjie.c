@@ -150,10 +150,13 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     append_string(&cj->base_query, filter_query);
     free(filter_query);
 
+    sqlite3_open_v2(CANGJIE_DB, &cj->db, SQLITE_OPEN_READONLY, NULL);
+
     return cj;
 }
 
 int cangjie_free(Cangjie *cj) {
+    sqlite3_close(cj->db);
     free(cj->base_query);
     free(cj);
 

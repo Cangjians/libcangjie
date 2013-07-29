@@ -19,6 +19,8 @@
 
 #include <stdint.h>
 
+#include <sqlite3.h>
+
 
 typedef enum CangjieVersion {
     CANGJIE_VERSION_3 = 3,
@@ -44,6 +46,7 @@ typedef struct Cangjie {
     uint32_t version;
     uint32_t filter_flags;
 
+    sqlite3 *db;
     char *base_query;
 } Cangjie;
 

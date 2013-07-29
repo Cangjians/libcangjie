@@ -12,6 +12,8 @@ libcangjie_la_SOURCES = \
 	src/cangjiecharlist.c \
 	src/utils.c \
 	$(NULL)
+libcangjie_la_CFLAGS = -DCANGJIE_DB='"$(libcangjie_datadir)/cangjie.db"'
+libcangjie_la_LIBADD = $(sqlite3_LIBS)
 libcangjie_la_include_HEADERS = \
 	src/cangjie.h \
 	src/cangjiechar.h \
