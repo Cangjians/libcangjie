@@ -161,6 +161,59 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     return cj;
 }
 
+CangjieCharList *cangjie_get_characters(Cangjie *cj, char *input_code) {
+    CangjieCharList *l = NULL;
+
+    sqlite3_stmt *stmt;
+
+    // Start with the Cangjie instance's base_query
+    char *base_query = calloc(strlen(cj->base_query) + 1, sizeof(char));
+    strcat(base_query, cj->base_query);
+
+    char *query_code = calloc(6, sizeof(char));
+    strncpy(query_code, input_code, 5);
+
+    // Handle optional wildcards
+    char *star_ptr = strchr(query_code, '*');
+    if (star_ptr == NULL) {
+        append_string(&base_query, "AND code = '%q';");
+    } else {
+        append_string(&base_query, "AND code LIKE '%q';");
+        query_code[star_ptr-query_code] = '%';
+    }
+
+    char *query = sqlite3_mprintf(base_query, cj->version, query_code);
+    sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+
+    free(query_code);
+    free(base_query);
+    sqlite3_free(query);
+
+    int ret;
+
+    while (1) {
+        ret = sqlite3_step(stmt);
+
+        if (ret == SQLITE_ROW) {
+            char *chchar = (char *)sqlite3_column_text(stmt, 0);
+            char *code = (char *)sqlite3_column_text(stmt, 1);
+            uint32_t classic_freq = (uint32_t)sqlite3_column_int(stmt, 2);
+
+            CangjieChar *c = cangjie_char_new(chchar, code, classic_freq);
+            l = cangjie_char_list_prepend(l, c);
+        } else if(ret == SQLITE_DONE) {
+            // All rows finished
+            sqlite3_finalize(stmt);
+            break;
+        } else {
+            // Some error encountered
+            return NULL;
+        }
+    }
+
+    return l;
+}
+
 int cangjie_free(Cangjie *cj) {
     sqlite3_close(cj->db);
     free(cj->base_query);

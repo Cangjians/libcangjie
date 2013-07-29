@@ -21,6 +21,8 @@
 
 #include <sqlite3.h>
 
+#include "cangjiecharlist.h"
+
 
 typedef enum CangjieVersion {
     CANGJIE_VERSION_3 = 3,
@@ -51,5 +53,7 @@ typedef struct Cangjie {
 } Cangjie;
 
 Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags);
+
+CangjieCharList *cangjie_get_characters(Cangjie *cj, char *code);
 
 int cangjie_free(Cangjie *cj);
