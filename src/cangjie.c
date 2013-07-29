@@ -18,8 +18,15 @@
 
 
 #include <stdlib.h>
+#include <string.h>
 
 #include "cangjie.h"
+
+
+#define BASE_QUERY "SELECT chchar, code, classic_freq\n" \
+                   "FROM chars\n" \
+                   "INNER JOIN codes on chars.char_index=codes.char_index\n" \
+                   "WHERE version=%d "
 
 
 Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
@@ -28,10 +35,14 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     cj->version = version;
     cj->filter_flags = filter_flags;
 
+    cj->base_query = calloc(strlen(BASE_QUERY), sizeof(char));
+    strcat(cj->base_query, BASE_QUERY);
+
     return cj;
 }
 
 int cangjie_free(Cangjie *cj) {
+    free(cj->base_query);
     free(cj);
 
     return 0;

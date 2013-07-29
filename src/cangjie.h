@@ -43,6 +43,8 @@ typedef enum CangjieFilter {
 typedef struct Cangjie {
     uint32_t version;
     uint32_t filter_flags;
+
+    char *base_query;
 } Cangjie;
 
 Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags);
