@@ -2,29 +2,35 @@ This is a library implementing the Cangjie input method.
 
 Below is a trivial example of how to use it::
 
-    // Note: The library doesn't exist yet, so take this as a target, it's
-    //       what we'd like to end up with eventually.
-    
+    #include <stdio.h>
     #include <cangjie.h>
     
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
-    CangjieCharList *chars = cj->get_characters("d*d");
+    int main() {
+        Cangjie *cj = cangjie_new(CANGJIE_VERSION_3,
+                                  CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+        CangjieCharList *chars = cangjie_get_characters(cj, "d*d");
     
-    CangjieChar *c = chars->data;
-    
-    if (c == NULL) {
-        printf("No chars with code 'd*d'\n");
-        return 0;
-    }
-    
-    while (1) {
-        printf("Char: %s, code: '%s', classic frequency: %d\n",
-               c->chchar, c->code, c->classic_freq);
-
-        c = chars->next;
-        if (c == NULL) {
-            break;
+        if (chars == NULL) {
+            printf("No chars with code '%s'\n", "d*d");
+            cangjie_free(cj);
+            return 1;
         }
+    
+        CangjieCharList *iter = chars;
+    
+        while (1) {
+            if (iter == NULL)
+                break;
+
+            printf("Char: %s, code: '%s', classic frequency: %d\n",
+                   iter->c->chchar, iter->c->code, iter->c->classic_freq);
+
+            iter = iter->next;
+        }
+    
+        cangjie_char_list_free(chars);
+        cangjie_free(cj);
+        return 0;
     }
 
 For more details, refer to `the documentation`_.
