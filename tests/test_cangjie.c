@@ -18,6 +18,7 @@
 
 #include <assert.h>
 #include <stdlib.h> // For the setenv function
+#include <string.h>
 
 #include <cangjie.h>
 
@@ -32,9 +33,28 @@ void test_cangjie_new() {
 }
 
 
+void test_cangjie_get_characters_single_result() {
+    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_TRADITIONAL);
+
+    assert(cj->version == CANGJIE_VERSION_3);
+    assert(cj->filter_flags == CANGJIE_FILTER_TRADITIONAL);
+
+    CangjieCharList *l = cangjie_get_characters(cj, "dmlm");
+
+    assert(strcmp(l->c->chchar, "椏") == 0);
+    assert(strcmp(l->c->code, "dmlm") == 0);
+    assert(l->c->classic_freq == 10253);
+    assert(l->next == NULL);
+
+    cangjie_char_list_free(l);
+    cangjie_free(cj);
+}
+
+
 int main() {
     // FIXME: Can this be passed to all tests through some Autotools magic?
     setenv("CANGJIE_DB", CANGJIE_DB, 1);
 
     test_cangjie_new();
+    test_cangjie_get_characters_single_result();
 }
