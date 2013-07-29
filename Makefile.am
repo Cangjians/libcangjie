@@ -45,6 +45,9 @@ data/cangjie.db: bin/libcangjie_dbbuilder data/table.txt
 libcangjie_data_DATA = data/cangjie.db
 libcangjie_datadir = $(pkgdatadir)
 
+pkgconfig_DATA = data/cangjie.pc
+pkgconfigdir = $(libdir)/pkgconfig
+
 
 # -- Unit tests ----------------------
 check_PROGRAMS = \
@@ -82,6 +85,7 @@ AUTHORS:
 CLEANFILES = \
 	AUTHORS \
 	data/cangjie.db \
+	data/cangjie.pc \
 	$(NULL)
 
 EXTRA_DIST = \
