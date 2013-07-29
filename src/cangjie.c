@@ -150,7 +150,13 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     append_string(&cj->base_query, filter_query);
     free(filter_query);
 
-    sqlite3_open_v2(CANGJIE_DB, &cj->db, SQLITE_OPEN_READONLY, NULL);
+    // Check the CANGJIE_DB env var (it is useful for local testing)
+    char *database_path = getenv("CANGJIE_DB");
+    if (database_path != NULL) {
+        sqlite3_open_v2(database_path, &cj->db, SQLITE_OPEN_READONLY, NULL);
+    } else {
+        sqlite3_open_v2(CANGJIE_DB, &cj->db, SQLITE_OPEN_READONLY, NULL);
+    }
 
     return cj;
 }
