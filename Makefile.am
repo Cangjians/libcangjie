@@ -3,49 +3,49 @@ ACLOCAL_AMFLAGS  = -I m4 ${ACLOCAL_FLAGS}
 
 
 # -- Library -------------------------
-lib_LTLIBRARIES = libcangjie.la
+lib_LTLIBRARIES = libcangjie2.la
 
-libcangjie_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION)
-libcangjie_la_SOURCES = \
+libcangjie2_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION)
+libcangjie2_la_SOURCES = \
 	src/cangjie.c \
 	src/cangjiechar.c \
 	src/cangjiecharlist.c \
 	src/utils.c \
 	$(NULL)
-libcangjie_la_CFLAGS = -DCANGJIE_DB='"$(libcangjie_datadir)/cangjie.db"'
-libcangjie_la_LIBADD = $(sqlite3_LIBS)
-libcangjie_la_include_HEADERS = \
+libcangjie2_la_CFLAGS = -DCANGJIE_DB='"$(libcangjie2_datadir)/cangjie.db"'
+libcangjie2_la_LIBADD = $(sqlite3_LIBS)
+libcangjie2_la_include_HEADERS = \
 	src/cangjie.h \
 	src/cangjiechar.h \
 	src/cangjiecharlist.h \
 	src/utils.h \
 	$(NULL)
-libcangjie_la_includedir = $(includedir)/cangjie
+libcangjie2_la_includedir = $(includedir)/cangjie2
 
 
 # -- Tools ---------------------------
 bin_PROGRAMS = \
-	bin/libcangjie_cli \
-	bin/libcangjie_dbbuilder \
+	bin/libcangjie2_cli \
+	bin/libcangjie2_dbbuilder \
 	$(NULL)
 
-bin_libcangjie_dbbuilder_SOURCES = src/dbbuilder.c
-bin_libcangjie_dbbuilder_LDADD = $(sqlite3_LIBS)
+bin_libcangjie2_dbbuilder_SOURCES = src/dbbuilder.c
+bin_libcangjie2_dbbuilder_LDADD = $(sqlite3_LIBS)
 
-bin_libcangjie_cli_SOURCES = src/cli.c
-bin_libcangjie_cli_LDADD = libcangjie.la
+bin_libcangjie2_cli_SOURCES = src/cli.c
+bin_libcangjie2_cli_LDADD = libcangjie2.la
 
 
 # -- Data ----------------------------
-data/cangjie.db: bin/libcangjie_dbbuilder data/table.txt
+data/cangjie.db: bin/libcangjie2_dbbuilder data/table.txt
 	rm -f $@
 	$(MKDIR_P) data
 	$^ $@ >/dev/null
 
-libcangjie_data_DATA = data/cangjie.db
-libcangjie_datadir = $(pkgdatadir)
+libcangjie2_data_DATA = data/cangjie.db
+libcangjie2_datadir = $(pkgdatadir)
 
-pkgconfig_DATA = data/cangjie.pc
+pkgconfig_DATA = data/cangjie2.pc
 pkgconfigdir = $(libdir)/pkgconfig
 
 
@@ -59,9 +59,9 @@ check_PROGRAMS = \
 # FIXME: Find a way to pass this as an envvar for all the tests
 tests_test_cangjie_CFLAGS = -DCANGJIE_DB='"$(srcdir)/data/cangjie.db"'
 
-tests_test_cangjie_LDADD = libcangjie.la
-tests_test_cangjiechar_LDADD = libcangjie.la
-tests_test_cangjiecharlist_LDADD = libcangjie.la
+tests_test_cangjie_LDADD = libcangjie2.la
+tests_test_cangjiechar_LDADD = libcangjie2.la
+tests_test_cangjiecharlist_LDADD = libcangjie2.la
 TESTS = $(check_PROGRAMS)
 
 
@@ -85,7 +85,7 @@ AUTHORS:
 CLEANFILES = \
 	AUTHORS \
 	data/cangjie.db \
-	data/cangjie.pc \
+	data/cangjie2.pc \
 	$(NULL)
 
 EXTRA_DIST = \

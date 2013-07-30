@@ -23,7 +23,7 @@ AC_SUBST([CANGJIE_SO_VERSION], [0:0:0])
 # OUTPUT files
 AC_CONFIG_FILES([
   Makefile
-  data/cangjie.pc
+  data/cangjie2.pc
 ])
 
 AC_OUTPUT
