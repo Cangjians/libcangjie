@@ -26,17 +26,16 @@
 
 
 char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
-                     "                   chchar TEXT, trad_zh INTEGER,\n"
-                     "                   simpl_zh INTEGER, big5 INTEGER,\n"
-                     "                   hkscs INTEGER, zhuyin INTEGER,\n"
-                     "                   kanji INTEGER, hiragana INTEGER,\n"
-                     "                   katakana INTEGER, punct INTEGER,\n"
-                     "                   symbol INTEGER,\n"
+                     "                   chchar TEXT, zh INTEGER,\n"
+                     "                   big5 INTEGER, hkscs INTEGER,\n"
+                     "                   zhuyin INTEGER, kanji INTEGER,\n"
+                     "                   hiragana INTEGER, katakana INTEGER,\n"
+                     "                   punct INTEGER, symbol INTEGER,\n"
                      "                   classic_freq INTEGER);";
 char *create_codes = "CREATE TABLE codes(char_index INTEGER, version INTEGER,\n"
                      "                   code TEXT);";
 char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
-                     "                         %d, %d, %d, %d, %d, %d, %d);";
+                     "                         %d, %d, %d, %d, %d, %d);";
 char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q');";
 
 
@@ -47,8 +46,7 @@ void insert_line(sqlite3 *db, char *line, int i) {
 
     // Parse the line
     char *chchar = strtok_r(line, " ", &saveptr);
-    uint32_t trad_zh = atoi(strtok_r(NULL, " ", &saveptr));
-    uint32_t simpl_zh = atoi(strtok_r(NULL, " ", &saveptr));
+    uint32_t zh = atoi(strtok_r(NULL, " ", &saveptr));
     uint32_t big5 = atoi(strtok_r(NULL, " ", &saveptr));
     uint32_t hkscs = atoi(strtok_r(NULL, " ", &saveptr));
     uint32_t zhuyin = atoi(strtok_r(NULL, " ", &saveptr));
@@ -61,9 +59,9 @@ void insert_line(sqlite3 *db, char *line, int i) {
     char *cj5_codes = strtok_r(NULL, " ", &saveptr);
     uint32_t classic_freq = atoi(strtok_r(NULL, "\0", &saveptr));
 
-    query = sqlite3_mprintf(insert_chars, i, chchar, trad_zh, simpl_zh, big5,
-                            hkscs, zhuyin, kanji, hiragana, katakana, punct,
-                            symbol, classic_freq);
+    query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs, zhuyin,
+                            kanji, hiragana, katakana, punct, symbol,
+                            classic_freq);
     sqlite3_exec(db, query, NULL, NULL, NULL);
     sqlite3_free(query);
 
