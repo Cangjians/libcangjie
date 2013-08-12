@@ -122,6 +122,7 @@ int main(int argc, char **argv) {
     sqlite3 *db;
     sqlite3_open_v2(dbfile, &db,
                     SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL);
+    sqlite3_exec(db, "BEGIN", NULL, NULL, NULL);
     sqlite3_exec(db, create_chars, NULL, NULL, NULL);
     sqlite3_exec(db, create_codes, NULL, NULL, NULL);
 
@@ -146,6 +147,8 @@ int main(int argc, char **argv) {
         insert_line(db, line, i);
         i += 1;
     }
+
+    sqlite3_exec(db, "COMMIT", NULL, NULL, NULL);
 
     fclose(table);
     sqlite3_close(db);
