@@ -39,9 +39,9 @@ char *cangjie_get_filter_query(Cangjie *cj) {
         return query;
     }
 
-    // Longest possible string has a length of 59:
-    //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR trad_zh = 1 ) "
-    query = calloc(60, sizeof(char));
+    // Longest possible string has a length of 127:
+    //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
+    query = calloc(128, sizeof(char));
     uint32_t first = 1;
 
     strcat(query, " AND ( ");
