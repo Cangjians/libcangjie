@@ -34,13 +34,12 @@ typedef enum CangjieFilter {
     CANGJIE_FILTER_BIG5        = 1 << 0,
     CANGJIE_FILTER_HKSCS       = 1 << 1,
     CANGJIE_FILTER_PUNCTUATION = 1 << 2,
-    CANGJIE_FILTER_TRADITIONAL = 1 << 3,
-    CANGJIE_FILTER_SIMPLIFIED  = 1 << 4,
-    CANGJIE_FILTER_ZHUYIN      = 1 << 5,
-    CANGJIE_FILTER_KANJI       = 1 << 6,
-    CANGJIE_FILTER_KATAKANA    = 1 << 7,
-    CANGJIE_FILTER_HIRAGANA    = 1 << 8,
-    CANGJIE_FILTER_SYMBOLS     = 1 << 9,
+    CANGJIE_FILTER_CHINESE     = 1 << 3,
+    CANGJIE_FILTER_ZHUYIN      = 1 << 4,
+    CANGJIE_FILTER_KANJI       = 1 << 5,
+    CANGJIE_FILTER_KATAKANA    = 1 << 6,
+    CANGJIE_FILTER_HIRAGANA    = 1 << 7,
+    CANGJIE_FILTER_SYMBOLS     = 1 << 8,
 } CangjieFilter;
 
 

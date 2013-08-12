@@ -69,21 +69,12 @@ char *cangjie_get_filter_query(Cangjie *cj) {
         }
     }
 
-    if (cj->filter_flags & CANGJIE_FILTER_TRADITIONAL) {
+    if (cj->filter_flags & CANGJIE_FILTER_CHINESE) {
         if (first) {
-            strcat(query, "trad_zh = 1 ");
+            strcat(query, "zh = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR trad_zh = 1 ");
-        }
-    }
-
-    if (cj->filter_flags & CANGJIE_FILTER_SIMPLIFIED) {
-        if (first) {
-            strcat(query, "simpl_zh = 1 ");
-            first = 0;
-        } else {
-            strcat(query, "OR simpl_zh = 1 ");
+            strcat(query, "OR zh = 1 ");
         }
     }
 

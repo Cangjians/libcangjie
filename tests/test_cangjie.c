@@ -24,20 +24,20 @@
 
 
 void test_cangjie_new() {
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_TRADITIONAL);
+    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
 
     assert(cj->version == CANGJIE_VERSION_3);
-    assert(cj->filter_flags == CANGJIE_FILTER_TRADITIONAL);
+    assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
 
     cangjie_free(cj);
 }
 
 
 void test_cangjie_get_characters_single_result() {
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_TRADITIONAL);
+    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
 
     assert(cj->version == CANGJIE_VERSION_3);
-    assert(cj->filter_flags == CANGJIE_FILTER_TRADITIONAL);
+    assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
 
     CangjieCharList *l = cangjie_get_characters(cj, "dmlm");
 
