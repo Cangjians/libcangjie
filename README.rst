@@ -6,11 +6,13 @@ Below is a trivial example of how to use it::
     #include <cangjie.h>
     
     int main() {
-        Cangjie *cj = cangjie_new(CANGJIE_VERSION_3,
-                                  CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
-        CangjieCharList *chars = cangjie_get_characters(cj, "d*d");
+        Cangjie *cj;
+        int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
+                              CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+        CangjieCharList *chars;
+        ret = cangjie_get_characters(cj, "d*d", &chars);
     
-        if (chars == NULL) {
+        if (ret == CANGJIE_NOCHARS) {
             printf("No chars with code '%s'\n", "d*d");
             cangjie_free(cj);
             return 1;
