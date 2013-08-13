@@ -21,7 +21,6 @@
 #include <string.h>
 
 #include "cangjie.h"
-#include "cangjieerrors.h"
 #include "utils.h"
 
 

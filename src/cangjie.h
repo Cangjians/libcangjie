@@ -22,6 +22,7 @@
 #include <sqlite3.h>
 
 #include "cangjiecharlist.h"
+#include "cangjieerrors.h"
 
 
 typedef enum CangjieVersion {
