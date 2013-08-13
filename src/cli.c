@@ -2,8 +2,6 @@
 
 #include <cangjie.h>
 
-#include "cangjieerrors.h"
-
 
 int main(int argc, char **argv) {
     if (argc != 2) {
