@@ -25,9 +25,9 @@
 
 
 int cangjie_char_new(CangjieChar **c,
-                     const char *chchar,
-                     const char *code,
-                     uint32_t    classic_freq) {
+                     const char   *chchar,
+                     const char   *code,
+                     uint32_t      classic_freq) {
     CangjieChar *tmp = calloc(1, sizeof(CangjieChar));
 
     // Copy at most 4 bytes, it's a single UTF-8 encoded character

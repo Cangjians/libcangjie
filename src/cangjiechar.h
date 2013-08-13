@@ -27,8 +27,8 @@ typedef struct CangjieChar {
 } CangjieChar;
 
 int cangjie_char_new(CangjieChar **c,
-                     const char *chchar,
-                     const char *code,
-                     uint32_t    classic_freq);
+                     const char   *chchar,
+                     const char   *code,
+                     uint32_t      classic_freq);
 
 int cangjie_char_free(CangjieChar *c);
