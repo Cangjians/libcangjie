@@ -23,25 +23,28 @@
 #include "cangjieerrors.h"
 
 
-CangjieCharList *cangjie_char_list_new_elem(CangjieChar *c) {
-    CangjieCharList *l = calloc(1, sizeof(CangjieCharList));
+int cangjie_char_list_new_elem(CangjieCharList **l,
+                               CangjieChar      *c) {
+    CangjieCharList *tmp = calloc(1, sizeof(CangjieCharList));
 
-    l->c = c;
-    l->prev = NULL;
-    l->next = NULL;
+    tmp->c = c;
+    tmp->prev = NULL;
+    tmp->next = NULL;
 
-    return l;
+    *l = tmp;
+
+    return CANGJIE_OK;
 }
 
-CangjieCharList *cangjie_char_list_append(CangjieCharList *l,
-                                          CangjieChar     *c) {
+int cangjie_char_list_append(CangjieCharList **l,
+                             CangjieChar      *c) {
     CangjieCharList *new_list;
     CangjieCharList *last;
 
-    new_list = cangjie_char_list_new_elem(c);
+    int ret = cangjie_char_list_new_elem(&new_list, c);
 
-    if (l != NULL) {
-        last = l;
+    if (*l != NULL) {
+        last = *l;
         while (last->next) {
             last = last->next;
         }
@@ -49,24 +52,28 @@ CangjieCharList *cangjie_char_list_append(CangjieCharList *l,
         last->next = new_list;
         new_list->prev = last;
 
-        return l;
+        return CANGJIE_OK;
     }
 
-    return new_list;
+    *l = new_list;
+
+    return CANGJIE_OK;
 }
 
-CangjieCharList *cangjie_char_list_prepend(CangjieCharList *l,
-                                           CangjieChar     *c) {
+int cangjie_char_list_prepend(CangjieCharList **l,
+                              CangjieChar      *c) {
     CangjieCharList *new_list;
 
-    new_list = cangjie_char_list_new_elem(c);
+    int ret = cangjie_char_list_new_elem(&new_list, c);
 
-    if (l != NULL) {
-        l->prev = new_list;
-        new_list->next = l;
+    if (*l != NULL) {
+        (*l)->prev = new_list;
+        new_list->next = *l;
     }
 
-    return new_list;
+    *l = new_list;
+
+    return CANGJIE_OK;
 }
 
 int cangjie_char_list_free(CangjieCharList *l) {

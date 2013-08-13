@@ -27,10 +27,10 @@ struct CangjieCharList {
     CangjieCharList *next;
 };
 
-CangjieCharList *cangjie_char_list_append(CangjieCharList *l,
-                                          CangjieChar     *c);
+int cangjie_char_list_append(CangjieCharList **l,
+                             CangjieChar      *c);
 
-CangjieCharList *cangjie_char_list_prepend(CangjieCharList *l,
-                                           CangjieChar     *c);
+int cangjie_char_list_prepend(CangjieCharList **l,
+                              CangjieChar      *c);
 
 int cangjie_char_list_free(CangjieCharList *l);
