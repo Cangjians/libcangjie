@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
         printf("No chars with code '%s'\n", code);
 
         cangjie_free(cj);
-        return 1;
+        return CANGJIE_NOCHARS;
     }
     
     CangjieCharList *iter = chars;
