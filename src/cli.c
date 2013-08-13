@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
         cangjie_free(cj);
         return CANGJIE_NOCHARS;
     }
-    
+
     CangjieCharList *iter = chars;
     CangjieChar *c;
 
