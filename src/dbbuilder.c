@@ -24,6 +24,8 @@
 
 #include <sqlite3.h>
 
+#include "cangjieerrors.h"
+
 
 char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
                      "                   chchar TEXT, zh INTEGER,\n"
@@ -153,5 +155,5 @@ int main(int argc, char **argv) {
     fclose(table);
     sqlite3_close(db);
 
-    return 0;
+    return CANGJIE_OK;
 }

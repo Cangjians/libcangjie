@@ -20,6 +20,7 @@
 #include <stdlib.h>
 
 #include "cangjiecharlist.h"
+#include "cangjieerrors.h"
 
 
 CangjieCharList *cangjie_char_list_new_elem(CangjieChar *c) {
@@ -75,5 +76,5 @@ int cangjie_char_list_free(CangjieCharList *l) {
     cangjie_char_free(l->c);
     free(l);
 
-    return 0;
+    return CANGJIE_OK;
 }

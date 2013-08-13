@@ -2,6 +2,8 @@
 
 #include <cangjie.h>
 
+#include "cangjieerrors.h"
+
 
 int main(int argc, char **argv) {
     if (argc != 2) {
@@ -40,5 +42,5 @@ int main(int argc, char **argv) {
     cangjie_char_list_free(chars);
     cangjie_free(cj);
 
-    return 0;
+    return CANGJIE_OK;
 }

@@ -21,6 +21,7 @@
 #include <string.h>
 
 #include "cangjiechar.h"
+#include "cangjieerrors.h"
 
 
 CangjieChar *cangjie_char_new(const char *chchar,
@@ -42,5 +43,5 @@ CangjieChar *cangjie_char_new(const char *chchar,
 int cangjie_char_free(CangjieChar *c) {
     free(c);
 
-    return 0;
+    return CANGJIE_OK;
 }

@@ -21,6 +21,7 @@
 #include <string.h>
 
 #include "cangjie.h"
+#include "cangjieerrors.h"
 #include "utils.h"
 
 
@@ -210,5 +211,5 @@ int cangjie_free(Cangjie *cj) {
     free(cj->base_query);
     free(cj);
 
-    return 0;
+    return CANGJIE_OK;
 }
