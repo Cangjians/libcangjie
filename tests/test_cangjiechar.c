@@ -27,7 +27,8 @@ void test_cangjie_char_a() {
     char *code = "abc";
     uint32_t classic_freq = 123;
 
-    CangjieChar *c = cangjie_char_new(chchar, code, classic_freq);
+    CangjieChar *c;
+    int ret = cangjie_char_new(&c, chchar, code, classic_freq);
 
     assert(strcmp(c->chchar, chchar) == 0);
     assert(strcmp(c->code, code) == 0);
@@ -41,7 +42,8 @@ void test_cangjie_char_zh() {
     char *code = "abc";
     uint32_t classic_freq = 123;
 
-    CangjieChar *c = cangjie_char_new(chchar, code, classic_freq);
+    CangjieChar *c;
+    int ret = cangjie_char_new(&c, chchar, code, classic_freq);
 
     assert(strcmp(c->chchar, chchar) == 0);
     assert(strcmp(c->code, code) == 0);

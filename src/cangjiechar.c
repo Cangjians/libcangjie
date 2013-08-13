@@ -24,20 +24,23 @@
 #include "cangjieerrors.h"
 
 
-CangjieChar *cangjie_char_new(const char *chchar,
-                              const char *code,
-                              uint32_t    classic_freq) {
-    CangjieChar *c = calloc(1, sizeof(CangjieChar));
+int cangjie_char_new(CangjieChar **c,
+                     const char *chchar,
+                     const char *code,
+                     uint32_t    classic_freq) {
+    CangjieChar *tmp = calloc(1, sizeof(CangjieChar));
 
     // Copy at most 4 bytes, it's a single UTF-8 encoded character
-    strncpy(c->chchar, chchar, 4);
+    strncpy(tmp->chchar, chchar, 4);
 
     // Copy at most 5 bytes, that's the longest a Cangjie input code can be
-    strncpy(c->code, code, 5);
+    strncpy(tmp->code, code, 5);
 
-    c->classic_freq = classic_freq;
+    tmp->classic_freq = classic_freq;
 
-    return c;
+    *c = tmp;
+
+    return CANGJIE_OK;
 }
 
 int cangjie_char_free(CangjieChar *c) {

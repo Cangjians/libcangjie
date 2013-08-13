@@ -191,7 +191,8 @@ CangjieCharList *cangjie_get_characters(Cangjie *cj, char *input_code) {
             char *code = (char *)sqlite3_column_text(stmt, 1);
             uint32_t classic_freq = (uint32_t)sqlite3_column_int(stmt, 2);
 
-            CangjieChar *c = cangjie_char_new(chchar, code, classic_freq);
+            CangjieChar *c;
+            int ret = cangjie_char_new(&c, chchar, code, classic_freq);
             l = cangjie_char_list_prepend(l, c);
         } else if(ret == SQLITE_DONE) {
             // All rows finished
