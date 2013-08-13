@@ -31,102 +31,100 @@
                    "WHERE version=%d "
 
 
-char *cangjie_get_filter_query(Cangjie *cj) {
-    char *query;
-
+int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags == 0) {
         // No filter means pass all, so let's return an empty string
-        query = calloc(1, sizeof(char));
-        return query;
+        *query = calloc(1, sizeof(char));
+        return CANGJIE_OK;
     }
 
     // Longest possible string has a length of 127:
     //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
-    query = calloc(128, sizeof(char));
+    *query = calloc(128, sizeof(char));
     uint32_t first = 1;
 
-    strcat(query, " AND ( ");
+    strcat(*query, " AND ( ");
 
     if (cj->filter_flags & CANGJIE_FILTER_BIG5) {
-        strcat(query, "big5 = 1 ");
+        strcat(*query, "big5 = 1 ");
         first = 0;
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HKSCS) {
         if (first) {
-            strcat(query, "hkscs = 1 ");
+            strcat(*query, "hkscs = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR hkscs = 1 ");
+            strcat(*query, "OR hkscs = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_PUNCTUATION) {
         if (first) {
-            strcat(query, "punct = 1 ");
+            strcat(*query, "punct = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR punct = 1 ");
+            strcat(*query, "OR punct = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_CHINESE) {
         if (first) {
-            strcat(query, "zh = 1 ");
+            strcat(*query, "zh = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR zh = 1 ");
+            strcat(*query, "OR zh = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_ZHUYIN) {
         if (first) {
-            strcat(query, "zhuyin = 1 ");
+            strcat(*query, "zhuyin = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR zhuyin = 1 ");
+            strcat(*query, "OR zhuyin = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KANJI) {
         if (first) {
-            strcat(query, "kanji = 1 ");
+            strcat(*query, "kanji = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR kanji = 1 ");
+            strcat(*query, "OR kanji = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KATAKANA) {
         if (first) {
-            strcat(query, "katakana = 1 ");
+            strcat(*query, "katakana = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR katakana = 1 ");
+            strcat(*query, "OR katakana = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HIRAGANA) {
         if (first) {
-            strcat(query, "hiragana = 1 ");
+            strcat(*query, "hiragana = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR hiragana = 1 ");
+            strcat(*query, "OR hiragana = 1 ");
         }
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_SYMBOLS) {
         if (first) {
-            strcat(query, "symbol = 1 ");
+            strcat(*query, "symbol = 1 ");
             first = 0;
         } else {
-            strcat(query, "OR symbol = 1 ");
+            strcat(*query, "OR symbol = 1 ");
         }
     }
 
-    strcat(query, ") ");
+    strcat(*query, ") ");
 
-    return query;
+    return CANGJIE_OK;
 }
 
 Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
@@ -138,7 +136,8 @@ Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags) {
     cj->base_query = calloc(strlen(BASE_QUERY) + 1, sizeof(char));
     strcat(cj->base_query, BASE_QUERY);
 
-    char *filter_query = cangjie_get_filter_query(cj);
+    char *filter_query;
+    int ret = cangjie_get_filter_query(cj, &filter_query);
     append_string(&cj->base_query, filter_query);
     free(filter_query);
 
