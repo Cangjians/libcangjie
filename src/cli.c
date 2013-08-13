@@ -13,8 +13,9 @@ int main(int argc, char **argv) {
 
     char *code = argv[1];
 
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3,
-                              CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+    Cangjie *cj;
+    int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
+                          CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
     CangjieCharList *chars = cangjie_get_characters(cj, code);
     
     if (chars == NULL) {

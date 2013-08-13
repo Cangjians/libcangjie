@@ -24,7 +24,8 @@
 
 
 void test_cangjie_new() {
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    Cangjie *cj;
+    int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
 
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
@@ -34,7 +35,8 @@ void test_cangjie_new() {
 
 
 void test_cangjie_get_characters_single_result() {
-    Cangjie *cj = cangjie_new(CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    Cangjie *cj;
+    int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
 
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);

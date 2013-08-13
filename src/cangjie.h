@@ -51,7 +51,9 @@ typedef struct Cangjie {
     char *base_query;
 } Cangjie;
 
-Cangjie *cangjie_new(CangjieVersion version, CangjieFilter filter_flags);
+int cangjie_new(Cangjie        **cj,
+                CangjieVersion   version,
+                CangjieFilter    filter_flags);
 
 CangjieCharList *cangjie_get_characters(Cangjie *cj, char *code);
 
