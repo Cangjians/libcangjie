@@ -156,8 +156,10 @@ int cangjie_new(Cangjie        **cj,
     return CANGJIE_OK;
 }
 
-CangjieCharList *cangjie_get_characters(Cangjie *cj, char *input_code) {
-    CangjieCharList *l = NULL;
+int cangjie_get_characters(Cangjie          *cj,
+                           char             *input_code,
+                           CangjieCharList **l) {
+    CangjieCharList *tmp = NULL;
 
     sqlite3_stmt *stmt;
 
@@ -196,18 +198,20 @@ CangjieCharList *cangjie_get_characters(Cangjie *cj, char *input_code) {
 
             CangjieChar *c;
             int ret = cangjie_char_new(&c, chchar, code, classic_freq);
-            ret = cangjie_char_list_prepend(&l, c);
+            ret = cangjie_char_list_prepend(&tmp, c);
         } else if(ret == SQLITE_DONE) {
             // All rows finished
             sqlite3_finalize(stmt);
             break;
         } else {
             // Some error encountered
-            return NULL;
+            return CANGJIE_DBERROR;
         }
     }
 
-    return l;
+    *l = tmp;
+
+    return CANGJIE_OK;
 }
 
 int cangjie_free(Cangjie *cj) {

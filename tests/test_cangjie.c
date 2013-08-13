@@ -41,7 +41,8 @@ void test_cangjie_get_characters_single_result() {
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
 
-    CangjieCharList *l = cangjie_get_characters(cj, "dmlm");
+    CangjieCharList *l;
+    ret = cangjie_get_characters(cj, "dmlm", &l);
 
     assert(strcmp(l->c->chchar, "椏") == 0);
     assert(strcmp(l->c->code, "dmlm") == 0);

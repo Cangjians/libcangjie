@@ -16,8 +16,9 @@ int main(int argc, char **argv) {
     Cangjie *cj;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
                           CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
-    CangjieCharList *chars = cangjie_get_characters(cj, code);
-    
+    CangjieCharList *chars;
+    ret = cangjie_get_characters(cj, code, &chars);
+
     if (chars == NULL) {
         printf("No chars with code '%s'\n", code);
 

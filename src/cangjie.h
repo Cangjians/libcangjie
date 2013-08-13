@@ -55,6 +55,8 @@ int cangjie_new(Cangjie        **cj,
                 CangjieVersion   version,
                 CangjieFilter    filter_flags);
 
-CangjieCharList *cangjie_get_characters(Cangjie *cj, char *code);
+int cangjie_get_characters(Cangjie          *cj,
+                           char             *code,
+                           CangjieCharList **l);
 
 int cangjie_free(Cangjie *cj);
