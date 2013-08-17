@@ -150,9 +150,15 @@ int cangjie_new(Cangjie        **cj,
     // Check the CANGJIE_DB env var (it is useful for local testing)
     char *database_path = getenv("CANGJIE_DB");
     if (database_path != NULL) {
-        sqlite3_open_v2(database_path, &tmp->db, SQLITE_OPEN_READONLY, NULL);
+        ret = sqlite3_open_v2(database_path, &tmp->db, SQLITE_OPEN_READONLY, NULL);
     } else {
-        sqlite3_open_v2(CANGJIE_DB, &tmp->db, SQLITE_OPEN_READONLY, NULL);
+        ret = sqlite3_open_v2(CANGJIE_DB, &tmp->db, SQLITE_OPEN_READONLY, NULL);
+    }
+    if (ret == SQLITE_CANTOPEN) {
+        return CANGJIE_DBOPEN;
+    } else if (ret != SQLITE_OK) {
+        // FIXME: Unhandled error codes
+        return ret;
     }
 
     *cj = tmp;
