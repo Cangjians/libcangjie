@@ -167,7 +167,7 @@ int cangjie_get_characters(Cangjie          *cj,
 
     // Start with the Cangjie instance's base_query
     char *base_query = calloc(strlen(cj->base_query) + 1, sizeof(char));
-    strcat(base_query, cj->base_query);
+    strcpy(base_query, cj->base_query);
 
     char *query_code = calloc(6, sizeof(char));
     strncpy(query_code, input_code, 5);
