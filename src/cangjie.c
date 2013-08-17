@@ -159,6 +159,10 @@ int cangjie_new(Cangjie        **cj,
 
     char *filter_query;
     int ret = cangjie_get_filter_query(tmp, &filter_query);
+    if (ret != CANGJIE_OK) {
+        return ret;
+    }
+
     strcat(tmp->base_query, filter_query);
     free(filter_query);
 

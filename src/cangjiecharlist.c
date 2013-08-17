@@ -45,6 +45,9 @@ int cangjie_char_list_append(CangjieCharList **l,
     CangjieCharList *last;
 
     int ret = cangjie_char_list_new_elem(&new_list, c);
+    if (ret != CANGJIE_OK) {
+        return ret;
+    }
 
     if (*l != NULL) {
         last = *l;
@@ -68,6 +71,9 @@ int cangjie_char_list_prepend(CangjieCharList **l,
     CangjieCharList *new_list;
 
     int ret = cangjie_char_list_new_elem(&new_list, c);
+    if (ret != CANGJIE_OK) {
+        return ret;
+    }
 
     if (*l != NULL) {
         (*l)->prev = new_list;
