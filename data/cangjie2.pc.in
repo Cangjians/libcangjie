@@ -9,4 +9,4 @@ URL: @PACKAGE_URL@
 Version: @PACKAGE_VERSION@
 Cflags: -I${includedir}/cangjie2
 Requires: sqlite3
-Libs: -L${libdir} -lcangjie
+Libs: -L${libdir} -lcangjie2
