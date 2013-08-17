@@ -37,7 +37,7 @@ Below is a trivial example of how to use it::
 
 For more details, refer to `the documentation`_.
 
-Development, happens `on github`_, and stable release tarballs will be
+Development happens `on github`_, and stable release tarballs will be
 available when we reach that point.
 
 .. _the documentation: Sorry, not written yet. :(
