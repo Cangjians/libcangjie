@@ -1,3 +1,11 @@
+Dependencies
+============
+
+To build this library, you will need the following:
+
+* a C compiler and library (we recommend GCC and the GNU LibC)
+* the SQLite3 library and development headers
+
 Install from a release tarball
 ==============================
 
