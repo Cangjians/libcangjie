@@ -26,6 +26,7 @@
 void test_cangjie_new() {
     Cangjie *cj;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    assert(ret == CANGJIE_OK);
 
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
@@ -37,12 +38,14 @@ void test_cangjie_new() {
 void test_cangjie_get_characters_single_result() {
     Cangjie *cj;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    assert(ret == CANGJIE_OK);
 
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
 
     CangjieCharList *l;
     ret = cangjie_get_characters(cj, "dmlm", &l);
+    assert(ret == CANGJIE_OK);
 
     assert(strcmp(l->c->chchar, "椏") == 0);
     assert(strcmp(l->c->code, "dmlm") == 0);
@@ -57,16 +60,19 @@ void test_cangjie_get_characters_single_result() {
 void test_cangjie_get_characters_multiple_queries() {
     Cangjie *cj;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    assert(ret == CANGJIE_OK);
 
     assert(cj->version == CANGJIE_VERSION_3);
     assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
 
     CangjieCharList *l;
     ret = cangjie_get_characters(cj, "h*i", &l);
+    assert(ret == CANGJIE_OK);
     cangjie_char_list_free(l);
 
     CangjieCharList *l2;
     ret = cangjie_get_characters(cj, "dmlm", &l2);
+    assert(ret == CANGJIE_OK);
 
     assert(strcmp(l2->c->chchar, "椏") == 0);
     assert(strcmp(l2->c->code, "dmlm") == 0);

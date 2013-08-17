@@ -29,6 +29,7 @@ void test_cangjie_char_a() {
 
     CangjieChar *c;
     int ret = cangjie_char_new(&c, chchar, code, classic_freq);
+    assert(ret == CANGJIE_OK);
 
     assert(strcmp(c->chchar, chchar) == 0);
     assert(strcmp(c->code, code) == 0);
@@ -44,6 +45,7 @@ void test_cangjie_char_zh() {
 
     CangjieChar *c;
     int ret = cangjie_char_new(&c, chchar, code, classic_freq);
+    assert(ret == CANGJIE_OK);
 
     assert(strcmp(c->chchar, chchar) == 0);
     assert(strcmp(c->code, code) == 0);
