@@ -29,6 +29,10 @@
                    "INNER JOIN codes on chars.char_index=codes.char_index\n" \
                    "WHERE version=%d "
 
+// Longest possible filter query has a length of 127:
+//     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
+#define MAX_LEN_FILTER_QUERY 127
+
 
 int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags == 0) {
@@ -37,9 +41,7 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
         return CANGJIE_OK;
     }
 
-    // Longest possible string has a length of 127:
-    //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
-    *query = calloc(128, sizeof(char));
+    *query = calloc(MAX_LEN_FILTER_QUERY + 1, sizeof(char));
     uint32_t first = 1;
 
     strcat(*query, " AND ( ");
@@ -134,12 +136,13 @@ int cangjie_new(Cangjie        **cj,
     tmp->version = version;
     tmp->filter_flags = filter_flags;
 
-    tmp->base_query = calloc(strlen(BASE_QUERY) + 1, sizeof(char));
+    tmp->base_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
+                             sizeof(char));
     strcat(tmp->base_query, BASE_QUERY);
 
     char *filter_query;
     int ret = cangjie_get_filter_query(tmp, &filter_query);
-    append_string(&tmp->base_query, filter_query);
+    strcat(tmp->base_query, filter_query);
     free(filter_query);
 
     // Check the CANGJIE_DB env var (it is useful for local testing)
