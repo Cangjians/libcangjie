@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
         printf("\n");
         printf("Build DB_FILE out of TABLE_FILE.\n");
 
-        return 1;
+        return -1;
     }
 
     char *tablefile = argv[1];
