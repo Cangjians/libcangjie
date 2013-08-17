@@ -21,7 +21,6 @@
 #include <string.h>
 
 #include "cangjie.h"
-#include "utils.h"
 
 
 #define BASE_QUERY "SELECT chchar, code, classic_freq\n" \
