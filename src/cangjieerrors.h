@@ -2,3 +2,4 @@
 #define CANGJIE_NOCHARS  1  /* Nothing wrong, but no corresponding CangjieChar returned */
 #define CANGJIE_DBOPEN   2  /* Could not open the database */
 #define CANGJIE_DBERROR  3  /* Something happened when querying the database */
+#define CANGJIE_NOMEM    4  /* Memory allocation failure */

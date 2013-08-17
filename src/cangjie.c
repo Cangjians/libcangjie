@@ -40,10 +40,18 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags == 0) {
         // No filter means pass all, so let's return an empty string
         *query = calloc(1, sizeof(char));
+        if (query == NULL) {
+            return CANGJIE_NOMEM;
+        }
+
         return CANGJIE_OK;
     }
 
     *query = calloc(MAX_LEN_FILTER_QUERY + 1, sizeof(char));
+    if (query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
     uint32_t first = 1;
 
     strcat(*query, " AND ( ");
@@ -134,12 +142,19 @@ int cangjie_new(Cangjie        **cj,
                 CangjieVersion   version,
                 CangjieFilter    filter_flags) {
     Cangjie *tmp = calloc(1, sizeof(Cangjie));
+    if (tmp == NULL) {
+        return CANGJIE_NOMEM;
+    }
 
     tmp->version = version;
     tmp->filter_flags = filter_flags;
 
     tmp->base_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
                              sizeof(char));
+    if (tmp->base_query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
     strcat(tmp->base_query, BASE_QUERY);
 
     char *filter_query;
@@ -176,9 +191,16 @@ int cangjie_get_characters(Cangjie          *cj,
     // Start with the Cangjie instance's base_query
     char *base_query = calloc(strlen(cj->base_query) + MAX_LEN_CODE_QUERY + 1,
                               sizeof(char));
+    if (base_query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
     strcpy(base_query, cj->base_query);
 
     char *query_code = calloc(6, sizeof(char));
+    if (query_code == NULL) {
+        return CANGJIE_NOMEM;
+    }
     strncpy(query_code, input_code, 5);
 
     // Handle optional wildcards

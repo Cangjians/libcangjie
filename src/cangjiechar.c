@@ -29,6 +29,9 @@ int cangjie_char_new(CangjieChar **c,
                      const char   *code,
                      uint32_t      classic_freq) {
     CangjieChar *tmp = calloc(1, sizeof(CangjieChar));
+    if (tmp == NULL) {
+        return CANGJIE_NOMEM;
+    }
 
     // Copy at most 4 bytes, it's a single UTF-8 encoded character
     strncpy(tmp->chchar, chchar, 4);

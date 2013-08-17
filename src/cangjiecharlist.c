@@ -26,6 +26,9 @@
 int cangjie_char_list_new_elem(CangjieCharList **l,
                                CangjieChar      *c) {
     CangjieCharList *tmp = calloc(1, sizeof(CangjieCharList));
+    if (tmp == NULL) {
+        return CANGJIE_NOMEM;
+    }
 
     tmp->c = c;
     tmp->prev = NULL;
