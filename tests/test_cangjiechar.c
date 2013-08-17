@@ -19,7 +19,7 @@
 #include <assert.h>
 #include <string.h>
 
-#include <cangjiechar.h>
+#include <cangjie.h>
 
 
 void test_cangjie_char_a() {
