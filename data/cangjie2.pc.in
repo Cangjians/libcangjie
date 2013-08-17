@@ -7,6 +7,6 @@ Name: @PACKAGE_NAME@
 Description: Library implementing the Cangjie input method
 URL: @PACKAGE_URL@
 Version: @PACKAGE_VERSION@
-Cflags: -I${includedir}/cangjie
+Cflags: -I${includedir}/cangjie2
 Requires: sqlite3
 Libs: -L${libdir} -lcangjie
