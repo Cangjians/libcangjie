@@ -41,7 +41,7 @@ char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
 char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q');";
 
 
-void insert_line(sqlite3 *db, char *line, int i) {
+int insert_line(sqlite3 *db, char *line, int i) {
     char *saveptr;
     char *query;
     char *code;
@@ -63,12 +63,16 @@ void insert_line(sqlite3 *db, char *line, int i) {
 
     if ((strcmp(cj3_codes, "!") == 0) && (strcmp(cj5_codes, "!") == 0)) {
         // This character is useless in the database
-        return;
+        return CANGJIE_OK;
     }
 
     query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs, zhuyin,
                             kanji, hiragana, katakana, punct, symbol,
                             classic_freq);
+    if (query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
     sqlite3_exec(db, query, NULL, NULL, NULL);
     sqlite3_free(query);
 
@@ -105,6 +109,8 @@ void insert_line(sqlite3 *db, char *line, int i) {
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
     }
+
+    return CANGJIE_OK;
 }
 
 int main(int argc, char **argv) {
