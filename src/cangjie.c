@@ -217,13 +217,19 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     char *query = sqlite3_mprintf(base_query, cj->version, query_code);
-    sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+    if (query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
+    int ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+    if (ret != SQLITE_OK) {
+        // FIXME: Unhandled error codes
+        return ret;
+    }
 
     free(query_code);
     free(base_query);
     sqlite3_free(query);
-
-    int ret;
 
     while (1) {
         ret = sqlite3_step(stmt);
