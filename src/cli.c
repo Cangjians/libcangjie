@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     CangjieCharList *chars;
     ret = cangjie_get_characters(cj, code, &chars);
 
-    if (ret == CANGJIE_NOCHAR) {
+    if (ret == CANGJIE_NOCHARS) {
         printf("No chars with code '%s'\n", code);
 
         cangjie_free(cj);
