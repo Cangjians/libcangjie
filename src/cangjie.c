@@ -33,6 +33,9 @@
 //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
 #define MAX_LEN_FILTER_QUERY 127
 
+// Longest possible code query has a length of 19:
+//     "AND code LIKE '%q';"
+#define MAX_LEN_CODE_QUERY 19
 
 int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags == 0) {
@@ -166,7 +169,8 @@ int cangjie_get_characters(Cangjie          *cj,
     sqlite3_stmt *stmt;
 
     // Start with the Cangjie instance's base_query
-    char *base_query = calloc(strlen(cj->base_query) + 1, sizeof(char));
+    char *base_query = calloc(strlen(cj->base_query) + MAX_LEN_CODE_QUERY + 1,
+                              sizeof(char));
     strcpy(base_query, cj->base_query);
 
     char *query_code = calloc(6, sizeof(char));
@@ -175,9 +179,9 @@ int cangjie_get_characters(Cangjie          *cj,
     // Handle optional wildcards
     char *star_ptr = strchr(query_code, '*');
     if (star_ptr == NULL) {
-        append_string(&base_query, "AND code = '%q';");
+        strcat(base_query, "AND code = '%q';");
     } else {
-        append_string(&base_query, "AND code LIKE '%q';");
+        strcat(base_query, "AND code LIKE '%q';");
         query_code[star_ptr-query_code] = '%';
     }
 
