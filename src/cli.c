@@ -14,6 +14,14 @@ int main(int argc, char **argv) {
     Cangjie *cj;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
                           CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+    if (ret == CANGJIE_DBOPEN) {
+        printf("Could not open the Cangjie database\n");
+        return ret;
+    } else if (ret != CANGJIE_OK) {
+        printf("Unhandled error while creating the Cangjie object: %d\n", ret);
+        return ret;
+    }
+
     CangjieCharList *chars;
     ret = cangjie_get_characters(cj, code, &chars);
 
