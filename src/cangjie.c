@@ -36,6 +36,14 @@
 //     "AND code LIKE '%q';"
 #define MAX_LEN_CODE_QUERY 19
 
+
+const char *cangjie_radicals[] = {
+    ("日"), ("月"), ("金"), ("木"), ("水"), ("火"), ("土"),
+    ("竹"), ("戈"), ("十"), ("大"), ("中"), ("一"), ("弓"),
+    ("人"), ("心"), ("手"), ("口"), ("尸"), ("廿"), ("山"),
+    ("女"), ("田"), ("難"), ("卜"), ("Ｚ")
+};
+
 int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags == 0) {
         // No filter means pass all, so let's return an empty string
@@ -253,6 +261,24 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     *l = tmp;
+
+    return CANGJIE_OK;
+}
+
+int cangjie_get_radical(Cangjie     *cj,
+                        const char   key,
+                        const char **radical) {
+    if ((key < 'a' || key > 'z') && (key != '*')) {
+        return CANGJIE_MISUSE;
+    }
+
+    if (key == '*') {
+        // Special case for the wildcard '*'
+        *radical = "＊";
+    } else {
+        // The actual Cangjie radicals
+        *radical = cangjie_radicals[key - 'a'];
+    }
 
     return CANGJIE_OK;
 }

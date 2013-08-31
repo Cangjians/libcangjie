@@ -60,4 +60,8 @@ int cangjie_get_characters(Cangjie          *cj,
                            char             *code,
                            CangjieCharList **l);
 
+int cangjie_get_radical(Cangjie     *cj,
+                        const char   key,
+                        const char **radical);
+
 int cangjie_free(Cangjie *cj);
