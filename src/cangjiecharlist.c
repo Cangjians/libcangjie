@@ -86,6 +86,10 @@ int cangjie_char_list_prepend(CangjieCharList **l,
 }
 
 int cangjie_char_list_free(CangjieCharList *l) {
+    if (l == NULL) {
+        return CANGJIE_OK;
+    }
+
     if (l->next != NULL) {
         cangjie_char_list_free(l->next);
     }
