@@ -269,7 +269,7 @@ int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
                         const char **radical) {
     if ((key < 'a' || key > 'z') && (key != '*')) {
-        return CANGJIE_MISUSE;
+        return CANGJIE_INVALID;
     }
 
     if (key == '*') {
@@ -286,7 +286,7 @@ int cangjie_get_radical(Cangjie     *cj,
 int cangjie_is_input_key(Cangjie    *cj,
                          const char  key) {
     if (key < 'a' || key > 'z') {
-        return CANGJIE_MISUSE;
+        return CANGJIE_INVALID;
     }
 
     return CANGJIE_OK;

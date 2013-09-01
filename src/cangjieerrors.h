@@ -3,4 +3,4 @@
 #define CANGJIE_DBOPEN   2  /* Could not open the database */
 #define CANGJIE_DBERROR  3  /* Something happened when querying the database */
 #define CANGJIE_NOMEM    4  /* Memory allocation failure */
-#define CANGJIE_MISUSE   5  /* Invalid input was passed to the library */
+#define CANGJIE_INVALID  5  /* Invalid input was passed to the library */
