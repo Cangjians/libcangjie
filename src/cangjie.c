@@ -283,6 +283,15 @@ int cangjie_get_radical(Cangjie     *cj,
     return CANGJIE_OK;
 }
 
+int cangjie_is_input_key(Cangjie    *cj,
+                         const char  key) {
+    if (key < 'a' || key > 'z') {
+        return CANGJIE_MISUSE;
+    }
+
+    return CANGJIE_OK;
+}
+
 int cangjie_free(Cangjie *cj) {
     sqlite3_close(cj->db);
     free(cj->base_query);

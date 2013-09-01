@@ -64,4 +64,7 @@ int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
                         const char **radical);
 
+int cangjie_is_input_key(Cangjie    *cj,
+                         const char  key);
+
 int cangjie_free(Cangjie *cj);
