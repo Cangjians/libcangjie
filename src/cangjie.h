@@ -49,7 +49,7 @@ typedef struct Cangjie {
     uint32_t filter_flags;
 
     sqlite3 *db;
-    char *base_query;
+    char *cj_query;
 } Cangjie;
 
 int cangjie_new(Cangjie        **cj,

@@ -157,13 +157,13 @@ int cangjie_new(Cangjie        **cj,
     tmp->version = version;
     tmp->filter_flags = filter_flags;
 
-    tmp->base_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
+    tmp->cj_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
                              sizeof(char));
-    if (tmp->base_query == NULL) {
+    if (tmp->cj_query == NULL) {
         return CANGJIE_NOMEM;
     }
 
-    strcat(tmp->base_query, BASE_QUERY);
+    strcat(tmp->cj_query, BASE_QUERY);
 
     char *filter_query;
     int ret = cangjie_get_filter_query(tmp, &filter_query);
@@ -171,7 +171,7 @@ int cangjie_new(Cangjie        **cj,
         return ret;
     }
 
-    strcat(tmp->base_query, filter_query);
+    strcat(tmp->cj_query, filter_query);
     free(filter_query);
 
     // Check the CANGJIE_DB env var (it is useful for local testing)
@@ -200,14 +200,14 @@ int cangjie_get_characters(Cangjie          *cj,
 
     sqlite3_stmt *stmt;
 
-    // Start with the Cangjie instance's base_query
-    char *base_query = calloc(strlen(cj->base_query) + MAX_LEN_CODE_QUERY + 1,
+    // Start with the Cangjie instance's cj_query
+    char *cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
                               sizeof(char));
-    if (base_query == NULL) {
+    if (cj_query == NULL) {
         return CANGJIE_NOMEM;
     }
 
-    strcpy(base_query, cj->base_query);
+    strcpy(cj_query, cj->cj_query);
 
     char *query_code = calloc(6, sizeof(char));
     if (query_code == NULL) {
@@ -218,13 +218,13 @@ int cangjie_get_characters(Cangjie          *cj,
     // Handle optional wildcards
     char *star_ptr = strchr(query_code, '*');
     if (star_ptr == NULL) {
-        strcat(base_query, "AND code = '%q';");
+        strcat(cj_query, "AND code = '%q';");
     } else {
-        strcat(base_query, "AND code LIKE '%q';");
+        strcat(cj_query, "AND code LIKE '%q';");
         query_code[star_ptr-query_code] = '%';
     }
 
-    char *query = sqlite3_mprintf(base_query, cj->version, query_code);
+    char *query = sqlite3_mprintf(cj_query, cj->version, query_code);
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
@@ -236,7 +236,7 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     free(query_code);
-    free(base_query);
+    free(cj_query);
     sqlite3_free(query);
 
     while (1) {
@@ -294,7 +294,7 @@ int cangjie_is_input_key(Cangjie    *cj,
 
 int cangjie_free(Cangjie *cj) {
     sqlite3_close(cj->db);
-    free(cj->base_query);
+    free(cj->cj_query);
     free(cj);
 
     return CANGJIE_OK;
