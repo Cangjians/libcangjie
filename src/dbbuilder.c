@@ -61,7 +61,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
     char *cj5_codes = strtok_r(NULL, " ", &saveptr);
     uint32_t frequency = atoi(strtok_r(NULL, "\0", &saveptr));
 
-    if ((strcmp(cj3_codes, "!") == 0) && (strcmp(cj5_codes, "!") == 0)) {
+    if ((strcmp(cj3_codes, "NA") == 0) && (strcmp(cj5_codes, "NA") == 0)) {
         // This character is useless in the database
         return CANGJIE_OK;
     }
@@ -87,7 +87,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
         query = sqlite3_mprintf(insert_codes, i, 3, code);
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
-    } else if (strcmp(cj3_codes, "!") != 0) {
+    } else if (strcmp(cj3_codes, "NA") != 0) {
         query = sqlite3_mprintf(insert_codes, i, 3, cj3_codes);
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
@@ -104,7 +104,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
         query = sqlite3_mprintf(insert_codes, i, 5, code);
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
-    } else if (strcmp(cj3_codes, "!") != 0) {
+    } else if (strcmp(cj3_codes, "NA") != 0) {
         query = sqlite3_mprintf(insert_codes, i, 5, cj5_codes);
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
