@@ -28,7 +28,7 @@
 
 
 char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
-                     "                   chchar TEXT, zh INTEGER,\n"
+                     "                   chchar TEXT UNIQUE, zh INTEGER,\n"
                      "                   big5 INTEGER, hkscs INTEGER,\n"
                      "                   zhuyin INTEGER, kanji INTEGER,\n"
                      "                   hiragana INTEGER, katakana INTEGER,\n"
