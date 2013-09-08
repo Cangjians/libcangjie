@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
 
         c = iter->c;
         printf("Char: %s, code: '%s', classic frequency: %d\n",
-               c->chchar, c->code, c->classic_freq);
+               c->chchar, c->code, c->frequency);
 
         iter = iter->next;
     }

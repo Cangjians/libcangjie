@@ -25,7 +25,7 @@ Below is a trivial example of how to use it::
                 break;
 
             printf("Char: %s, code: '%s', classic frequency: %d\n",
-                   iter->c->chchar, iter->c->code, iter->c->classic_freq);
+                   iter->c->chchar, iter->c->code, iter->c->frequency);
 
             iter = iter->next;
         }

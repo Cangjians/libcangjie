@@ -23,7 +23,7 @@
 #include "cangjie.h"
 
 
-#define BASE_QUERY "SELECT chchar, code, classic_freq\n" \
+#define BASE_QUERY "SELECT chchar, code, frequency\n" \
                    "FROM chars\n" \
                    "INNER JOIN codes on chars.char_index=codes.char_index\n" \
                    "WHERE version=%d "
@@ -245,10 +245,10 @@ int cangjie_get_characters(Cangjie          *cj,
         if (ret == SQLITE_ROW) {
             char *chchar = (char *)sqlite3_column_text(stmt, 0);
             char *code = (char *)sqlite3_column_text(stmt, 1);
-            uint32_t classic_freq = (uint32_t)sqlite3_column_int(stmt, 2);
+            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 2);
 
             CangjieChar *c;
-            int ret = cangjie_char_new(&c, chchar, code, classic_freq);
+            int ret = cangjie_char_new(&c, chchar, code, frequency);
             ret = cangjie_char_list_prepend(&tmp, c);
         } else if(ret == SQLITE_DONE) {
             // All rows finished

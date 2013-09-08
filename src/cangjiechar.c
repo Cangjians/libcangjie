@@ -27,7 +27,7 @@
 int cangjie_char_new(CangjieChar **c,
                      const char   *chchar,
                      const char   *code,
-                     uint32_t      classic_freq) {
+                     uint32_t      frequency) {
     CangjieChar *tmp = calloc(1, sizeof(CangjieChar));
     if (tmp == NULL) {
         return CANGJIE_NOMEM;
@@ -39,7 +39,7 @@ int cangjie_char_new(CangjieChar **c,
     // Copy at most 5 bytes, that's the longest a Cangjie input code can be
     strncpy(tmp->code, code, 5);
 
-    tmp->classic_freq = classic_freq;
+    tmp->frequency = frequency;
 
     *c = tmp;
 

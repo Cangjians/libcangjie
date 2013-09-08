@@ -33,7 +33,7 @@ char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
                      "                   zhuyin INTEGER, kanji INTEGER,\n"
                      "                   hiragana INTEGER, katakana INTEGER,\n"
                      "                   punct INTEGER, symbol INTEGER,\n"
-                     "                   classic_freq INTEGER);";
+                     "                   frequency INTEGER);";
 char *create_codes = "CREATE TABLE codes(char_index INTEGER, version INTEGER,\n"
                      "                   code TEXT);";
 char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
@@ -59,7 +59,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
     uint32_t symbol = atoi(strtok_r(NULL, " ", &saveptr));
     char *cj3_codes = strtok_r(NULL, " ", &saveptr);
     char *cj5_codes = strtok_r(NULL, " ", &saveptr);
-    uint32_t classic_freq = atoi(strtok_r(NULL, "\0", &saveptr));
+    uint32_t frequency = atoi(strtok_r(NULL, "\0", &saveptr));
 
     if ((strcmp(cj3_codes, "!") == 0) && (strcmp(cj5_codes, "!") == 0)) {
         // This character is useless in the database
@@ -68,7 +68,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
 
     query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs, zhuyin,
                             kanji, hiragana, katakana, punct, symbol,
-                            classic_freq);
+                            frequency);
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }

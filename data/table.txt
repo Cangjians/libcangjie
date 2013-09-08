@@ -2,7 +2,7 @@
 #
 # The format of the data in this table is as follows:
 #
-# char zh big5 hkscs zhuyin kanji hiragana katakana punct symbol cj3_codes cj5_codes classic_freq
+# char zh big5 hkscs zhuyin kanji hiragana katakana punct symbol cj3_codes cj5_codes frequency
 
 ? 0 0 0 0 0 0 0 1 0 zxaf,zxbb ! 0
 § 0 0 0 0 0 0 0 0 1 yyybs yyybs 0

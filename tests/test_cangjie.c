@@ -49,7 +49,7 @@ void test_cangjie_get_characters_single_result() {
 
     assert(strcmp(l->c->chchar, "椏") == 0);
     assert(strcmp(l->c->code, "dmlm") == 0);
-    assert(l->c->classic_freq == 10253);
+    assert(l->c->frequency == 10253);
     assert(l->next == NULL);
 
     cangjie_char_list_free(l);
@@ -76,7 +76,7 @@ void test_cangjie_get_characters_multiple_queries() {
 
     assert(strcmp(l2->c->chchar, "椏") == 0);
     assert(strcmp(l2->c->code, "dmlm") == 0);
-    assert(l2->c->classic_freq == 10253);
+    assert(l2->c->frequency == 10253);
     assert(l2->next == NULL);
 
     cangjie_char_list_free(l2);
