@@ -271,6 +271,10 @@ int cangjie_get_characters(Cangjie          *cj,
         }
     }
 
+    if (tmp == NULL) {
+        return CANGJIE_NOCHARS;
+    }
+
     *l = tmp;
 
     return CANGJIE_OK;
@@ -314,6 +318,10 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
             // Some error encountered
             return CANGJIE_DBERROR;
         }
+    }
+
+    if (tmp == NULL) {
+        return CANGJIE_NOCHARS;
     }
 
     *l = tmp;
