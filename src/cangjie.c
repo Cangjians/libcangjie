@@ -157,6 +157,7 @@ int cangjie_new(Cangjie        **cj,
     tmp->version = version;
     tmp->filter_flags = filter_flags;
 
+    // Prepare the main Cangjie query
     tmp->cj_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
                              sizeof(char));
     if (tmp->cj_query == NULL) {
@@ -173,6 +174,16 @@ int cangjie_new(Cangjie        **cj,
 
     strcat(tmp->cj_query, filter_query);
     free(filter_query);
+
+    // Prepare the query by short code
+    tmp->shortcode_query = calloc(strlen(BASE_QUERY) + MAX_LEN_CODE_QUERY + 1,
+                                  sizeof(char));
+    if (tmp->shortcode_query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
+    strcat(tmp->shortcode_query, BASE_QUERY);
+    strcat(tmp->shortcode_query, "AND code = '%q';");
 
     // Check the CANGJIE_DB env var (it is useful for local testing)
     char *database_path = getenv("CANGJIE_DB");
@@ -265,6 +276,51 @@ int cangjie_get_characters(Cangjie          *cj,
     return CANGJIE_OK;
 }
 
+int cangjie_get_characters_by_shortcode(Cangjie          *cj,
+                                        char             *input_code,
+                                        CangjieCharList **l) {
+    CangjieCharList *tmp = NULL;
+
+    sqlite3_stmt *stmt;
+
+    char *query = sqlite3_mprintf(cj->shortcode_query, 0, input_code);
+    if (query == NULL) {
+        return CANGJIE_NOMEM;
+    }
+
+    int ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+    if (ret != SQLITE_OK) {
+        // FIXME: Unhandled error codes
+        return ret;
+    }
+
+    sqlite3_free(query);
+
+    while (1) {
+        ret = sqlite3_step(stmt);
+
+        if (ret == SQLITE_ROW) {
+            char *chchar = (char *)sqlite3_column_text(stmt, 0);
+            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 2);
+
+            CangjieChar *c;
+            int ret = cangjie_char_new(&c, chchar, input_code, frequency);
+            ret = cangjie_char_list_prepend(&tmp, c);
+        } else if(ret == SQLITE_DONE) {
+            // All rows finished
+            sqlite3_finalize(stmt);
+            break;
+        } else {
+            // Some error encountered
+            return CANGJIE_DBERROR;
+        }
+    }
+
+    *l = tmp;
+
+    return CANGJIE_OK;
+}
+
 int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
                         const char **radical) {
@@ -295,6 +351,7 @@ int cangjie_is_input_key(Cangjie    *cj,
 int cangjie_free(Cangjie *cj) {
     sqlite3_close(cj->db);
     free(cj->cj_query);
+    free(cj->shortcode_query);
     free(cj);
 
     return CANGJIE_OK;

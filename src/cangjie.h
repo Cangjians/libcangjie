@@ -50,6 +50,7 @@ typedef struct Cangjie {
 
     sqlite3 *db;
     char *cj_query;
+    char *shortcode_query;
 } Cangjie;
 
 int cangjie_new(Cangjie        **cj,
@@ -59,6 +60,10 @@ int cangjie_new(Cangjie        **cj,
 int cangjie_get_characters(Cangjie          *cj,
                            char             *code,
                            CangjieCharList **l);
+
+int cangjie_get_characters_by_shortcode(Cangjie          *cj,
+                                        char             *shortcode,
+                                        CangjieCharList **l);
 
 int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
