@@ -89,6 +89,7 @@ CLEANFILES = \
 
 EXTRA_DIST = \
 	autogen.sh \
+	data/README.table.rst \
 	data/table.txt \
 	INSTALL.rst \
 	README.rst \
