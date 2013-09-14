@@ -207,6 +207,10 @@ int cangjie_new(Cangjie        **cj,
 int cangjie_get_characters(Cangjie          *cj,
                            char             *input_code,
                            CangjieCharList **l) {
+    if (input_code[0] == '*' || input_code[strlen(input_code) - 1] == '*') {
+        return CANGJIE_INVALID;
+    }
+
     CangjieCharList *tmp = NULL;
 
     sqlite3_stmt *stmt;
