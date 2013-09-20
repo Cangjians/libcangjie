@@ -62,6 +62,10 @@ int insert_line(sqlite3 *db, char *line, int i) {
     char *short_code = strtok_r(NULL, " ", &saveptr);
     uint32_t frequency = atoi(strtok_r(NULL, "\0", &saveptr));
 
+    if (strcmp(short_code, "SPACE") == 0) {
+        strcpy(short_code, " ");
+    }
+
     if ((strcmp(cj3_codes, "NA") == 0) && (strcmp(cj5_codes, "NA") == 0) \
                                        && (strcmp(short_code, "NA") == 0)) {
         // This character is useless in the database
