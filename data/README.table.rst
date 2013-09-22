@@ -20,7 +20,7 @@ Some of us are not native Chinese speakers. As such, the data might be
 incomplete, or even incorrect.
 
 If you find that this is the case, please help us making it better by
-`filing bugs <http://TODO>`_.
+`filing bugs <https://github.com/Cangjians/libcangjie2/issues>`_.
 
 Data Format
 ===========

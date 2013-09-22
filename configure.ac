@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([libcangjie2], [0.0.1], [TODO], [libcangjie2], [TODO])
+AC_INIT([libcangjie2], [0.0.1], [https://github.com/Cangjians/libcangjie2/issues], [libcangjie2], [https://github.com/Cangjians/libcangjie2])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])

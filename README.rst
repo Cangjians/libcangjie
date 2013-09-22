@@ -41,7 +41,7 @@ Development happens `on github`_, and stable release tarballs will be
 available when we reach that point.
 
 .. _the documentation: Sorry, not written yet. :(
-.. _on github: Sorry, not pushed yet. :(
+.. _on github: https://github.com/Cangjians/libcangjie2
 
 Installation instructions can be found in the ``INSTALL.rst`` file.
 
