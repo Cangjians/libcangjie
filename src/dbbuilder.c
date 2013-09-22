@@ -35,7 +35,8 @@ char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
                      "                   punct INTEGER, symbol INTEGER,\n"
                      "                   frequency INTEGER);";
 char *create_codes = "CREATE TABLE codes(char_index INTEGER, version INTEGER,\n"
-                     "                   code TEXT);";
+                     "                   code TEXT,\n"
+                     "                   FOREIGN KEY(char_index) REFERENCES chars(char_index));";
 char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
                      "                         %d, %d, %d, %d, %d, %d);";
 char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q');";
@@ -142,6 +143,7 @@ int main(int argc, char **argv) {
     sqlite3 *db;
     sqlite3_open_v2(dbfile, &db,
                     SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL);
+    sqlite3_exec(db, "PRAGMA foreign_keys = ON;", NULL, NULL, NULL);
     sqlite3_exec(db, "BEGIN", NULL, NULL, NULL);
     sqlite3_exec(db, create_chars, NULL, NULL, NULL);
     sqlite3_exec(db, create_codes, NULL, NULL, NULL);
