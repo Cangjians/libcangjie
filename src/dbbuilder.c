@@ -171,6 +171,9 @@ int main(int argc, char **argv) {
     sqlite3_exec(db, "COMMIT", NULL, NULL, NULL);
 
     fclose(table);
+
+    sqlite3_exec(db, "CREATE INDEX i1 on codes(version, code);", NULL, NULL, NULL);
+
     sqlite3_close(db);
 
     return CANGJIE_OK;
