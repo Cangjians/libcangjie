@@ -78,4 +78,4 @@ decided to offer it under the
 We won't ask you to sign a copyright assignment or any other kind of silly and
 tedious legal document, so just send us patches and/or pull requests!
 
-.. _GNU Lesser General Public License, either version 3 or any later version_: http://www.gnu.org/licenses/lgpl.html
+.. _GNU Lesser General Public License, either version 3 or any later version: http://www.gnu.org/licenses/lgpl.html
