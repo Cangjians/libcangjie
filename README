@@ -44,8 +44,6 @@ or the one shipped with this software.
 Development happens [on github](https://github.com/Cangjians/libcangjie2), and
 stable release tarballs will be available when we reach that point.
 
-Installation instructions can be found in the `INSTALL.rst` file.
-
 ## History
 
 This library is based on
