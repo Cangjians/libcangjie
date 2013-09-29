@@ -1,11 +1,3 @@
----
-layout: default
-title: libcangjie2 documentation - Error codes
-name: projects
-project: libcangjie2
-sub: doc
----
-
 ## Return values
 
 **All functions in libcangjie2 return `int`'s**. Which value they return

@@ -1,11 +1,3 @@
----
-layout: default
-title: libcangjie2 documentation
-name: projects
-project: libcangjie2
-sub: doc
----
-
 ## Output filtering
 
 Often when using libcangjie2 you will get lists of characters (for example,

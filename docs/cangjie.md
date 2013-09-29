@@ -1,11 +1,3 @@
----
-layout: default
-title: libcangjie2 documentation
-name: projects
-project: libcangjie2
-sub: doc
----
-
 ## The Cangjie context
 
 Now this is really the interesting part: it is the actual entry point to the

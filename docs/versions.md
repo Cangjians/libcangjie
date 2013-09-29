@@ -1,11 +1,3 @@
----
-layout: default
-title: libcangjie2 documentation
-name: projects
-project: libcangjie2
-sub: doc
----
-
 ## The Cangjie versions
 
 libcangjie2 supports **2 different versions of the Cangjie input method**:
