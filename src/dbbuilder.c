@@ -83,40 +83,26 @@ int insert_line(sqlite3 *db, char *line, int i) {
     sqlite3_exec(db, query, NULL, NULL, NULL);
     sqlite3_free(query);
 
-    // FIXME: This will fail if there are more than 2 codes
-    if (strchr(cj3_codes, ',') != NULL) {
+    if (strcmp(cj3_codes, "NA") != 0) {
         code = strtok_r(cj3_codes, ",", &saveptr);
-        query = sqlite3_mprintf(insert_codes, i, 3, code);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
-
-        code = strtok_r(NULL, "\0", &saveptr);
-        query = sqlite3_mprintf(insert_codes, i, 3, code);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
-    } else if (strcmp(cj3_codes, "NA") != 0) {
-        query = sqlite3_mprintf(insert_codes, i, 3, cj3_codes);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
+        while (code != NULL) {
+            query = sqlite3_mprintf(insert_codes, i, 3, code);
+            sqlite3_exec(db, query, NULL, NULL, NULL);
+            sqlite3_free(query);
+            code = strtok_r(NULL, ",", &saveptr);
+        }
     }
 
-    // FIXME: This will fail if there are more than 2 codes
-    if (strchr(cj5_codes, ',') != NULL) {
+    if (strcmp(cj5_codes, "NA") != 0) {
         code = strtok_r(cj5_codes, ",", &saveptr);
-        query = sqlite3_mprintf(insert_codes, i, 5, code);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
-
-        code = strtok_r(NULL, "\0", &saveptr);
-        query = sqlite3_mprintf(insert_codes, i, 5, code);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
-    } else if (strcmp(cj3_codes, "NA") != 0) {
-        query = sqlite3_mprintf(insert_codes, i, 5, cj5_codes);
-        sqlite3_exec(db, query, NULL, NULL, NULL);
-        sqlite3_free(query);
+        while (code != NULL) {
+            query = sqlite3_mprintf(insert_codes, i, 5, code);
+            sqlite3_exec(db, query, NULL, NULL, NULL);
+            sqlite3_free(query);
+            code = strtok_r(NULL, ",", &saveptr);
+        }
     }
-
+    
     if (strcmp(short_code, "NA") != 0) {
         query = sqlite3_mprintf(insert_codes, i, 0, short_code);
         sqlite3_exec(db, query, NULL, NULL, NULL);

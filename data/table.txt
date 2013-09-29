@@ -27805,8 +27805,8 @@
 黀 1 1 0 0 1 0 0 0 0 idsje icsje,idsje NA 3531
 黁 1 0 1 0 1 0 0 0 0 idhda idhda NA 0
 黂 1 1 0 0 1 0 0 0 0 idjtc icjtc,idjtc NA 2379
-黃 1 1 0 0 1 0 0 0 0 tmwc tmlc NA 18494
-黄 1 0 1 0 1 0 0 0 0 tlwc tlwc NA 0
+黃 1 1 0 0 1 0 0 0 0 tmwc tlwc,tmwc,tmlc NA 18494
+黄 1 0 1 0 1 0 0 0 0 tlwc tlwc,tmwc NA 0
 黅 1 0 0 0 1 0 0 0 0 tcomn tcoin NA 0
 黆 1 0 1 0 1 0 0 0 0 tclbu tclbu NA 0
 黇 1 0 1 0 1 0 0 0 0 tcyr tcyr NA 0
