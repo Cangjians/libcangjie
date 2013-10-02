@@ -26,6 +26,9 @@
 
 #include "cangjieerrors.h"
 
+#ifdef _MSC_VER
+#define strtok_r strtok_s
+#endif
 
 char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
                      "                   chchar TEXT UNIQUE, zh INTEGER,\n"
