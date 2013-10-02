@@ -22,6 +22,9 @@
 
 #include <cangjie.h>
 
+#ifdef _MSC_VER
+#define setenv _putenv
+#endif
 
 void test_cangjie_new() {
     Cangjie *cj;
