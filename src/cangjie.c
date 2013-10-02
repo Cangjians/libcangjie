@@ -1,4 +1,4 @@
-/* Copyright (c) 2013 - The libcangjie2 authors.
+﻿/* Copyright (c) 2013 - The libcangjie2 authors.
  *
  * This file is part of libcangjie2.
  *
