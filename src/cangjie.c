@@ -341,7 +341,7 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
 
 int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
-                        const char **radical) {
+                        char       **radical) {
     if ((key < 'a' || key > 'z') && (key != '*')) {
         return CANGJIE_INVALID;
     }
@@ -351,7 +351,7 @@ int cangjie_get_radical(Cangjie     *cj,
         *radical = "＊";
     } else {
         // The actual Cangjie radicals
-        *radical = cangjie_radicals[key - 'a'];
+        *radical = (char *)cangjie_radicals[key - 'a'];
     }
 
     return CANGJIE_OK;

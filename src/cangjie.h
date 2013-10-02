@@ -67,7 +67,7 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
 
 int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
-                        const char **radical);
+                        char       **radical);
 
 int cangjie_is_input_key(Cangjie    *cj,
                          const char  key);
