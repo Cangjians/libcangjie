@@ -27,6 +27,7 @@ void test_cangjie_char_list_append() {
 
     /* Append the first node */
     CangjieChar *char1;
+    CangjieChar *char2;
     int ret = cangjie_char_new(&char1, "森", "ddd", 123);
     assert(ret == CANGJIE_OK);
 
@@ -36,7 +37,6 @@ void test_cangjie_char_list_append() {
     assert(l->c == char1);
 
     /* Append a new node */
-    CangjieChar *char2;
     ret = cangjie_char_new(&char2, "明", "ab", 123);
     assert(ret == CANGJIE_OK);
 
@@ -54,6 +54,7 @@ void test_cangjie_char_list_prepend() {
 
     /* Prepend the first node */
     CangjieChar *char1;
+    CangjieChar *char2;
     int ret = cangjie_char_new(&char1, "曝", "aate", 123);
     assert(ret == CANGJIE_OK);
 
@@ -63,7 +64,6 @@ void test_cangjie_char_list_prepend() {
     assert(l->c == char1);
 
     /* Prepend a new node */
-    CangjieChar *char2;
     ret = cangjie_char_new(&char2, "鷳", "abhaf", 123);
     assert(ret == CANGJIE_OK);
 
