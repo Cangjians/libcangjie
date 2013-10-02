@@ -4,16 +4,22 @@
 
 
 int main(int argc, char **argv) {
+    char *code;
+    Cangjie *cj;
+    int ret;
+    CangjieCharList *chars;
+    CangjieCharList *iter;
+    CangjieChar *c;
+
     if (argc != 2) {
         printf("Usage: %s CODE\n", argv[0]);
         return -1;
     }
 
-    char *code = argv[1];
+    code = argv[1];
 
-    Cangjie *cj;
-    int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
-                          CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+    ret = cangjie_new(&cj, CANGJIE_VERSION_3,
+                      CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
     if (ret == CANGJIE_DBOPEN) {
         printf("Could not open the Cangjie database\n");
         return ret;
@@ -22,7 +28,6 @@ int main(int argc, char **argv) {
         return ret;
     }
 
-    CangjieCharList *chars;
     ret = cangjie_get_characters(cj, code, &chars);
 
     if (ret == CANGJIE_NOCHARS) {
@@ -32,8 +37,7 @@ int main(int argc, char **argv) {
         return CANGJIE_NOCHARS;
     }
 
-    CangjieCharList *iter = chars;
-    CangjieChar *c;
+    iter = chars;
 
     while (1) {
         if (iter == NULL) {

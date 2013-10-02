@@ -113,6 +113,14 @@ int insert_line(sqlite3 *db, char *line, int i) {
 }
 
 int main(int argc, char **argv) {
+    char *tablefile;
+    char *dbfile;
+    sqlite3 *db;
+    FILE *table;
+    char line[128];
+    int len;
+    int i = 1;
+
     if (argc != 3) {
         printf("Usage: %s TABLE_FILE DB_FILE\n", argv[0]);
         printf("\n");
@@ -121,12 +129,11 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    char *tablefile = argv[1];
-    char *dbfile = argv[2];
+    tablefile = argv[1];
+    dbfile = argv[2];
     printf("Building database '%s' from table '%s'...\n", dbfile, tablefile);
 
     // Create the database
-    sqlite3 *db;
     sqlite3_open_v2(dbfile, &db,
                     SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL);
     sqlite3_exec(db, "PRAGMA foreign_keys = ON;", NULL, NULL, NULL);
@@ -134,11 +141,7 @@ int main(int argc, char **argv) {
     sqlite3_exec(db, create_chars, NULL, NULL, NULL);
     sqlite3_exec(db, create_codes, NULL, NULL, NULL);
 
-    FILE *table = fopen(tablefile, "r");
-
-    char line[128];
-    int len;
-    int i = 1;
+    table = fopen(tablefile, "r");
 
     while(fgets(line, 128, table) != NULL) {
         if (line[0] == '#' || line[0] == '\n') {
