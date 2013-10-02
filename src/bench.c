@@ -4,6 +4,9 @@
 
 #include <cangjie.h>
 
+#ifdef _MSC_VER
+#define snprintf sprintf_s
+#endif
 
 int iterate_results(CangjieCharList *chars) {
     CangjieCharList *iter = chars;
