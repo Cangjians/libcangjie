@@ -45,6 +45,7 @@ const char *cangjie_radicals[] = {
 };
 
 int cangjie_get_filter_query(Cangjie *cj, char **query) {
+    uint32_t first = 1;
     if (cj->filter_flags == 0) {
         // No filter means pass all, so let's return an empty string
         *query = calloc(1, sizeof(char));
@@ -59,8 +60,6 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
-
-    uint32_t first = 1;
 
     strcat(*query, " AND ( ");
 
@@ -149,6 +148,9 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
 int cangjie_new(Cangjie        **cj,
                 CangjieVersion   version,
                 CangjieFilter    filter_flags) {
+    char *filter_query;
+    int ret;
+    char *database_path;
     Cangjie *tmp = calloc(1, sizeof(Cangjie));
     if (tmp == NULL) {
         return CANGJIE_NOMEM;
@@ -166,8 +168,7 @@ int cangjie_new(Cangjie        **cj,
 
     strcat(tmp->cj_query, BASE_QUERY);
 
-    char *filter_query;
-    int ret = cangjie_get_filter_query(tmp, &filter_query);
+    ret = cangjie_get_filter_query(tmp, &filter_query);
     if (ret != CANGJIE_OK) {
         return ret;
     }
@@ -186,7 +187,7 @@ int cangjie_new(Cangjie        **cj,
     strcat(tmp->shortcode_query, "AND code = '%q';");
 
     // Check the CANGJIE_DB env var (it is useful for local testing)
-    char *database_path = getenv("CANGJIE_DB");
+    database_path = getenv("CANGJIE_DB");
     if (database_path != NULL) {
         ret = sqlite3_open_v2(database_path, &tmp->db, SQLITE_OPEN_READONLY, NULL);
     } else {
@@ -207,31 +208,35 @@ int cangjie_new(Cangjie        **cj,
 int cangjie_get_characters(Cangjie          *cj,
                            char             *input_code,
                            CangjieCharList **l) {
+    CangjieCharList *tmp = NULL;
+    sqlite3_stmt *stmt;
+    char *cj_query;
+    char *query_code;
+    char *star_ptr;
+    char *query;
+    int ret;
+
     if (input_code[0] == '*' || input_code[strlen(input_code) - 1] == '*') {
         return CANGJIE_INVALID;
     }
 
-    CangjieCharList *tmp = NULL;
-
-    sqlite3_stmt *stmt;
-
     // Start with the Cangjie instance's cj_query
-    char *cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
-                              sizeof(char));
+    cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
+                      sizeof(char));
     if (cj_query == NULL) {
         return CANGJIE_NOMEM;
     }
 
     strcpy(cj_query, cj->cj_query);
 
-    char *query_code = calloc(6, sizeof(char));
+    query_code = calloc(6, sizeof(char));
     if (query_code == NULL) {
         return CANGJIE_NOMEM;
     }
     strncpy(query_code, input_code, 5);
 
     // Handle optional wildcards
-    char *star_ptr = strchr(query_code, '*');
+    star_ptr = strchr(query_code, '*');
     if (star_ptr == NULL) {
         strcat(cj_query, "AND code = '%q';");
     } else {
@@ -239,12 +244,12 @@ int cangjie_get_characters(Cangjie          *cj,
         query_code[star_ptr-query_code] = '%';
     }
 
-    char *query = sqlite3_mprintf(cj_query, cj->version, query_code);
+    query = sqlite3_mprintf(cj_query, cj->version, query_code);
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
 
-    int ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+    ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
     if (ret != SQLITE_OK) {
         // FIXME: Unhandled error codes
         return ret;
@@ -290,13 +295,14 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
     CangjieCharList *tmp = NULL;
 
     sqlite3_stmt *stmt;
+    int ret;
 
     char *query = sqlite3_mprintf(cj->shortcode_query, 0, input_code);
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
 
-    int ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
+    ret = sqlite3_prepare_v2(cj->db, query, -1, &stmt, 0);
     if (ret != SQLITE_OK) {
         // FIXME: Unhandled error codes
         return ret;
