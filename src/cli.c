@@ -47,8 +47,18 @@ int main(int argc, char **argv) {
     CangjieCharList *chars;
     CangjieCharList *iter;
     CangjieChar *c;
+
+    // variables to parse options
     int opt;
     int option_index;
+
+    // option flags
+    int opt_filter;
+    CangjieCliMode opt_mode;
+    int opt_cj_version;
+
+    // helper variable(s)
+    char errmsg[255];
 
     // available options
     static struct option long_options[] = {
@@ -57,6 +67,11 @@ int main(int argc, char **argv) {
         {"use-cj-version", required_argument, 0, 'u'},
         {"help", no_argument, 0, 'h'},
     };
+
+    // default options
+    opt_filter = CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS;
+    opt_mode = CANGJIE_CLI_MODE_CODE;
+    opt_cj_version = CANGJIE_VERSION_3;
 
     // read options
     while (1) {
@@ -67,34 +82,80 @@ int main(int argc, char **argv) {
         if (opt == -1) break;
 
         switch (opt) {
-          case 'f':
-            // TODO: option --with-filter with optarg
-            break;
-          case 'm':
-            // TODO: option --mode with optarg
-            break;
-          case 'u':
-            // TODO: option --use-cj-version with optarg
-            break;
-          case 'h':
-          default:
-            print_help();
-            return (opt == 'h') ? EXIT_SUCCESS : EXIT_FAILURE;
+            case 'f':
+                opt_filter = 0;
+                if (strstr(optarg, "big5") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_BIG5;
+                }
+                if (strstr(optarg, "hkscs") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_HKSCS;
+                }
+                if (strstr(optarg, "puntuation") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_PUNCTUATION;
+                }
+                if (strstr(optarg, "chinese") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_CHINESE;
+                }
+                if (strstr(optarg, "zhuyin") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_BIG5;
+                }
+                if (strstr(optarg, "kanji") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_KANJI;
+                }
+                if (strstr(optarg, "katakana") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_KATAKANA;
+                }
+                if (strstr(optarg, "hiragana") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_HIRAGANA;
+                }
+                if (strstr(optarg, "symbols") != NULL) {
+                  opt_filter = opt_filter | CANGJIE_FILTER_SYMBOLS;
+                }
+                if (opt_filter == 0) {
+                    sprintf(errmsg, "Invalid filter option '%s'", optarg);
+                    print_error(errmsg);
+                    return EXIT_FAILURE;
+                }
+                break;
+            case 'm':
+                if (strcmp(optarg, "code") == 0) {
+                    opt_mode = CANGJIE_CLI_MODE_CODE;
+                } else if (strcmp(optarg, "shortcode") == 0) {
+                    opt_mode = CANGJIE_CLI_MODE_SHORTCODE;
+                } else {
+                    sprintf(errmsg, "Invalid query mode '%s'", optarg);
+                    print_error(errmsg);
+                    return EXIT_FAILURE;
+                }
+                break;
+            case 'u':
+                if (*optarg == '3') {
+                    opt_cj_version = CANGJIE_VERSION_3;
+                } else if (*optarg == '5') {
+                    opt_cj_version = CANGJIE_VERSION_5;
+                } else {
+                    sprintf(errmsg, "Invalid Cangjie version '%s'", optarg);
+                    print_error(errmsg);
+                    return EXIT_FAILURE;
+                }
+                break;
+            case 'h':
+            default:
+                print_help();
+                return (opt == 'h') ? EXIT_SUCCESS : EXIT_FAILURE;
         }
     }
 
     // check if query provided
     if (optind == argc) {
-        printf("libcangjie2_cli: missing query code\n");
-        printf("Try 'libcangjie2_cli --help' for more information\n");
+        print_error("missing query code");
         return EXIT_FAILURE;
     }
 
-
     code = argv[optind];
 
-    ret = cangjie_new(&cj, CANGJIE_VERSION_3,
-                      CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
+    ret = cangjie_new(&cj, opt_cj_version, opt_filter);
+
     if (ret == CANGJIE_DBOPEN) {
         printf("Could not open the Cangjie database\n");
         return ret;
@@ -103,7 +164,11 @@ int main(int argc, char **argv) {
         return ret;
     }
 
-    ret = cangjie_get_characters(cj, code, &chars);
+    if (opt_mode == CANGJIE_CLI_MODE_CODE) {
+        ret = cangjie_get_characters(cj, code, &chars);
+    } else if (opt_mode == CANGJIE_CLI_MODE_SHORTCODE) {
+        ret = cangjie_get_characters_by_shortcode(cj, code, &chars);
+    }
 
     if (ret == CANGJIE_NOCHARS) {
         printf("No chars with code '%s'\n", code);
