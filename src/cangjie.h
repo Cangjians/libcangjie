@@ -23,9 +23,12 @@
 
 #include <sqlite3.h>
 
+#include "cangjiecommon.h"
 #include "cangjiecharlist.h"
 #include "cangjieerrors.h"
 
+
+CANGJIE_BEGIN_DECL
 
 typedef enum CangjieVersion {
     CANGJIE_VERSION_3 = 3,
@@ -55,25 +58,27 @@ typedef struct Cangjie {
     char *shortcode_query;
 } Cangjie;
 
-int cangjie_new(Cangjie        **cj,
+CANGJIE_EXTERN int cangjie_new(Cangjie        **cj,
                 CangjieVersion   version,
                 CangjieFilter    filter_flags);
 
-int cangjie_get_characters(Cangjie          *cj,
+CANGJIE_EXTERN int cangjie_get_characters(Cangjie          *cj,
                            char             *code,
                            CangjieCharList **l);
 
-int cangjie_get_characters_by_shortcode(Cangjie          *cj,
+CANGJIE_EXTERN int cangjie_get_characters_by_shortcode(Cangjie          *cj,
                                         char             *shortcode,
                                         CangjieCharList **l);
 
-int cangjie_get_radical(Cangjie     *cj,
+CANGJIE_EXTERN int cangjie_get_radical(Cangjie     *cj,
                         const char   key,
                         char       **radical);
 
-int cangjie_is_input_key(Cangjie    *cj,
+CANGJIE_EXTERN int cangjie_is_input_key(Cangjie    *cj,
                          const char  key);
 
-int cangjie_free(Cangjie *cj);
+CANGJIE_EXTERN int cangjie_free(Cangjie *cj);
+
+CANGJIE_END_DECL
 
 #endif

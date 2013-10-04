@@ -16,28 +16,30 @@
  * along with libcangjie2.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef CANGJIECHAR_H__
-#define CANGJIECHAR_H__
+#ifndef CANGJIECOMMON_H__
+#define CANGJIECOMMON_H__
 
-#include <stdint.h>
-#include "cangjiecommon.h"
+#ifdef __cplusplus
+    #define CANGJIE_BEGIN_DECL extern "C" {
+    #define CANGJIE_END_DECL }
+#else
+    #define CANGJIE_BEGIN_DECL
+    #define CANGJIE_END_DECL
+#endif
 
-
-CANGJIE_BEGIN_DECL
-
-typedef struct CangjieChar {
-    char     chchar[5];
-    char     code[6];
-    uint32_t frequency;
-} CangjieChar;
-
-CANGJIE_EXTERN int cangjie_char_new(CangjieChar **c,
-                     const char   *chchar,
-                     const char   *code,
-                     uint32_t      frequency);
-
-CANGJIE_EXTERN int cangjie_char_free(CangjieChar *c);
-
-CANGJIE_END_DECL
+#if defined _WIN32
+    #ifdef CANGJIE_DLLEXPORT
+        #define CANGJIE_EXTERN __declspec(dllexport)
+    #else
+        #define CANGJIE_EXTERN __declspec(dllimport)
+    #endif
+    #define CANGJIE_INTERN
+#elif __GNUC__ >= 4
+    #define CANGJIE_EXTERN extern __attribute__((visibility("default")))
+    #define CANGJIE_INTERN extern __attribute__((visibility("hidden")))
+#else
+    #define CANGJIE_EXTERN
+    #define CANGJIE_INTERN
+#endif
 
 #endif

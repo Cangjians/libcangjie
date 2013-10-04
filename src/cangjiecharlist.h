@@ -19,8 +19,11 @@
 #ifndef CANGJIECHARLIST_H__
 #define CANGJIECHARLIST_H__
 
+#include "cangjiecommon.h"
 #include "cangjiechar.h"
 
+
+CANGJIE_BEGIN_DECL
 
 typedef struct CangjieCharList CangjieCharList;
 struct CangjieCharList {
@@ -29,12 +32,14 @@ struct CangjieCharList {
     CangjieCharList *next;
 };
 
-int cangjie_char_list_append(CangjieCharList **l,
+CANGJIE_EXTERN int cangjie_char_list_append(CangjieCharList **l,
                              CangjieChar      *c);
 
-int cangjie_char_list_prepend(CangjieCharList **l,
+CANGJIE_EXTERN int cangjie_char_list_prepend(CangjieCharList **l,
                               CangjieChar      *c);
 
-int cangjie_char_list_free(CangjieCharList *l);
+CANGJIE_EXTERN int cangjie_char_list_free(CangjieCharList *l);
+
+CANGJIE_END_DECL
 
 #endif
