@@ -1,8 +1,43 @@
 #include <getopt.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <cangjie.h>
+
+
+
+typedef enum CangjieCliMode {
+    CANGJIE_CLI_MODE_CODE      = 0,
+    CANGJIE_CLI_MODE_SHORTCODE = 1,
+    CANGJIE_CLI_MODE_RADICAL   = 2,
+} CangjieCliMode;
+
+
+int print_help() {
+    printf("Usage: libcangjie2_cli [OPTIONS]... CODE\n");
+    printf("A CLI interface of libcangjie2 cangjie code query\n\n");
+    printf("-f, --with-filter=FILTER1,FILTER2...  specify the filters used in the query\n");
+    printf("                                      default: big5,hkscs\n");
+    printf("                                      acceptable values:\n");
+    printf("                                        big5, hkscs, punctuation, chinese,\n");
+    printf("                                        zhuyin, kanji, katakana, symbols\n");
+    printf("-m, --mode=MODE                       specify the mode of query\n");
+    printf("                                      default: code\n");
+    printf("                                      acceptable values: code, shortcode\n");
+    printf("-u, --use-cj-version=VERSION          specify the version of Cangjie used\n");
+    printf("                                      default: 3\n");
+    printf("                                      acceptable values: 3, 5\n");
+    printf("-h, --help                            print this help message and leave\n");
+    printf("\nFor complete documentation, please go to our website: \n");
+    printf("<http://cangjians.github.io/>\n");
+}
+
+
+int print_error(char *msg) {
+    printf("libcangjie2_cli: %s\n", msg);
+    printf("Try 'libcangjie2_cli --help' for more information\n");
+}
 
 
 int main(int argc, char **argv) {
@@ -98,19 +133,3 @@ int main(int argc, char **argv) {
 }
 
 
-int print_help() {
-    printf("Usage: libcangjie2_cli [OPTIONS]... CODE\n");
-    printf("A CLI interface of libcangjie2 cangjie code query\n\n");
-    printf("-f, --with-filter=FILTER1,FILTER2...  specify the filters used in the query\n");
-    printf("                                      acceptable values:\n");
-    printf("                                        big5, hkscs, punctuation, chinese,\n");
-    printf("                                        zhuyin, kanji, katakana, symbols\n");
-    printf("-m, --mode=MODE                       specify the mode of query\n");
-    printf("                                      acceptable values: \n");
-    printf("                                        code, shortcode\n");
-    printf("-u, --use-cj-version=VERSION          specify the version of Cangjie used\n");
-    printf("                                      acceptable values: 3, 5\n");
-    printf("-h, --help                            print this help message and leave\n");
-    printf("\nFor complete documentation, please go to our website: \n");
-    printf("<http://cangjians.github.io/>\n");
-}
