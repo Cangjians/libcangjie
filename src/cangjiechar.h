@@ -16,6 +16,8 @@
  * along with libcangjie2.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef CANGJIECHAR_H__
+#define CANGJIECHAR_H__
 
 #include <stdint.h>
 
@@ -32,3 +34,5 @@ int cangjie_char_new(CangjieChar **c,
                      uint32_t      frequency);
 
 int cangjie_char_free(CangjieChar *c);
+
+#endif

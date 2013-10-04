@@ -16,6 +16,8 @@
  * along with libcangjie2.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef CANGJIE_H__
+#define CANGJIE_H__
 
 #include <stdint.h>
 
@@ -73,3 +75,5 @@ int cangjie_is_input_key(Cangjie    *cj,
                          const char  key);
 
 int cangjie_free(Cangjie *cj);
+
+#endif

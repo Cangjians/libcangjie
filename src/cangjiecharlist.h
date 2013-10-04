@@ -16,6 +16,8 @@
  * along with libcangjie2.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef CANGJIECHARLIST_H__
+#define CANGJIECHARLIST_H__
 
 #include "cangjiechar.h"
 
@@ -34,3 +36,5 @@ int cangjie_char_list_prepend(CangjieCharList **l,
                               CangjieChar      *c);
 
 int cangjie_char_list_free(CangjieCharList *l);
+
+#endif
