@@ -23,7 +23,7 @@
 #include <cangjie.h>
 
 #ifdef _MSC_VER
-#define setenv _putenv
+#define setenv(a, b, c) _putenv_s(a, b)
 #endif
 
 void test_cangjie_new() {
