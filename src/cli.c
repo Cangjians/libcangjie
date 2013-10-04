@@ -23,7 +23,8 @@ int print_help() {
     printf("                                        zhuyin, kanji, katakana, symbols\n");
     printf("-m, --mode=MODE                       specify the mode of query\n");
     printf("                                      default: code\n");
-    printf("                                      acceptable values: code, shortcode\n");
+    printf("                                      acceptable values:\n");
+    printf("                                        code, shortcode, radical\n");
     printf("-u, --use-cj-version=VERSION          specify the version of Cangjie used\n");
     printf("                                      default: 3\n");
     printf("                                      acceptable values: 3, 5\n");
@@ -58,6 +59,8 @@ int main(int argc, char **argv) {
 
     // helper variable(s)
     char errmsg[255];
+    char *code_ptr;
+    char *ptr_radical;
 
     // available options
     static struct option long_options[] = {
@@ -121,6 +124,8 @@ int main(int argc, char **argv) {
                     opt_mode = CANGJIE_CLI_MODE_CODE;
                 } else if (strcmp(optarg, "shortcode") == 0) {
                     opt_mode = CANGJIE_CLI_MODE_SHORTCODE;
+                } else if (strcmp(optarg, "radical") == 0) {
+                    opt_mode = CANGJIE_CLI_MODE_RADICAL;
                 } else {
                     sprintf(errmsg, "Invalid query mode '%s'", optarg);
                     print_error(errmsg);
@@ -163,34 +168,54 @@ int main(int argc, char **argv) {
         return ret;
     }
 
-    if (opt_mode == CANGJIE_CLI_MODE_CODE) {
-        ret = cangjie_get_characters(cj, code, &chars);
-    } else if (opt_mode == CANGJIE_CLI_MODE_SHORTCODE) {
-        ret = cangjie_get_characters_by_shortcode(cj, code, &chars);
-    }
 
-    if (ret == CANGJIE_NOCHARS) {
-        printf("No chars with code '%s'\n", code);
+    if (opt_mode == CANGJIE_CLI_MODE_RADICAL) {
 
-        cangjie_free(cj);
-        return CANGJIE_NOCHARS;
-    }
+        code_ptr = code;
+        for (; *code_ptr != '\0'; code_ptr++) {
+            ret = cangjie_get_radical(cj, *code_ptr, &ptr_radical);
+            if (ret == SQLITE_OK) {
+                printf("code: '%c', radical: '%s'\n", *code_ptr, ptr_radical);
+            } else {
+                printf("Query error\n");
+                return ret;
+            }
+        }
+        return ret;
 
-    iter = chars;
+    } else {
 
-    while (1) {
-        if (iter == NULL) {
-            break;
+        if (opt_mode == CANGJIE_CLI_MODE_CODE) {
+            ret = cangjie_get_characters(cj, code, &chars);
+        } else if (opt_mode == CANGJIE_CLI_MODE_SHORTCODE) {
+            ret = cangjie_get_characters_by_shortcode(cj, code, &chars);
         }
 
-        c = iter->c;
-        printf("Char: %s, code: '%s', classic frequency: %d\n",
-               c->chchar, c->code, c->frequency);
+        if (ret == CANGJIE_NOCHARS) {
+            printf("No chars with code '%s'\n", code);
 
-        iter = iter->next;
+            cangjie_free(cj);
+            return CANGJIE_NOCHARS;
+        }
+
+        iter = chars;
+
+        while (1) {
+            if (iter == NULL) {
+                break;
+            }
+
+            c = iter->c;
+            printf("Char: %s, code: '%s', classic frequency: %d\n",
+                   c->chchar, c->code, c->frequency);
+
+            iter = iter->next;
+        }
+
+        cangjie_char_list_free(chars);
+
     }
 
-    cangjie_char_list_free(chars);
     cangjie_free(cj);
 
     return CANGJIE_OK;
