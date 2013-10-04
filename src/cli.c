@@ -1,6 +1,5 @@
 #include <getopt.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include <cangjie.h>
@@ -114,7 +113,7 @@ int main(int argc, char **argv) {
                 if (opt_filter == 0) {
                     sprintf(errmsg, "Invalid filter option '%s'", optarg);
                     print_error(errmsg);
-                    return EXIT_FAILURE;
+                    return -1;
                 }
                 break;
             case 'm':
@@ -125,7 +124,7 @@ int main(int argc, char **argv) {
                 } else {
                     sprintf(errmsg, "Invalid query mode '%s'", optarg);
                     print_error(errmsg);
-                    return EXIT_FAILURE;
+                    return -1;
                 }
                 break;
             case 'u':
@@ -136,20 +135,20 @@ int main(int argc, char **argv) {
                 } else {
                     sprintf(errmsg, "Invalid Cangjie version '%s'", optarg);
                     print_error(errmsg);
-                    return EXIT_FAILURE;
+                    return -1;
                 }
                 break;
             case 'h':
             default:
                 print_help();
-                return (opt == 'h') ? EXIT_SUCCESS : EXIT_FAILURE;
+                return (opt == 'h') ? 0 : -1;
         }
     }
 
     // check if query provided
     if (optind == argc) {
         print_error("missing query code");
-        return EXIT_FAILURE;
+        return -1;
     }
 
     code = argv[optind];
@@ -196,5 +195,3 @@ int main(int argc, char **argv) {
 
     return CANGJIE_OK;
 }
-
-
