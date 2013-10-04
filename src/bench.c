@@ -8,7 +8,7 @@
 #define snprintf sprintf_s
 #endif
 
-int iterate_results(CangjieCharList *chars) {
+void iterate_results(CangjieCharList *chars) {
     CangjieCharList *iter = chars;
     while (1) {
         if (iter == NULL) {
