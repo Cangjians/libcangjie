@@ -94,4 +94,5 @@ int main() {
     test_cangjie_new();
     test_cangjie_get_characters_single_result();
     test_cangjie_get_characters_multiple_queries();
+	return 0;
 }
