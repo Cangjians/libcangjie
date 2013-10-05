@@ -58,4 +58,5 @@ void test_cangjie_char_zh() {
 int main() {
     test_cangjie_char_a();
     test_cangjie_char_zh();
+	return 0;
 }

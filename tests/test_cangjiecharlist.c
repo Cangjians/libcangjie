@@ -79,4 +79,5 @@ void test_cangjie_char_list_prepend() {
 int main() {
     test_cangjie_char_list_append();
     test_cangjie_char_list_prepend();
+	return 0;
 }
