@@ -39,7 +39,7 @@ int main() {
 ```
 
 For more details, refer to the documentation, either
-[online](http://cangjians.github.io/projects/libcangjie2/documentation.html)
+[online](http://cangjians.github.io/projects/libcangjie2/documentation)
 or the one shipped with this software.
 
 Development happens [on github](https://github.com/Cangjians/libcangjie2), and
