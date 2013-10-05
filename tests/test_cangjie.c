@@ -22,9 +22,17 @@
 
 #include <cangjie.h>
 
-#ifdef _MSC_VER
-#define setenv(a, b, c) _putenv_s(a, b)
+void set_env_var(const char *name, const char *value) {
+#ifdef _WIN32
+    char *buf = (char *)calloc(strlen(name) + strlen(value) + 2, 1);
+    strcpy(buf, name);
+    strcat(buf, "=");
+    strcat(buf, value);
+    _putenv(buf);
+#else
+    setenv(name, value, 1);
 #endif
+}
 
 void test_cangjie_new() {
     Cangjie *cj;
@@ -89,7 +97,7 @@ void test_cangjie_get_characters_multiple_queries() {
 
 int main() {
     // FIXME: Can this be passed to all tests through some Autotools magic?
-    setenv("CANGJIE_DB", CANGJIE_DB, 1);
+    set_env_var("CANGJIE_DB", CANGJIE_DB);
 
     test_cangjie_new();
     test_cangjie_get_characters_single_result();
