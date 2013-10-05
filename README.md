@@ -1,4 +1,4 @@
-This is a library implementing the Cangjie input method.
+This is a C library implementing the Cangjie input method.
 
 Below is a trivial example of how to use it:
 
@@ -11,6 +11,7 @@ int main() {
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3,
                           CANGJIE_FILTER_BIG5 | CANGJIE_FILTER_HKSCS);
     CangjieCharList *chars;
+    CangjieCharList *iter;
     ret = cangjie_get_characters(cj, "d*d", &chars);
 
     if (ret == CANGJIE_NOCHARS) {
@@ -19,7 +20,7 @@ int main() {
         return 1;
     }
 
-    CangjieCharList *iter = chars;
+    iter = chars;
 
     while (1) {
         if (iter == NULL)
