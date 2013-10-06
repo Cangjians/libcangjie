@@ -95,8 +95,8 @@ EXTRA_DIST = \
 	autogen.sh \
 	data/README.table.rst \
 	data/table.txt \
-	INSTALL.rst \
-	README.rst \
+	INSTALL.md \
+	README.md \
 	$(NULL)
 
 .PHONY: AUTHORS
