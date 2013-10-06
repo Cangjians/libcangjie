@@ -68,6 +68,7 @@ int main(int argc, char **argv) {
         {"mode", required_argument, 0, 'm'},
         {"use-cj-version", required_argument, 0, 'u'},
         {"help", no_argument, 0, 'h'},
+        {0, 0, 0, 0},
     };
 
     // default options
@@ -142,6 +143,10 @@ int main(int argc, char **argv) {
                     print_error(errmsg);
                     return -1;
                 }
+                break;
+            case '?':
+                printf("Try 'libcangjie2_cli --help' for more information\n");
+                return -1;
                 break;
             case 'h':
             default:
