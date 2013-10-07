@@ -17,6 +17,7 @@ libcangjie2_la_include_HEADERS = \
 	src/cangjie.h \
 	src/cangjiechar.h \
 	src/cangjiecharlist.h \
+	src/cangjiecommon.h \
 	src/cangjieerrors.h \
 	$(NULL)
 libcangjie2_la_includedir = $(includedir)/cangjie2
@@ -95,8 +96,8 @@ EXTRA_DIST = \
 	autogen.sh \
 	data/README.table.rst \
 	data/table.txt \
-	INSTALL.rst \
-	README.rst \
+	INSTALL.md \
+	README.md \
 	$(NULL)
 
 .PHONY: AUTHORS
