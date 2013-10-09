@@ -93,7 +93,7 @@ int ret = cangjie_get_radical(cj, 'd', &radical);
 
 After execution, `radical` contains the radical corresponding to the 'd' code.
 
-Finally, users (especiall Quick users) often want a convenient way to input
+Finally, users (especially Quick users) often want a convenient way to input
 punctuation and symbols without knowing their Cangjie code.
 
 As such, we provide the `cangjie_get_characters_by_shortcode()` function,

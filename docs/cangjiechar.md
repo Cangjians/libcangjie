@@ -26,7 +26,7 @@ character is.
 For example, a character with a `frequency` of 1000 should be presented before
 a character with a frequency of 500.
 
-#### Instanciating a CangjieChar: `cangjie_char_new()`
+#### Instantiating a CangjieChar: `cangjie_char_new()`
 
 `CangjieChar`'s are really something that your application will consume, not
 something you will create and manage.
