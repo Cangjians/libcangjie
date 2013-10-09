@@ -129,7 +129,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
             code = strtok_r(NULL, ",", &saveptr);
         }
     }
-    
+
     if (strcmp(short_code, "NA") != 0) {
         query = sqlite3_mprintf(insert_codes, i, 0, short_code);
         sqlite3_exec(db, query, NULL, NULL, NULL);
