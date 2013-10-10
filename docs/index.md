@@ -1,7 +1,7 @@
 libcangjie2 is a very simple library:
 
 * there is only one header to include: `cangjie.h`
-* everything happens by instanciating a `Cangjie` context, and then passing it
+* everything happens by instantiating a `Cangjie` context, and then passing it
   to the various functions of the API.
 
 These pages will document proper use of libcangjie2. Although the interesting
