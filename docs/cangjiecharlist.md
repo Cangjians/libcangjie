@@ -54,5 +54,5 @@ int ret = cangjie_char_list_free(l);
 ```
 
 **Note:** `cangjie_char_list_free()` will traverse the list and free every
-`CangjieChar` elements in it. You do not need to manually free them with
+`CangjieChar` element in it. You do not need to manually free them with
 `cangjie_char_free()`.

@@ -135,7 +135,7 @@ input) or `CANGJIE_INVALID` (the key is not).
 #### Tidying up behind yourself
 
 When done, you should destroy the `Cangjie` context to free the used memory
-and closed the connection to the database:
+and close the connection to the database:
 
 ```c
 int ret = cangjie_free(cj);
