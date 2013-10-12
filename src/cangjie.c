@@ -33,7 +33,7 @@
 #define MAX_LEN_FILTER_QUERY 127
 
 // Longest possible code query has a length of 19:
-//     "AND code LIKE '%q';"
+//     "AND code GLOB '%q';"
 #define MAX_LEN_CODE_QUERY 19
 
 
@@ -240,8 +240,7 @@ int cangjie_get_characters(Cangjie          *cj,
     if (star_ptr == NULL) {
         strcat(cj_query, "AND code = '%q';");
     } else {
-        strcat(cj_query, "AND code LIKE '%q';");
-        query_code[star_ptr-query_code] = '%';
+        strcat(cj_query, "AND code GLOB '%q';");
     }
 
     query = sqlite3_mprintf(cj_query, cj->version, query_code);
