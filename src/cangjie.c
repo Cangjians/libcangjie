@@ -300,6 +300,10 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
     sqlite3_stmt *stmt;
     int ret;
 
+    if (strlen(input_code) > 1) {
+        return CANGJIE_INVALID;
+    }
+
     char *query = sqlite3_mprintf(cj->shortcode_query, 0, input_code);
     if (query == NULL) {
         return CANGJIE_NOMEM;
