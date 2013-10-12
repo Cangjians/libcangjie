@@ -220,6 +220,10 @@ int cangjie_get_characters(Cangjie          *cj,
         return CANGJIE_INVALID;
     }
 
+    if (strlen(input_code) > 5) {
+        return CANGJIE_INVALID;
+    }
+
     // Start with the Cangjie instance's cj_query
     cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
                       sizeof(char));
