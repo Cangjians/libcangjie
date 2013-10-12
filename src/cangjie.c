@@ -33,7 +33,7 @@
 #define MAX_LEN_FILTER_QUERY 127
 
 // Longest possible code query has a length of 19:
-//     "AND code LIKE '%q';"
+//     "AND code GLOB '%q';"
 #define MAX_LEN_CODE_QUERY 19
 
 
@@ -220,6 +220,10 @@ int cangjie_get_characters(Cangjie          *cj,
         return CANGJIE_INVALID;
     }
 
+    if (strlen(input_code) > 5) {
+        return CANGJIE_INVALID;
+    }
+
     // Start with the Cangjie instance's cj_query
     cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
                       sizeof(char));
@@ -240,8 +244,7 @@ int cangjie_get_characters(Cangjie          *cj,
     if (star_ptr == NULL) {
         strcat(cj_query, "AND code = '%q';");
     } else {
-        strcat(cj_query, "AND code LIKE '%q';");
-        query_code[star_ptr-query_code] = '%';
+        strcat(cj_query, "AND code GLOB '%q';");
     }
 
     query = sqlite3_mprintf(cj_query, cj->version, query_code);
@@ -296,6 +299,10 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
 
     sqlite3_stmt *stmt;
     int ret;
+
+    if (strlen(input_code) > 1) {
+        return CANGJIE_INVALID;
+    }
 
     char *query = sqlite3_mprintf(cj->shortcode_query, 0, input_code);
     if (query == NULL) {
