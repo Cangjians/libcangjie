@@ -75320,6 +75320,16 @@
 ］ 0 0 0 0 0 0 0 1 0 NA NA ] 1
 ＠ 0 0 0 0 0 0 0 0 1 NA NA @ 0
 ＃ 0 0 0 0 0 0 0 0 1 NA NA # 0
+０ 0 0 0 0 0 0 0 0 1 NA NA 0 0
+１ 0 0 0 0 0 0 0 0 1 NA NA 1 0
+２ 0 0 0 0 0 0 0 0 1 NA NA 2 0
+３ 0 0 0 0 0 0 0 0 1 NA NA 3 0
+４ 0 0 0 0 0 0 0 0 1 NA NA 4 0
+５ 0 0 0 0 0 0 0 0 1 NA NA 5 0
+６ 0 0 0 0 0 0 0 0 1 NA NA 6 0
+７ 0 0 0 0 0 0 0 0 1 NA NA 7 0
+８ 0 0 0 0 0 0 0 0 1 NA NA 8 0
+９ 0 0 0 0 0 0 0 0 1 NA NA 9 0
 # Yes, we're using the word "SPACE" here to represent a space (' '). We can't
 # simply use a space character directly as it's the column delimiter, so we
 # have to be clever.
