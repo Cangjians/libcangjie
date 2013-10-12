@@ -75320,6 +75320,7 @@
 ］ 0 0 0 0 0 0 0 1 0 NA NA ] 1
 ＠ 0 0 0 0 0 0 0 0 1 NA NA @ 0
 ＃ 0 0 0 0 0 0 0 0 1 NA NA # 0
-# Yes, I'm using the word "SPACE" here to represent a space (' '). But I can't
-# use a space character directly as it's the column delimiter
+# Yes, we're using the word "SPACE" here to represent a space (' '). We can't
+# simply use a space character directly as it's the column delimiter, so we
+# have to be clever.
 　 0 0 0 0 0 0 0 1 0 zxaa zxaa SPACE 0
