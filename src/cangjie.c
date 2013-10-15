@@ -216,11 +216,11 @@ int cangjie_get_characters(Cangjie          *cj,
     char *query;
     int ret;
 
-    if (input_code[0] == '*' || input_code[strlen(input_code) - 1] == '*') {
+    if (input_code == NULL || strlen(input_code) == 0 || strlen(input_code) > 5) {
         return CANGJIE_INVALID;
     }
 
-    if (strlen(input_code) > 5) {
+    if (input_code[0] == '*' || input_code[strlen(input_code) - 1] == '*') {
         return CANGJIE_INVALID;
     }
 
@@ -301,7 +301,7 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
     int ret;
     char *query;
 
-    if (strlen(input_code) > 1) {
+    if (input_code == NULL || strlen(input_code) != 1) {
         return CANGJIE_INVALID;
     }
 
