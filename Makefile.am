@@ -42,8 +42,8 @@ bin_libcangjie2_cli_LDADD = libcangjie2.la
 
 # -- Data ----------------------------
 data/cangjie.db: bin/libcangjie2_dbbuilder data/table.txt
-	rm -f $@
-	$(MKDIR_P) data
+	$(AM_V_GEN)rm -f $@; \
+	$(MKDIR_P) data; \
 	$^ $@ >/dev/null
 
 libcangjie2_data_DATA = data/cangjie.db
