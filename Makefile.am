@@ -11,7 +11,6 @@ libcangjie2_la_SOURCES = \
 	src/cangjiechar.c \
 	src/cangjiecharlist.c \
 	$(NULL)
-libcangjie2_la_CFLAGS = -DCANGJIE_DB='"$(libcangjie2_datadir)/cangjie.db"'
 libcangjie2_la_LIBADD = $(sqlite3_LIBS)
 libcangjie2_la_include_HEADERS = \
 	src/cangjie.h \
@@ -71,6 +70,7 @@ TESTS = $(check_PROGRAMS)
 
 # -- Common --------------------------
 AM_CPPFLAGS = -I$(top_srcdir)/src
+AM_CFLAGS = -DCANGJIE_DB='"$(libcangjie2_datadir)/cangjie.db"' $(GCOV_CFLAGS)
 
 AUTHORS:
 	@if test -d "$(srcdir)/.git"; then \
