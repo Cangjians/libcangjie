@@ -5,7 +5,7 @@ ACLOCAL_AMFLAGS  = -I m4 ${ACLOCAL_FLAGS}
 # -- Library -------------------------
 lib_LTLIBRARIES = libcangjie2.la
 
-libcangjie2_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION)
+libcangjie2_la_LDFLAGS = -version-info $(CANGJIE_SO_VERSION) $(GCOV_LDFLAGS)
 libcangjie2_la_SOURCES = \
 	src/cangjie.c \
 	src/cangjiechar.c \
@@ -53,6 +53,48 @@ pkgconfigdir = $(libdir)/pkgconfig
 
 
 # -- Unit tests ----------------------
+if GCOV_ENABLED
+gcov-report.txt: gcov-clean
+	$(AM_V_GEN)(rm -f $@; \
+	echo -e "\nTest coverage for libcangjie2\n=============================\n" >> $@; \
+	echo -e "Details\n-------\n" >> $@; \
+	total_covered=0; total_actual=0; \
+	for file in $(filter %.c,$(libcangjie2_la_SOURCES)); do \
+	    file=`basename $$file`; \
+	    gcda=$${file/.c/.gcda}; \
+	    gcov -o .libs/$$gcda $$file > /dev/null; \
+	    if test -f $$file.gcov; then \
+	        actual=`grep -v ' -:' $$file.gcov | wc -l`; \
+	        uncovered=`grep '#####:' $$file.gcov | wc -l`; \
+	        covered=$$((actual - uncovered)); \
+	        total_covered=$$((total_covered + covered)); \
+	        total_actual=$$((total_actual + actual)); \
+	        echo "$$file: $$covered $$actual $$((($$covered * 100) / $$actual))" \
+                    | $(AWK) '{ printf "%-20s %3s / %3s (%3s%%)\n", $$1, $$2, $$3, $$4 }';  \
+	    fi \
+	done >> $@; \
+	cd $(abs_srcdir); \
+	echo -e "\nTotal\n-----\n" >> $@; \
+	echo -e "Source lines:       $$total_actual" >> $@; \
+	echo -e "Covered statements: $$total_covered" >> $@; \
+	echo -e "$$((($$total_covered * 100) / $$total_actual))" \
+	    | awk '{ printf "Total coverage:     %3s%%\n", $$1 }' >> $@)
+
+gcov: gcov-report.txt
+	@cat gcov-report.txt
+gcov-clean:
+	@find . -name "*.gcda" -o -name "*.gcov" -delete
+else
+gcov-report.txt:
+	@true
+gcov-clean:
+	@true
+gcov:
+	@echo "Need to reconfigure with --enable-gcov"
+endif	# GCOV_ENABLED
+
+check-local: gcov
+
 check_PROGRAMS = \
 	tests/test_cangjie \
 	tests/test_cangjiechar \
@@ -100,4 +142,4 @@ EXTRA_DIST = \
 	README.md \
 	$(NULL)
 
-.PHONY: AUTHORS
+.PHONY: AUTHORS gcov gcov-clean gcov-report.txt

@@ -28,11 +28,15 @@ libcangjie2-*.tar.xz
 # -- Misc built stuff ----------------
 AUTHORS
 bin
+gcov-report.txt
 *.db
 *.lo
 *.la
 *.o
 *.pc
+*.gcda
+*.gcno
+*.gcov
 
 # -- Temp editor files ---------------
 *.swp
