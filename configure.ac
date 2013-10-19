@@ -12,6 +12,25 @@ m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 # Initialize libtool
 LT_INIT([disable-static])
 
+AC_MSG_CHECKING([whether to build with gcov testing])
+AC_ARG_ENABLE([gcov],
+              [AS_HELP_STRING([--enable-gcov],
+                              [enable coverage testing (requires gcc and gcov)])],
+              [],
+              [enable_gcov=no])
+
+AS_IF([test "x$enable_gcov" = "xyes" && test "x$GCC" = "xyes"],
+      [
+        GCOV_CFLAGS="$CFLAGS -fprofile-arcs -ftest-coverage"
+        GCOV_LDFLAGS="$LDFLAGS -fprofile-arcs -ftest-coverage"
+      ]
+)
+
+AM_CONDITIONAL([GCOV_ENABLED], [test "x$enable_gcov" = "xyes"])
+AC_SUBST([GCOV_CFLAGS])
+AC_SUBST([GCOV_LDFLAGS])
+AC_MSG_RESULT([$enable_gcov])
+
 PKG_CHECK_MODULES(sqlite3, [sqlite3])
 
 # Define these substitions here to keep all version information in one place.
