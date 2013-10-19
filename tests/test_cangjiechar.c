@@ -39,7 +39,7 @@ void test_cangjie_char_a() {
 }
 
 void test_cangjie_char_zh() {
-    char *chchar = "木";
+    char *chchar = "\xE6\x9C\xA8"; // 木
     char *code = "abc";
     uint32_t frequency = 123;
 
