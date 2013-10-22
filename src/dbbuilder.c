@@ -59,20 +59,22 @@ char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
                      "                   big5 INTEGER, hkscs INTEGER,\n"
                      "                   zhuyin INTEGER, kanji INTEGER,\n"
                      "                   hiragana INTEGER, katakana INTEGER,\n"
-                     "                   punct INTEGER, symbol INTEGER,\n"
-                     "                   frequency INTEGER);";
+                     "                   punct INTEGER, symbol INTEGER);";
 char *create_codes = "CREATE TABLE codes(char_index INTEGER, version INTEGER,\n"
-                     "                   code TEXT,\n"
+                     "                   code TEXT, frequency INTEGER,\n"
                      "                   FOREIGN KEY(char_index) REFERENCES chars(char_index));";
+char *select_index = "SELECT char_index FROM chars WHERE chchar='%q';";
 char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
-                     "                         %d, %d, %d, %d, %d, %d);";
-char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q');";
+                     "                         %d, %d, %d, %d, %d);";
+char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q', %d);";
 
 
 int insert_line(sqlite3 *db, char *line, int i) {
     char *saveptr;
     char *query;
     char *code;
+    sqlite3_stmt *stmt;
+    int ret;
 
     // Parse the line
     char *chchar = strtok_r(line, " ", &saveptr);
@@ -100,20 +102,44 @@ int insert_line(sqlite3 *db, char *line, int i) {
         return CANGJIE_OK;
     }
 
-    query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs, zhuyin,
-                            kanji, hiragana, katakana, punct, symbol,
-                            frequency);
+    // Check whether this character already exists in the database
+    query = sqlite3_mprintf(select_index, chchar);
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
 
-    sqlite3_exec(db, query, NULL, NULL, NULL);
+    ret = sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+    if (ret != SQLITE_OK) {
+        // FIXME: Unhandled error codes
+        return ret;
+    }
     sqlite3_free(query);
+
+    ret = sqlite3_step(stmt);
+    if(ret == SQLITE_DONE) {
+        // The character does not exist yet, insert it
+        query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs,
+                                zhuyin, kanji, hiragana, katakana, punct,
+                                symbol);
+        if (query == NULL) {
+            return CANGJIE_NOMEM;
+        }
+
+        sqlite3_exec(db, query, NULL, NULL, NULL);
+        sqlite3_free(query);
+    } else if (ret == SQLITE_ROW) {
+        // The character exists
+        i = (uint32_t)sqlite3_column_int(stmt, 0);
+    } else {
+        // Some error encountered
+        return CANGJIE_DBERROR;
+    }
+    sqlite3_finalize(stmt);
 
     if (strcmp(cj3_codes, "NA") != 0) {
         code = strtok_r(cj3_codes, ",", &saveptr);
         while (code != NULL) {
-            query = sqlite3_mprintf(insert_codes, i, 3, code);
+            query = sqlite3_mprintf(insert_codes, i, 3, code, frequency);
             sqlite3_exec(db, query, NULL, NULL, NULL);
             sqlite3_free(query);
             code = strtok_r(NULL, ",", &saveptr);
@@ -123,7 +149,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
     if (strcmp(cj5_codes, "NA") != 0) {
         code = strtok_r(cj5_codes, ",", &saveptr);
         while (code != NULL) {
-            query = sqlite3_mprintf(insert_codes, i, 5, code);
+            query = sqlite3_mprintf(insert_codes, i, 5, code, frequency);
             sqlite3_exec(db, query, NULL, NULL, NULL);
             sqlite3_free(query);
             code = strtok_r(NULL, ",", &saveptr);
@@ -131,7 +157,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
     }
 
     if (strcmp(short_code, "NA") != 0) {
-        query = sqlite3_mprintf(insert_codes, i, 0, short_code);
+        query = sqlite3_mprintf(insert_codes, i, 0, short_code, frequency);
         sqlite3_exec(db, query, NULL, NULL, NULL);
         sqlite3_free(query);
     }

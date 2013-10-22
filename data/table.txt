@@ -14826,7 +14826,13 @@
 氍 1 1 0 0 1 0 0 0 0 bghqu bghqu NA 2776
 氎 1 0 0 0 1 0 0 0 0 wmhqu wmhqu NA 0
 氏 1 1 0 0 1 0 0 0 0 hvp hvp NA 23051
-氐 1 1 0 0 1 0 0 0 0 hpm,hvpi hpm,hvpi NA 22844
+
+# Setting the frequency for this character when queried with 'hvpi' to 0
+# allows us to be more compatible with the default Cangjie input method on
+# that "other Operating System" ;)
+氐 1 1 0 0 1 0 0 0 0 hpm hpm NA 22844
+氐 1 1 0 0 1 0 0 0 0 hvpi hvpi NA 0
+
 民 1 1 0 0 1 0 0 0 0 rvp rvp NA 22845
 氒 1 0 0 0 1 0 0 0 0 hpj hpj NA 0
 氓 1 1 0 0 1 0 0 0 0 yvrvp yvrvp NA 21665
@@ -75320,6 +75326,17 @@
 ］ 0 0 0 0 0 0 0 1 0 NA NA ] 1
 ＠ 0 0 0 0 0 0 0 0 1 NA NA @ 0
 ＃ 0 0 0 0 0 0 0 0 1 NA NA # 0
-# Yes, I'm using the word "SPACE" here to represent a space (' '). But I can't
-# use a space character directly as it's the column delimiter
+０ 0 0 0 0 0 0 0 0 1 NA NA 0 0
+１ 0 0 0 0 0 0 0 0 1 NA NA 1 0
+２ 0 0 0 0 0 0 0 0 1 NA NA 2 0
+３ 0 0 0 0 0 0 0 0 1 NA NA 3 0
+４ 0 0 0 0 0 0 0 0 1 NA NA 4 0
+５ 0 0 0 0 0 0 0 0 1 NA NA 5 0
+６ 0 0 0 0 0 0 0 0 1 NA NA 6 0
+７ 0 0 0 0 0 0 0 0 1 NA NA 7 0
+８ 0 0 0 0 0 0 0 0 1 NA NA 8 0
+９ 0 0 0 0 0 0 0 0 1 NA NA 9 0
+# Yes, we're using the word "SPACE" here to represent a space (' '). We can't
+# simply use a space character directly as it's the column delimiter, so we
+# have to be clever.
 　 0 0 0 0 0 0 0 1 0 zxaa zxaa SPACE 0
