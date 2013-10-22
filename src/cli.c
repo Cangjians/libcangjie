@@ -1,6 +1,7 @@
 #include <getopt.h>
 #include <stdio.h>
 #include <string.h>
+#include <libgen.h>
 
 #include <cangjie.h>
 
@@ -14,7 +15,7 @@ typedef enum CangjieCliMode {
 
 
 int usage(const char *progname) {
-    printf("Usage: %s [OPTIONS]... CODE\n", progname);
+    printf("Usage: %s [OPTIONS]... CODE\n", basename(progname));
     printf("A CLI interface of libcangjie2 cangjie code query\n\n");
     printf("-f, --filter=FILTER1,FILTER2...  specify the filters used in the query\n");
     printf("                                 default: big5,hkscs\n");
