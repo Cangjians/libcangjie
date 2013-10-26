@@ -16,7 +16,7 @@ typedef enum CangjieCliMode {
 
 void usage(const char *progname) {
     printf("Usage: %s [OPTIONS]... CODE\n", basename(progname));
-    printf("A CLI interface of libcangjie2 cangjie code query\n\n");
+    printf("A CLI interface of libcangjie cangjie code query\n\n");
     printf("-f, --filter=FILTER1,FILTER2...  specify the filters used in the query\n");
     printf("                                 default: big5,hkscs\n");
     printf("                                 acceptable values:\n");
@@ -36,8 +36,8 @@ void usage(const char *progname) {
 
 
 void print_error(char *msg) {
-    printf("libcangjie2_cli: %s\n", msg);
-    printf("Try 'libcangjie2_cli --help' for more information\n");
+    printf("libcangjie_cli: %s\n", msg);
+    printf("Try 'libcangjie_cli --help' for more information\n");
 }
 
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv) {
                 }
                 break;
             case '?':
-                printf("Try 'libcangjie2_cli --help' for more information\n");
+                printf("Try 'libcangjie_cli --help' for more information\n");
                 return -1;
                 break;
             case 'h':

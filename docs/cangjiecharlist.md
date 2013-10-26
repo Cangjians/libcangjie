@@ -2,7 +2,7 @@
 
 This is again something your application will consume, but we document it here
 both for reference, and because knowing how things work will provide you a
-better understanding of how to use libcangjie2.
+better understanding of how to use libcangjie.
 
 A `CangjieCharList` is merely a doubly-linked list of `CangjieChar` instances:
 

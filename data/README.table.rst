@@ -14,13 +14,13 @@ This data was generated out of a few sources:
 * The Unihan database from the Unicode consortium
 * The Unicode specification
 * The data from Wan Leung Wong's original libcangjie
-* Some careful thought from the libcangjie2 team
+* Some careful thought from the libcangjie team
 
 Some of us are not native Chinese speakers. As such, the data might be
 incomplete, or even incorrect.
 
 If you find that this is the case, please help us making it better by
-`filing bugs <https://github.com/Cangjians/libcangjie2/issues>`_.
+`filing bugs <https://github.com/Cangjians/libcangjie/issues>`_.
 
 Data Format
 ===========
@@ -61,6 +61,6 @@ The format of the data in this table is as follows:
     on their order in that encoding. It should be the same ordering as with
     the Cangjie input method on a popular operating system.
   * For characters which have a short input code (see above), this value is
-    based on the ordering that the libcangjie2 authors thought would be
+    based on the ordering that the libcangjie authors thought would be
     appropriate.
   * For all other characters, it is 0.

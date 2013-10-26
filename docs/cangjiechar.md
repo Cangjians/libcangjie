@@ -1,6 +1,6 @@
 ## The CangjieChar structure
 
-This is the basic currency unit in libcangjie2. `CangjieChar`'s are what the
+This is the basic currency unit in libcangjie. `CangjieChar`'s are what the
 functions return when you want to find what character corresponds to a certain
 Cangjie code.
 

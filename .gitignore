@@ -23,7 +23,6 @@ test-driver
 test-suite.log
 tests/*
 !tests/*.c
-libcangjie2-*.tar.xz
 
 # -- Misc built stuff ----------------
 AUTHORS
@@ -37,6 +36,7 @@ gcov-report.txt
 *.gcda
 *.gcno
 *.gcov
+*.tar.xz
 
 # -- Temp editor files ---------------
 *.swp

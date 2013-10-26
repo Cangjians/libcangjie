@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([libcangjie2], [0.0.1], [https://github.com/Cangjians/libcangjie2/issues], [libcangjie2], [https://github.com/Cangjians/libcangjie2])
+AC_INIT([libcangjie], [0.0.1], [https://github.com/Cangjians/libcangjie/issues], [libcangjie], [https://github.com/Cangjians/libcangjie])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -42,7 +42,7 @@ AC_SUBST([CANGJIE_SO_VERSION], [0:0:0])
 # OUTPUT files
 AC_CONFIG_FILES([
   Makefile
-  data/cangjie2.pc
+  data/cangjie.pc
 ])
 
 AC_OUTPUT

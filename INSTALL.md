@@ -1,4 +1,4 @@
-At the moment, libcangjie2 is not included in any operating system, so you'll
+At the moment, libcangjie is not included in any operating system, so you'll
 have to build it from source.
 
 We will update these instructions as that changes.
@@ -29,7 +29,7 @@ $ sudo make install
 First, you need to clone the development repository:
 
 ```
-$ git clone git://github.com/Cangjians/libcangjie2
+$ git clone git://github.com/Cangjians/libcangjie
 ```
 
 Then, from the root folder of the Git clone, do the usual Autotools dance:
