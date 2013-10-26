@@ -33,7 +33,7 @@ typedef enum CangjieCliMode {
 } CangjieCliMode;
 
 
-void usage(const char *progname) {
+void usage(char *progname) {
     printf("Usage: %s [OPTIONS]... CODE\n", basename(progname));
     printf("A CLI interface of libcangjie cangjie code query\n\n");
     printf("-f, --filter=FILTER1,FILTER2...  specify the filters used in the query\n");
