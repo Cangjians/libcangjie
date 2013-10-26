@@ -1,6 +1,6 @@
 ## Return values
 
-**All functions in libcangjie2 return `int`'s**. Which value they return
+**All functions in libcangjie return `int`'s**. Which value they return
 depends on the success or failure of the execution.
 
 When everything goes right, the function succeeds and returns `CANGJIE_OK`.
@@ -8,7 +8,7 @@ When everything goes right, the function succeeds and returns `CANGJIE_OK`.
 Functions which are supposed get you a list of characters will return
 `CANGJIE_NOCHARS` when no characters correspond to your query.
 
-If the libcangjie2 database could not be opened for some reason, then
+If the libcangjie database could not be opened for some reason, then
 `CANGJIE_DBOPEN` is returned.
 
 If an error happens when querying the database, the function returns

@@ -1,6 +1,6 @@
 ## Output filtering
 
-Often when using libcangjie2 you will get lists of characters (for example,
+Often when using libcangjie you will get lists of characters (for example,
 which characters correspond to the code "d*d" ?).
 
 It is possible to filter these lists so you only get the characters you are

@@ -39,10 +39,10 @@ int main() {
 ```
 
 For more details, refer to the documentation, either
-[online](http://cangjians.github.io/projects/libcangjie2/documentation)
+[online](http://cangjians.github.io/projects/libcangjie/documentation)
 or the one shipped with this software.
 
-Development happens [on github](https://github.com/Cangjians/libcangjie2), and
+Development happens [on github](https://github.com/Cangjians/libcangjie), and
 stable release tarballs will be available when we reach that point.
 
 ## History
@@ -68,7 +68,7 @@ Thank you very much Wan Leung!
 
 ## Legalities
 
-libcangjie2 is offered under the terms of the
+libcangjie is offered under the terms of the
 [GNU Lesser General Public License, either version 3 or any later version](http://www.gnu.org/licenses/lgpl.html).
 
 We won't ask you to sign a copyright assignment or any other kind of silly and
