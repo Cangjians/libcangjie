@@ -135,7 +135,7 @@ int main(int argc, char **argv) {
                     return -1;
                 }
                 break;
-            case 'u':
+            case 'C':
                 if (*optarg == '3') {
                     opt_cj_version = CANGJIE_VERSION_3;
                 } else if (*optarg == '5') {
