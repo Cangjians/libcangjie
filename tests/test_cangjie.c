@@ -71,7 +71,6 @@ void test_cangjie_get_characters_single_result() {
 void test_cangjie_get_characters_by_shortcode() {
     Cangjie *cj;
     CangjieCharList *l;
-    CangjieCharList *cc = NULL;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
     assert(ret == CANGJIE_OK);
 
