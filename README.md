@@ -48,10 +48,10 @@ stable release tarballs will be available when we reach that point.
 ## History
 
 This library is based on
-[Wan Leung Wong's libcangjie](https://github.com/wanleung/libcangjie).
+[Wan Leung Wong's original libcangjie](https://github.com/wanleung/libcangjie).
 
-In fact, when writing it, we tried to preserve the original libcangjie API,
-because Wan Leung had done a pretty good job with it.
+In fact, when writing it, we tried to stay close to the original libcangjie
+API, because Wan Leung had done a pretty good job with it.
 
 However, we felt the need to start afresh for a few reasons:
 

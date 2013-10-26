@@ -122,8 +122,8 @@ AUTHORS:
 	      echo -e '# libcangjie was written by these people:\n'; \
 	      git log --no-merges --pretty=format:"%an <%ae>" \
 	          | sort | uniq; \
-	      echo -e "\n# libcangjie would not have been possible without Wan Leung Wong's original"; \
-	      echo -e '# work on libcangjie: https://github.com/wanleung/libcangjie'; \
+	      echo -e "\n# libcangjie would not have been possible without Wan Leung Wong's work on the"; \
+	      echo -e '# original libcangjie: https://github.com/wanleung/libcangjie'; \
 	    ) > $@.tmp && mv -f $@.tmp $@ \
 	    || ( rm -f $@.tmp ; echo Failed to generate $@ >&2 ); \
 	fi
