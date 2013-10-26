@@ -102,7 +102,7 @@ int main(int argc, char **argv) {
         opt = getopt_long(argc, argv, "f:m:C:h", long_options, &option_index);
 
         if (opt == -1) {
-            break; 
+            break;
         }
 
         switch (opt) {
