@@ -294,7 +294,14 @@ int cangjie_get_characters(Cangjie          *cj,
 
             CangjieChar *c;
             int ret = cangjie_char_new(&c, chchar, code, frequency);
+            if (ret != CANGJIE_OK) {
+                return ret;
+            }
+
             ret = cangjie_char_list_prepend(&tmp, c);
+            if (ret != CANGJIE_OK) {
+                return ret;
+            }
         } else if(ret == SQLITE_DONE) {
             // All rows finished
             sqlite3_finalize(stmt);
@@ -349,7 +356,14 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
 
             CangjieChar *c;
             int ret = cangjie_char_new(&c, chchar, input_code, frequency);
+            if (ret != CANGJIE_OK) {
+                return ret;
+            }
+
             ret = cangjie_char_list_prepend(&tmp, c);
+            if (ret != CANGJIE_OK) {
+                return ret;
+            }
         } else if(ret == SQLITE_DONE) {
             // All rows finished
             sqlite3_finalize(stmt);
