@@ -60,6 +60,30 @@ int main(int argc, char **argv) {
 
     count = 0;
 
+    printf("Testing all two-letters codes... ");
+    cStartClock = clock();
+    for (i = 97; i <= 122; i++) {
+        for (j = 97; j <= 122; j++) {
+            CangjieCharList *chars = NULL;
+
+            snprintf(code, 3, "%c%c", i, j);
+
+            ret = cangjie_get_characters(cj, code, &chars);
+
+            if (ret != CANGJIE_NOCHARS) {
+                iterate_results(chars);
+
+                cangjie_char_list_free(chars);
+            }
+
+            count++;
+        }
+    }
+    printf("Ran %d queries in %4.3f milliseconds\n", count,
+           1000 * (clock() - cStartClock) / (double)CLOCKS_PER_SEC);
+
+    count = 0;
+
     printf("Testing all 'X*Y' codes... ");
     cStartClock = clock();
     for (i = 97; i <= 122; i++) {
