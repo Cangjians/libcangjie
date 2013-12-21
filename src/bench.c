@@ -36,9 +36,10 @@ int main(int argc, char **argv) {
         return ret;
     }
 
-    code = calloc(4, sizeof(char));
-    cStartClock = clock();
+    code = malloc(4 * sizeof(char));
 
+    printf("Testing all one-letter codes... ");
+    cStartClock = clock();
     for (i = 97; i <= 122; i++) {
         CangjieCharList *chars = NULL;
 
@@ -54,11 +55,12 @@ int main(int argc, char **argv) {
 
         count++;
     }
-
     printf("Ran %d queries in %4.3f milliseconds\n", count,
            1000 * (clock() - cStartClock) / (double)CLOCKS_PER_SEC);
 
     count = 0;
+
+    printf("Testing all 'X*Y' codes... ");
     cStartClock = clock();
     for (i = 97; i <= 122; i++) {
         for (j = 97; j <= 122; j++) {
@@ -77,7 +79,6 @@ int main(int argc, char **argv) {
             count++;
         }
     }
-
     printf("Ran %d queries in %4.3f milliseconds\n", count,
            1000 * (clock() - cStartClock) / (double)CLOCKS_PER_SEC);
 
