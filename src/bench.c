@@ -41,6 +41,9 @@ int main(int argc, char **argv) {
 
     for (i = 97; i <= 122; i++) {
         CangjieCharList *chars = NULL;
+
+        snprintf(code, 2, "%c", i);
+
         ret = cangjie_get_characters(cj, code, &chars);
 
         if (ret != CANGJIE_NOCHARS) {
