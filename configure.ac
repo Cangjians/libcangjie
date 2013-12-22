@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([libcangjie], [0.0.1], [https://github.com/Cangjians/libcangjie/issues], [libcangjie], [https://github.com/Cangjians/libcangjie])
+AC_INIT([libcangjie], [1.0], [https://github.com/Cangjians/libcangjie/issues], [libcangjie], [https://github.com/Cangjians/libcangjie])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -37,7 +37,7 @@ PKG_CHECK_MODULES(sqlite3, [sqlite3])
 # For information on how to properly maintain the library version information,
 # refer to the libtool manual, section "Updating library version information":
 # http://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
-AC_SUBST([CANGJIE_SO_VERSION], [0:0:0])
+AC_SUBST([CANGJIE_SO_VERSION], [2:0:0])
 
 # OUTPUT files
 AC_CONFIG_FILES([
