@@ -40,8 +40,8 @@ The format of the data in this table is as follows:
   the Japanese Kanji alphabet.
 * The seventh column is a boolean representing whether the character is part
   of the Japanese Hiragana alphabet.
-* The eigth column is a boolean representing whether the character is part of
-  the Japanse Katakana alphabet.
+* The eighth column is a boolean representing whether the character is part of
+  the Japanese Katakana alphabet.
 * The ninth column is a boolean representing whether the character is a
   punctuation mark.
 * The tenth column is a boolean representing whether the character is a
