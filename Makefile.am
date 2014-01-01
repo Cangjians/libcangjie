@@ -138,6 +138,7 @@ EXTRA_DIST = \
 	autogen.sh \
 	data/README.table.rst \
 	data/table.txt \
+	$(wildcard docs/*.md) \
 	INSTALL.md \
 	README.md \
 	$(NULL)
