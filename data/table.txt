@@ -1,4 +1,4 @@
-# See the README.tables.rst file in this folder for details about this data.
+# See the README.table.rst file in this folder for details about this data.
 
 ? 0 0 0 0 0 0 0 1 0 zxaf,zxbb NA NA 0
 § 0 0 0 0 0 0 0 0 1 yyybs yyybs NA 0
