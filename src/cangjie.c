@@ -156,11 +156,13 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags & CANGJIE_FILTER_SYMBOLS) {
         if (first) {
             strcat(*query, "symbol = 1 ");
-            first = 0;
         } else {
             strcat(*query, "OR symbol = 1 ");
         }
     }
+
+    // Note: If you add a new filter here, make sure you add the proper
+    //       'first = 0' in the previous block
 
     strcat(*query, ") ");
 
