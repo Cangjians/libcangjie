@@ -276,6 +276,10 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     query = sqlite3_mprintf(cj_query, cj->version, query_code);
+
+    free(query_code);
+    free(cj_query);
+
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
@@ -286,8 +290,6 @@ int cangjie_get_characters(Cangjie          *cj,
         return ret;
     }
 
-    free(query_code);
-    free(cj_query);
     sqlite3_free(query);
 
     while (1) {
