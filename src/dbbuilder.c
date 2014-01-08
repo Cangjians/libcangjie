@@ -205,7 +205,6 @@ int main(int argc, char **argv) {
 
         if (line[len-1] == '\n') {
             line[len-1] = '\0';
-            len -= 1;
         }
 
         insert_line(db, line, i);
