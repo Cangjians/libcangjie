@@ -185,6 +185,7 @@ int cangjie_new(Cangjie        **cj,
     tmp->cj_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
                              sizeof(char));
     if (tmp->cj_query == NULL) {
+        cangjie_free(tmp);
         return CANGJIE_NOMEM;
     }
 
@@ -192,6 +193,7 @@ int cangjie_new(Cangjie        **cj,
 
     ret = cangjie_get_filter_query(tmp, &filter_query);
     if (ret != CANGJIE_OK) {
+        cangjie_free(tmp);
         return ret;
     }
 
@@ -202,6 +204,7 @@ int cangjie_new(Cangjie        **cj,
     tmp->shortcode_query = calloc(strlen(BASE_QUERY) + MAX_LEN_CODE_QUERY + 1,
                                   sizeof(char));
     if (tmp->shortcode_query == NULL) {
+        cangjie_free(tmp);
         return CANGJIE_NOMEM;
     }
 
@@ -216,8 +219,10 @@ int cangjie_new(Cangjie        **cj,
         ret = sqlite3_open_v2(CANGJIE_DB, &tmp->db, SQLITE_OPEN_READONLY, NULL);
     }
     if (ret == SQLITE_CANTOPEN) {
+        cangjie_free(tmp);
         return CANGJIE_DBOPEN;
     } else if (ret != SQLITE_OK) {
+        cangjie_free(tmp);
         // FIXME: Unhandled error codes
         return ret;
     }
@@ -257,6 +262,7 @@ int cangjie_get_characters(Cangjie          *cj,
 
     query_code = calloc(6, sizeof(char));
     if (query_code == NULL) {
+        free(cj_query);
         return CANGJIE_NOMEM;
     }
     strncpy(query_code, input_code, 5);
