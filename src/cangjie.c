@@ -156,11 +156,13 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
     if (cj->filter_flags & CANGJIE_FILTER_SYMBOLS) {
         if (first) {
             strcat(*query, "symbol = 1 ");
-            first = 0;
         } else {
             strcat(*query, "OR symbol = 1 ");
         }
     }
+
+    // Note: If you add a new filter here, make sure you add the proper
+    //       'first = 0' in the previous block
 
     strcat(*query, ") ");
 
@@ -185,6 +187,7 @@ int cangjie_new(Cangjie        **cj,
     tmp->cj_query = calloc(strlen(BASE_QUERY) + MAX_LEN_FILTER_QUERY + 1,
                              sizeof(char));
     if (tmp->cj_query == NULL) {
+        cangjie_free(tmp);
         return CANGJIE_NOMEM;
     }
 
@@ -192,6 +195,7 @@ int cangjie_new(Cangjie        **cj,
 
     ret = cangjie_get_filter_query(tmp, &filter_query);
     if (ret != CANGJIE_OK) {
+        cangjie_free(tmp);
         return ret;
     }
 
@@ -202,6 +206,7 @@ int cangjie_new(Cangjie        **cj,
     tmp->shortcode_query = calloc(strlen(BASE_QUERY) + MAX_LEN_CODE_QUERY + 1,
                                   sizeof(char));
     if (tmp->shortcode_query == NULL) {
+        cangjie_free(tmp);
         return CANGJIE_NOMEM;
     }
 
@@ -216,8 +221,10 @@ int cangjie_new(Cangjie        **cj,
         ret = sqlite3_open_v2(CANGJIE_DB, &tmp->db, SQLITE_OPEN_READONLY, NULL);
     }
     if (ret == SQLITE_CANTOPEN) {
+        cangjie_free(tmp);
         return CANGJIE_DBOPEN;
     } else if (ret != SQLITE_OK) {
+        cangjie_free(tmp);
         // FIXME: Unhandled error codes
         return ret;
     }
@@ -257,6 +264,7 @@ int cangjie_get_characters(Cangjie          *cj,
 
     query_code = calloc(6, sizeof(char));
     if (query_code == NULL) {
+        free(cj_query);
         return CANGJIE_NOMEM;
     }
     strncpy(query_code, input_code, 5);
@@ -270,6 +278,10 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     query = sqlite3_mprintf(cj_query, cj->version, query_code);
+
+    free(query_code);
+    free(cj_query);
+
     if (query == NULL) {
         return CANGJIE_NOMEM;
     }
@@ -280,8 +292,6 @@ int cangjie_get_characters(Cangjie          *cj,
         return ret;
     }
 
-    free(query_code);
-    free(cj_query);
     sqlite3_free(query);
 
     while (1) {
