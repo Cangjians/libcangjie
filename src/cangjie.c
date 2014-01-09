@@ -66,6 +66,16 @@ const char *cangjie_radicals[] = {
     "\xEF\xBC\xBA", // Ｚ
 };
 
+static void
+strcat_or_operator(uint32_t *first, char *query) {
+    if ( ! *first) {
+        strcat(query, "OR ");
+    }
+    else {
+        *first = 0;
+    }
+}
+
 int cangjie_get_filter_query(Cangjie *cj, char **query) {
     uint32_t first = 1;
     if (cj->filter_flags == 0) {
@@ -91,78 +101,44 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HKSCS) {
-        if (first) {
-            strcat(*query, "hkscs = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR hkscs = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "hkscs = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_PUNCTUATION) {
-        if (first) {
-            strcat(*query, "punct = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR punct = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "punct = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_CHINESE) {
-        if (first) {
-            strcat(*query, "zh = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR zh = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "zh = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_ZHUYIN) {
-        if (first) {
-            strcat(*query, "zhuyin = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR zhuyin = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "zhuyin = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KANJI) {
-        if (first) {
-            strcat(*query, "kanji = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR kanji = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "kanji = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KATAKANA) {
-        if (first) {
-            strcat(*query, "katakana = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR katakana = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "katakana = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HIRAGANA) {
-        if (first) {
-            strcat(*query, "hiragana = 1 ");
-            first = 0;
-        } else {
-            strcat(*query, "OR hiragana = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "hiragana = 1 ");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_SYMBOLS) {
-        if (first) {
-            strcat(*query, "symbol = 1 ");
-        } else {
-            strcat(*query, "OR symbol = 1 ");
-        }
+        strcat_or_operator(&first, *query);
+        strcat(*query, "symbol = 1 ");
     }
-
-    // Note: If you add a new filter here, make sure you add the proper
-    //       'first = 0' in the previous block
 
     strcat(*query, ") ");
 
