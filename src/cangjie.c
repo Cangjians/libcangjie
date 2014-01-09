@@ -68,11 +68,11 @@ const char *cangjie_radicals[] = {
 
 static void
 strcat_or_operator(uint32_t *first, char *query) {
-    if ( ! *first) {
-        strcat(query, "OR ");
+    if (*first) {
+        *first = 0;
     }
     else {
-        *first = 0;
+        strcat(query, "OR ");
     }
 }
 
