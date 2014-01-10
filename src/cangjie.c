@@ -66,12 +66,10 @@ const char *cangjie_radicals[] = {
     "\xEF\xBC\xBA", // Ｚ
 };
 
-static void
-strcat_or_operator(uint32_t *first, char *query) {
-    if ( ! *first) {
+static void strcat_or_operator(uint32_t *first, char *query) {
+    if (! *first) {
         strcat(query, "OR ");
-    }
-    else {
+    } else {
         *first = 0;
     }
 }
