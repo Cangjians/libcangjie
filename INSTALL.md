@@ -14,6 +14,7 @@ the `libcangjie2-dev` package.
 
 libcangjie is included in the default Fedora repositories, so you can just
 install it with `yum`:
+
 ```
 $ sudo yum install libcangjie
 ```
