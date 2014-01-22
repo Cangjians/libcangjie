@@ -1,3 +1,15 @@
+## Debian Unstable / Sid
+
+libcangjie is included in the default Debian repositories, so you can just
+install it with `apt-get`, as the root user:
+
+```
+# apt-get install libcangjie2
+```
+
+Note that if you need the development headers, then you should also install
+the `libcangjie2-dev` package.
+
 ## Fedora
 
 libcangjie is included in the default Fedora repositories, so you can just
