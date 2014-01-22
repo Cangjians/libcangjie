@@ -13,3 +13,7 @@ part is the last of the list, we recommend you read them in order:
 4. the `CangjieChar` structure (see cangjiechar.md)
 5. the `CangjieCharList` character lists (see cangjiecharlist.md)
 6. the `Cangjie` context (see cangjie.md)
+
+libcangjie also comes with a command-line tool, which can be seen as an
+example of how to use the API, and is useful for testing/debugging purpose:
+`libcangjie_cli`. (see cli.md)
