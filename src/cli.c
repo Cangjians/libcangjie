@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
                 if (strstr(optarg, "hkscs") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_HKSCS;
                 }
-                if (strstr(optarg, "puntuation") != NULL) {
+                if (strstr(optarg, "punctuation") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_PUNCTUATION;
                 }
                 if (strstr(optarg, "chinese") != NULL) {
