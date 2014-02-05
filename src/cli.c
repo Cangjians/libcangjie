@@ -121,7 +121,7 @@ int main(int argc, char **argv) {
                     opt_filter = opt_filter | CANGJIE_FILTER_CHINESE;
                 }
                 if (strstr(optarg, "zhuyin") != NULL) {
-                    opt_filter = opt_filter | CANGJIE_FILTER_BIG5;
+                    opt_filter = opt_filter | CANGJIE_FILTER_ZHUYIN;
                 }
                 if (strstr(optarg, "kanji") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_KANJI;
