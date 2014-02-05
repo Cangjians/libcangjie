@@ -34,6 +34,15 @@ $ sudo apt-get install libcangjie2
 Note that if you need the development headers, then you should also install
 the `libcangjie2-dev` package.
 
+## NixOS
+
+libcangjie is included in the default NixOS channel, **starting with the
+14.02 release**, so you can install it with `nix-env`:
+
+```
+$ nix-env --install libcangjie
+```
+
 ## Build from the sources
 
 ### Dependencies
