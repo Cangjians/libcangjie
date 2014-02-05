@@ -1,3 +1,14 @@
+## Arch Linux
+
+libcangjie has not been included in official repository yet, but only in AUR.
+If it works for you and you like it, please don't hesitate to vote it on
+[upvote it](https://aur.archlinux.org/packages/libcangjie/). You can install it
+with `yaourt`:
+
+```
+$ yaourt libcangjie
+```
+
 ## Debian Unstable / Sid
 
 libcangjie is included in the default Debian repositories, so you can just
