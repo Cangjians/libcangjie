@@ -40,7 +40,8 @@ void usage(char *progname) {
     printf("                                 default: big5,hkscs\n");
     printf("                                 acceptable values:\n");
     printf("                                   big5, hkscs, punctuation, chinese,\n");
-    printf("                                   zhuyin, kanji, katakana, symbols\n");
+    printf("                                   zhuyin, kanji, katakana, hiragana,\n");
+    printf("                                   symbols\n");
     printf("-m, --mode=MODE                  specify the mode of query\n");
     printf("                                 default: code\n");
     printf("                                 acceptable values:\n");
