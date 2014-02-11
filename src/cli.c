@@ -40,7 +40,8 @@ void usage(char *progname) {
     printf("                                 default: big5,hkscs\n");
     printf("                                 acceptable values:\n");
     printf("                                   big5, hkscs, punctuation, chinese,\n");
-    printf("                                   zhuyin, kanji, katakana, symbols\n");
+    printf("                                   zhuyin, kanji, katakana, hiragana,\n");
+    printf("                                   symbols\n");
     printf("-m, --mode=MODE                  specify the mode of query\n");
     printf("                                 default: code\n");
     printf("                                 acceptable values:\n");
@@ -114,14 +115,14 @@ int main(int argc, char **argv) {
                 if (strstr(optarg, "hkscs") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_HKSCS;
                 }
-                if (strstr(optarg, "puntuation") != NULL) {
+                if (strstr(optarg, "punctuation") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_PUNCTUATION;
                 }
                 if (strstr(optarg, "chinese") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_CHINESE;
                 }
                 if (strstr(optarg, "zhuyin") != NULL) {
-                    opt_filter = opt_filter | CANGJIE_FILTER_BIG5;
+                    opt_filter = opt_filter | CANGJIE_FILTER_ZHUYIN;
                 }
                 if (strstr(optarg, "kanji") != NULL) {
                     opt_filter = opt_filter | CANGJIE_FILTER_KANJI;
