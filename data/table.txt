@@ -7228,7 +7228,7 @@
 也 1 1 0 0 1 0 0 0 0 pd pd NA 23201
 习 1 0 0 0 1 0 0 0 0 sim sim NA 0
 乡 1 0 0 0 1 0 0 0 0 vvh vvh NA 0
-乢 1 0 0 0 1 0 0 0 0 uu uu,xxxua NA 0
+乢 1 0 0 0 1 0 0 0 0 uu uu,xxxuu NA 0
 乣 1 0 0 0 1 0 0 0 0 viu viu NA 0
 乤 1 0 0 0 1 0 0 0 0 myn myn NA 0
 乥 1 0 0 0 1 0 0 0 0 hcn hcn NA 0
@@ -21518,7 +21518,7 @@
 蘫 1 0 0 0 1 0 0 0 0 test test NA 0
 蘬 1 1 0 0 1 0 0 0 0 thmb thmb NA 2677
 蘭 1 1 0 0 1 0 0 0 0 tanw tanw NA 14857
-蘮 1 1 0 0 1 0 0 0 0 twln twln,xxxta NA 3014
+蘮 1 1 0 0 1 0 0 0 0 twln twln,xxxtw NA 3014
 蘯 1 0 1 0 1 0 0 0 0 teht teht NA 0
 蘰 1 0 0 0 1 0 0 0 0 tvfe tvfe,xtvfe NA 0
 蘱 1 1 0 0 1 0 0 0 0 tfkc tfkc NA 2507
@@ -27482,7 +27482,7 @@
 鵷 1 1 0 0 1 0 0 0 0 juhaf juhaf NA 3559
 鵸 1 1 0 0 1 0 0 0 0 krhaf krhaf NA 3552
 鵹 1 1 0 0 1 0 0 0 0 hhhaf hhhaf NA 3537
-鵺 1 0 0 0 1 0 0 0 0 ykhaf xxxyb,ykhaf NA 0
+鵺 1 0 0 0 1 0 0 0 0 ykhaf xxxyk,ykhaf NA 0
 鵻 1 1 0 0 1 0 0 0 0 hfog hfog NA 3540
 鵼 1 0 1 0 1 0 0 0 0 jmhaf jmhaf NA 0
 鵽 1 1 0 0 1 0 0 0 0 eeeef eeeef NA 3548
@@ -27622,7 +27622,7 @@
 鸃 1 1 0 0 1 0 0 0 0 hftgi hftgi NA 2272
 鸄 1 1 0 0 1 0 0 0 0 hkhaf hkhaf,xhkha NA 2264
 鸅 1 1 0 0 1 0 0 0 0 wjhaf wjhaf NA 2270
-鸆 1 1 0 0 1 0 0 0 0 ykhaf xxxya,ykhaf NA 2271
+鸆 1 1 0 0 1 0 0 0 0 ykhaf xxxyk,ykhaf NA 2271
 鸇 1 1 0 0 1 0 0 0 0 ymhaf ymhaf NA 2273
 鸈 1 0 0 0 1 0 0 0 0 tdhaf tdhaf NA 0
 鸉 1 1 0 0 1 0 0 0 0 dhhaf dhhaf NA 2267
