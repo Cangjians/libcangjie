@@ -254,9 +254,9 @@
 ☆ 0 0 0 0 0 0 0 0 1 yyybi yyybi,za NA 0
 ♀ 0 0 0 0 0 0 0 0 1 yyybr yyybr NA 0
 ♂ 0 0 0 0 0 0 0 0 1 yyybq yyybq NA 0
-、 0 0 0 0 0 0 0 1 0 i,xi,zxac i,xi,zxac , 3
-。 0 0 0 0 0 0 0 1 0 xr,yyyco,zxad xr,yyyco,zxad . 2
-〇 0 0 0 0 0 0 0 0 1 NA xxr,xxxxx NA 0
+、 0 0 0 0 0 0 0 1 0 zxac zxac , 3
+。 0 0 0 0 0 0 0 1 0 zxad zxad . 2
+〇 0 0 0 0 0 0 0 0 1 NA xxxxx NA 0
 〈 0 0 0 0 0 0 0 1 0 yyyae,zxby yyyae,za,zxby ' 6
 〉 0 0 0 0 0 0 0 1 0 yyyaf,zxca yyyaf,za,zxca ' 5
 《 0 0 0 0 0 0 0 1 0 yyyag,zxbu yyyag,za,zxbu " 6
