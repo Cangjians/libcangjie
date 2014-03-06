@@ -55,7 +55,8 @@ char* strtok_r(char *str, const char *delim, char **nextp) {
 #endif
 
 char *create_chars = "CREATE TABLE chars(char_index INTEGER PRIMARY KEY ASC,\n"
-                     "                   chchar TEXT UNIQUE, zh INTEGER,\n"
+                     "                   chchar TEXT UNIQUE,\n"
+                     "                   simpchar TEXT, zh INTEGER,\n"
                      "                   big5 INTEGER, hkscs INTEGER,\n"
                      "                   zhuyin INTEGER, kanji INTEGER,\n"
                      "                   hiragana INTEGER, katakana INTEGER,\n"
@@ -64,8 +65,8 @@ char *create_codes = "CREATE TABLE codes(char_index INTEGER, version INTEGER,\n"
                      "                   code TEXT, frequency INTEGER,\n"
                      "                   FOREIGN KEY(char_index) REFERENCES chars(char_index));";
 char *select_index = "SELECT char_index FROM chars WHERE chchar='%q';";
-char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', %d, %d, %d, %d,\n"
-                     "                         %d, %d, %d, %d, %d);";
+char *insert_chars = "INSERT INTO chars VALUES(%d, '%q', '%q', %d, %d, \n"
+                     "                   %d, %d, %d, %d, %d, %d, %d);";
 char *insert_codes = "INSERT INTO codes VALUES(%d, %d, '%q', %d);";
 
 
@@ -78,6 +79,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
 
     // Parse the line
     char *chchar = strtok_r(line, " ", &saveptr);
+    char *simpchar = strtok_r(NULL, " ", &saveptr);
     uint32_t zh = atoi(strtok_r(NULL, " ", &saveptr));
     uint32_t big5 = atoi(strtok_r(NULL, " ", &saveptr));
     uint32_t hkscs = atoi(strtok_r(NULL, " ", &saveptr));
@@ -91,6 +93,10 @@ int insert_line(sqlite3 *db, char *line, int i) {
     char *cj5_codes = strtok_r(NULL, " ", &saveptr);
     char *short_code = strtok_r(NULL, " ", &saveptr);
     uint32_t frequency = atoi(strtok_r(NULL, "\0", &saveptr));
+
+    if (strcmp(simpchar, "NA") == 0) {
+        strcpy(simpchar, "");
+    }
 
     if (strcmp(short_code, "SPACE") == 0) {
         strcpy(short_code, " ");
@@ -118,9 +124,9 @@ int insert_line(sqlite3 *db, char *line, int i) {
     ret = sqlite3_step(stmt);
     if(ret == SQLITE_DONE) {
         // The character does not exist yet, insert it
-        query = sqlite3_mprintf(insert_chars, i, chchar, zh, big5, hkscs,
-                                zhuyin, kanji, hiragana, katakana, punct,
-                                symbol);
+        query = sqlite3_mprintf(insert_chars, i, chchar, simpchar, zh, big5,
+                                hkscs, zhuyin, kanji, hiragana, katakana,
+                                punct, symbol);
         if (query == NULL) {
             return CANGJIE_NOMEM;
         }
