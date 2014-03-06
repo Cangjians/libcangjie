@@ -27,12 +27,14 @@ CANGJIE_BEGIN_DECL
 
 typedef struct CangjieChar {
     char     chchar[5];
+    char     simpchar[5];
     char     code[6];
     uint32_t frequency;
 } CangjieChar;
 
 CANGJIE_EXTERN int cangjie_char_new(CangjieChar **c,
                      const char   *chchar,
+                     const char   *simpchar,
                      const char   *code,
                      uint32_t      frequency);
 
