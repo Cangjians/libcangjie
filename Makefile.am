@@ -136,7 +136,7 @@ CLEANFILES = \
 
 EXTRA_DIST = \
 	autogen.sh \
-	data/README.table.rst \
+	data/README.table.md \
 	data/table.txt \
 	$(wildcard docs/*.md) \
 	INSTALL.md \
