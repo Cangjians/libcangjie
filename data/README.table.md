@@ -29,45 +29,49 @@ The format of the data in this table is as follows:
 
 1. The actual character the user desires to input.
 
-2. A boolean (0 or 1) representing whether the character is a
+2. The Simplified Chinese equivalent character of the actual 
+   character. For example, for the line where the actual
+   character is "後", this field should be "后".
+
+3. A boolean (0 or 1) representing whether the character is a
    Chinese character.
 
-3. A boolean representing whether the character exists in the
+4. A boolean representing whether the character exists in the
    Big5 encoding.
 
-4. A boolean representing whether the character is part of the
+5. A boolean representing whether the character is part of the
    Hong Kong Supplemental Character Set (HKSCS).
 
-5. A boolean representing whether the character is part of the
+6. A boolean representing whether the character is part of the
    Taiwanese Bopomofo/Zhuyin alphabet.
 
-6. A boolean representing whether the character is part of the
+7. A boolean representing whether the character is part of the
    Japanese Kanji alphabet.
 
-7. A boolean representing whether the character is part of the
+8. A boolean representing whether the character is part of the
    Japanese Hiragana alphabet.
 
-8. A boolean representing whether the character is part of the
+9. A boolean representing whether the character is part of the
    Japanese Katakana alphabet.
 
-9. A boolean representing whether the character is a punctuation mark.
+10. A boolean representing whether the character is a punctuation mark.
 
-10. A boolean representing whether the character is a
+11. A boolean representing whether the character is a
     miscellaneous symbol.
 
-11. A comma-separated list of the possible input codes for the
+12. A comma-separated list of the possible input codes for the
     character in Cangjie version 3, or the string "NA" if the character
     does not have an input code in Cangjie version 3.
 
-12. A comma-separated list of the possible input codes for the
+13. A comma-separated list of the possible input codes for the
     character in Cangjie version 5, or the string "NA".
 
-13. A short input code for the character, or the string "NA". This is
+14. A short input code for the character, or the string "NA". This is
     mostly to provide a convenient shortcut for users to quickly
     input punctuation marks and/or symbols (e.g the user can type
     "," to get '、', or '?' to get '？').
 
-14. An integer corresponding to the desired ordering of the characters.
+15. An integer corresponding to the desired ordering of the characters.
     Depending on the situation, it can be one of three things:
   1. For characters which were part of the Big5 encoding, this value is
      based on their order in that encoding. It should be the same
