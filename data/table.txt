@@ -7467,7 +7467,7 @@
 低 1 1 0 0 1 0 0 0 0 ohpm,ohvi ohpm,ohvi NA 22459
 住 1 1 0 0 1 0 0 0 0 oyg oyg NA 22545
 佐 1 1 0 0 1 0 0 0 0 okm okm NA 22537
-佑 1 1 0 0 1 0 0 0 0 okr,okrx okr,xokr NA 22536
+佑 1 1 0 0 1 0 0 0 0 okr okr,xokr NA 22536
 佒 1 1 0 0 1 0 0 0 0 olbk olbk NA 14173
 体 1 1 0 0 1 0 0 0 0 odm odm NA 14177
 佔 1 1 0 0 1 0 0 0 0 oyr oyr NA 22531
@@ -17861,7 +17861,7 @@
 矢 1 1 0 0 1 0 0 0 0 ok ok NA 22820
 矣 1 1 0 0 1 0 0 0 0 iok iok NA 22159
 矤 1 0 0 0 1 0 0 0 0 nok nok NA 0
-知 1 1 0 0 1 0 0 0 0 okr okr NA 21568
+知 1 1 0 0 1 0 0 0 0 okr,okrx okr NA 21568
 矦 1 0 1 0 1 0 0 0 0 nmok nmok NA 0
 矧 1 1 0 0 1 0 0 0 0 oknl oknl NA 12759
 矨 1 1 0 0 1 0 0 0 0 okhk okhk NA 12758
