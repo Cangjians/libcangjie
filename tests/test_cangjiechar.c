@@ -24,14 +24,16 @@
 
 void test_cangjie_char_a() {
     char *chchar = "a";
+    char *simpchar = "b";
     char *code = "abc";
     uint32_t frequency = 123;
 
     CangjieChar *c;
-    int ret = cangjie_char_new(&c, chchar, code, frequency);
+    int ret = cangjie_char_new(&c, chchar, simpchar, code, frequency);
     assert(ret == CANGJIE_OK);
 
     assert(strcmp(c->chchar, chchar) == 0);
+    assert(strcmp(c->simpchar, simpchar) == 0);
     assert(strcmp(c->code, code) == 0);
     assert(c->frequency == frequency);
 
@@ -39,15 +41,17 @@ void test_cangjie_char_a() {
 }
 
 void test_cangjie_char_zh() {
-    char *chchar = "\xE6\x9C\xA8"; // 木
+    char *chchar = "\xE5\xBE\x8C";   // 後
+    char *simpchar = "\xE5\x90\x8E"; // 后
     char *code = "abc";
     uint32_t frequency = 123;
 
     CangjieChar *c;
-    int ret = cangjie_char_new(&c, chchar, code, frequency);
+    int ret = cangjie_char_new(&c, chchar, simpchar, code, frequency);
     assert(ret == CANGJIE_OK);
 
     assert(strcmp(c->chchar, chchar) == 0);
+    assert(strcmp(c->simpchar, simpchar) == 0);
     assert(strcmp(c->code, code) == 0);
     assert(c->frequency == frequency);
 
