@@ -220,6 +220,16 @@ int main(int argc, char **argv) {
 
             cangjie_free(cj);
             return CANGJIE_NOCHARS;
+        } else if (ret == CANGJIE_INVALID) {
+            printf("Invalid code '%s'\n", code);
+
+            cangjie_free(cj);
+            return CANGJIE_INVALID;
+        } else if (ret != CANGJIE_OK) {
+            printf("Other error %d with code '%s'\n", ret, code);
+
+            cangjie_free(cj);
+            return ret;
         }
 
         iter = chars;
