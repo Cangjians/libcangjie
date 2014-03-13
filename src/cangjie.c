@@ -145,7 +145,7 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
 
 int cangjie_new(Cangjie        **cj,
                 CangjieVersion   version,
-                CangjieFilter    filter_flags) {
+                unsigned int     filter_flags) {
     char *filter_query;
     int ret;
     char *database_path;
