@@ -59,23 +59,23 @@ typedef struct Cangjie {
 } Cangjie;
 
 CANGJIE_EXTERN int cangjie_new(Cangjie        **cj,
-                CangjieVersion   version,
-                CangjieFilter    filter_flags);
+                               CangjieVersion   version,
+                               unsigned int     filter_flags);
 
 CANGJIE_EXTERN int cangjie_get_characters(Cangjie          *cj,
-                           char             *code,
-                           CangjieCharList **l);
+                                          char             *code,
+                                          CangjieCharList **l);
 
 CANGJIE_EXTERN int cangjie_get_characters_by_shortcode(Cangjie          *cj,
-                                        char             *shortcode,
-                                        CangjieCharList **l);
+                                                       char             *shortcode,
+                                                       CangjieCharList **l);
 
 CANGJIE_EXTERN int cangjie_get_radical(Cangjie     *cj,
-                        const char   key,
-                        char       **radical);
+                                       const char   key,
+                                       char       **radical);
 
 CANGJIE_EXTERN int cangjie_is_input_key(Cangjie    *cj,
-                         const char  key);
+                                        const char  key);
 
 CANGJIE_EXTERN int cangjie_free(Cangjie *cj);
 
