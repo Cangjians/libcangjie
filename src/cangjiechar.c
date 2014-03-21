@@ -26,6 +26,7 @@
 
 int cangjie_char_new(CangjieChar **c,
                      const char   *chchar,
+                     const char   *simpchar,
                      const char   *code,
                      uint32_t      frequency) {
     CangjieChar *tmp = calloc(1, sizeof(CangjieChar));
@@ -35,6 +36,9 @@ int cangjie_char_new(CangjieChar **c,
 
     // Copy at most 4 bytes, it's a single UTF-8 encoded character
     strncpy(tmp->chchar, chchar, 4);
+
+    // Copy at most 4 bytes, it's a single UTF-8 encoded character
+    strncpy(tmp->simpchar, simpchar, 4);
 
     // Copy at most 5 bytes, that's the longest a Cangjie input code can be
     strncpy(tmp->code, code, 5);

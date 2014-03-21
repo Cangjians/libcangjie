@@ -23,7 +23,7 @@
 #include "cangjie.h"
 
 
-#define BASE_QUERY "SELECT chchar, code, frequency\n" \
+#define BASE_QUERY "SELECT chchar, simpchar, code, frequency\n" \
                    "FROM chars\n" \
                    "INNER JOIN codes on chars.char_index=codes.char_index\n" \
                    "WHERE version=%d "
@@ -273,11 +273,12 @@ int cangjie_get_characters(Cangjie          *cj,
 
         if (ret == SQLITE_ROW) {
             char *chchar = (char *)sqlite3_column_text(stmt, 0);
-            char *code = (char *)sqlite3_column_text(stmt, 1);
-            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 2);
+            char *simpchar = (char *)sqlite3_column_text(stmt, 1);
+            char *code = (char *)sqlite3_column_text(stmt, 2);
+            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 3);
 
             CangjieChar *c;
-            int ret = cangjie_char_new(&c, chchar, code, frequency);
+            int ret = cangjie_char_new(&c, chchar, simpchar, code, frequency);
             if (ret != CANGJIE_OK) {
                 return ret;
             }
@@ -336,10 +337,11 @@ int cangjie_get_characters_by_shortcode(Cangjie          *cj,
 
         if (ret == SQLITE_ROW) {
             char *chchar = (char *)sqlite3_column_text(stmt, 0);
-            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 2);
+            char *simpchar = (char *)sqlite3_column_text(stmt, 1);
+            uint32_t frequency = (uint32_t)sqlite3_column_int(stmt, 3);
 
             CangjieChar *c;
-            int ret = cangjie_char_new(&c, chchar, input_code, frequency);
+            int ret = cangjie_char_new(&c, chchar, simpchar, input_code, frequency);
             if (ret != CANGJIE_OK) {
                 return ret;
             }

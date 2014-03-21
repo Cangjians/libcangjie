@@ -26,8 +26,8 @@ int main() {
         if (iter == NULL)
             break;
 
-        printf("Char: %s, code: '%s', classic frequency: %d\n",
-               iter->c->chchar, iter->c->code, iter->c->frequency);
+        printf("Char: %s, SimpChar: %s, code: '%s', classic frequency: %d\n",
+               iter->c->chchar, iter->c->simpchar, iter->c->code, iter->c->frequency);
 
         iter = iter->next;
     }

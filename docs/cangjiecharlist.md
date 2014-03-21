@@ -31,7 +31,7 @@ CangjieCharList *l;
 
 // Now create a new CangjieChar
 CangjieChar *c;
-int ret = cangjie_char_new(&c, "木", "d", 1000);
+int ret = cangjie_char_new(&c, "木", "木", "d", 1000);
 
 // And append it at the end of the list
 ret = cangjie_char_list_append(&l, c);
