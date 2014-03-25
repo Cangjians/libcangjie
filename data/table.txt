@@ -60415,7 +60415,7 @@
 𧷅 𧷅 1 0 0 0 0 0 0 0 0 belmc belmc NA 0
 𧷆 𧷆 1 0 0 0 0 0 0 0 0 bcysd bcysd NA 0
 𧷇 𧷇 1 0 0 0 0 0 0 0 0 lmfbc lmfbc NA 0
-𧷈 𧷈 1 0 0 0 0 0 0 0 0 xmbuc hmbuc NA 0
+𧷈 𧷈 1 0 0 0 0 0 0 0 0 hmbuc hmbuc NA 0
 𧷉 𧷉 1 0 0 0 0 0 0 0 0 bcbcc bcbcc NA 0
 𧷊 𧷊 1 0 0 0 0 0 0 0 0 bchju bchju NA 0
 𧷋 𧷋 1 0 0 0 0 0 0 0 0 mwvbc mwvbc NA 0
