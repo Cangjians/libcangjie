@@ -112,7 +112,7 @@ TESTS = $(check_PROGRAMS)
 
 # -- Common --------------------------
 AM_CPPFLAGS = -I$(top_srcdir)/src
-AM_CFLAGS = -DCANGJIE_DB='"$(libcangjie_datadir)/cangjie.db"' $(GCOV_CFLAGS)
+AM_CFLAGS = -DCANGJIE_DB='"$(libcangjie_datadir)/cangjie.db"' $(GCOV_CFLAGS) -Wdeclaration-after-statement
 
 AUTHORS:
 	@if test -d "$(srcdir)/.git"; then \
