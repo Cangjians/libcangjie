@@ -28,6 +28,12 @@
                    "INNER JOIN codes on chars.char_index=codes.char_index\n" \
                    "WHERE version=%d "
 
+// Since the results will be added to a linked list by "prepend",
+// the order of results would be the reverse order of this query.
+// Hence we use ASC in the order-by-clause to get a DESC order
+// in the actual results.
+#define ORDER_BY_CLAUSE "ORDER BY frequency ASC"
+
 // Longest possible filter query has a length of 127:
 //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
 #define MAX_LEN_FILTER_QUERY 127
@@ -177,15 +183,16 @@ int cangjie_new(Cangjie        **cj,
     free(filter_query);
 
     // Prepare the query by short code
-    tmp->shortcode_query = calloc(strlen(BASE_QUERY) + MAX_LEN_CODE_QUERY + 1,
-                                  sizeof(char));
+    tmp->shortcode_query = calloc(strlen(BASE_QUERY) + MAX_LEN_CODE_QUERY +
+                                  strlen(ORDER_BY_CLAUSE) + 1, sizeof(char));
     if (tmp->shortcode_query == NULL) {
         cangjie_free(tmp);
         return CANGJIE_NOMEM;
     }
 
     strcat(tmp->shortcode_query, BASE_QUERY);
-    strcat(tmp->shortcode_query, "AND code = '%q';");
+    strcat(tmp->shortcode_query, "AND code = '%q' ");
+    strcat(tmp->shortcode_query, ORDER_BY_CLAUSE);
 
     // Check the CANGJIE_DB env var (it is useful for local testing)
     database_path = getenv("CANGJIE_DB");
@@ -228,8 +235,8 @@ int cangjie_get_characters(Cangjie          *cj,
     }
 
     // Start with the Cangjie instance's cj_query
-    cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY + 1,
-                      sizeof(char));
+    cj_query = calloc(strlen(cj->cj_query) + MAX_LEN_CODE_QUERY +
+                      strlen(ORDER_BY_CLAUSE) + 1, sizeof(char));
     if (cj_query == NULL) {
         return CANGJIE_NOMEM;
     }
@@ -246,10 +253,13 @@ int cangjie_get_characters(Cangjie          *cj,
     // Handle optional wildcards
     star_ptr = strchr(query_code, '*');
     if (star_ptr == NULL) {
-        strcat(cj_query, "AND code = '%q';");
+        strcat(cj_query, "AND code = '%q' ");
     } else {
-        strcat(cj_query, "AND code GLOB '%q';");
+        strcat(cj_query, "AND code GLOB '%q' ");
     }
+
+    // Attach the order by clause to the end
+    strcat(cj_query, ORDER_BY_CLAUSE);
 
     query = sqlite3_mprintf(cj_query, cj->version, query_code);
 
