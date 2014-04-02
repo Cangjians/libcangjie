@@ -65,7 +65,9 @@ To build this library, you will need the following:
 
 ### Install from a release tarball
 
-_**Note:** There are no release tarballs at this point._
+Download a release tarball from
+[the download section](http://cangjians.github.io/downloads/libcangjie/) of
+our website.
 
 From the root folder of the unpacked tarball, do the usual Autotools dance:
 
