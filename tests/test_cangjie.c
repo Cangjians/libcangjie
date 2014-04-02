@@ -130,6 +130,7 @@ void test_cangjie_get_characters_results_order() {
 void test_cangjie_get_characters_by_shortcode() {
     Cangjie *cj;
     CangjieCharList *l;
+    CangjieCharList *cur;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
     assert(ret == CANGJIE_OK);
 
@@ -139,25 +140,29 @@ void test_cangjie_get_characters_by_shortcode() {
     ret = cangjie_get_characters_by_shortcode(cj, ",", &l);
     assert(ret == CANGJIE_OK);
 
-    assert(strcmp(l->c->chchar, "\xEF\xB8\x91") == 0); // ︑
-    assert(strcmp(l->c->code, ",") == 0);
-    assert(l->c->frequency == 1);
-    assert(l->next != NULL);
+    cur = l;
+    assert(strcmp(cur->c->chchar, "\xEF\xB8\x91") == 0); // ︑
+    assert(strcmp(cur->c->code, ",") == 0);
+    assert(cur->c->frequency == 1);
+    assert(cur->next != NULL);
 
-    assert(strcmp(l->next->c->chchar, "\xEF\xB8\x90") == 0); // ︐
-    assert(strcmp(l->next->c->code, ",") == 0);
-    assert(l->next->c->frequency == 0);
-    assert(l->next->next != NULL);
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xEF\xB8\x90") == 0); // ︐
+    assert(strcmp(cur->c->code, ",") == 0);
+    assert(cur->c->frequency == 0);
+    assert(cur->next != NULL);
 
-    assert(strcmp(l->next->next->c->chchar, "\xEF\xBC\x8C") == 0); // ，
-    assert(strcmp(l->next->next->c->code, ",") == 0);
-    assert(l->next->next->c->frequency == 2);
-    assert(l->next->next->next != NULL);
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xEF\xBC\x8C") == 0); // ，
+    assert(strcmp(cur->c->code, ",") == 0);
+    assert(cur->c->frequency == 2);
+    assert(cur->next != NULL);
 
-    assert(strcmp(l->next->next->next->c->chchar, "\xE3\x80\x81") == 0); // 、
-    assert(strcmp(l->next->next->next->c->code, ",") == 0);
-    assert(l->next->next->next->c->frequency == 3);
-    assert(l->next->next->next->next == NULL);
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE3\x80\x81") == 0); // 、
+    assert(strcmp(cur->c->code, ",") == 0);
+    assert(cur->c->frequency == 3);
+    assert(cur->next == NULL);
 
     cangjie_char_list_free(l);
     cangjie_free(cj);
