@@ -36,7 +36,7 @@
 
 // Longest possible filter query has a length of 127:
 //     " AND ( big5 = 1 OR hkscs = 1 OR punct = 1 OR ... ) "
-#define MAX_LEN_FILTER_QUERY 127
+#define MAX_LEN_FILTER_QUERY 106
 
 // Longest possible code query has a length of 19:
 //     "AND code GLOB '%q';"
@@ -74,7 +74,7 @@ const char *cangjie_radicals[] = {
 
 static void strcat_or_operator(uint32_t *first, char *query) {
     if (! *first) {
-        strcat(query, "OR ");
+        strcat(query, " OR ");
     } else {
         *first = 0;
     }
@@ -97,51 +97,51 @@ int cangjie_get_filter_query(Cangjie *cj, char **query) {
         return CANGJIE_NOMEM;
     }
 
-    strcat(*query, " AND ( ");
+    strcat(*query, "AND (");
 
     if (cj->filter_flags & CANGJIE_FILTER_BIG5) {
-        strcat(*query, "big5 = 1 ");
+        strcat(*query, "big5=1");
         first = 0;
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HKSCS) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "hkscs = 1 ");
+        strcat(*query, "hkscs=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_PUNCTUATION) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "punct = 1 ");
+        strcat(*query, "punct=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_CHINESE) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "zh = 1 ");
+        strcat(*query, "zh=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_ZHUYIN) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "zhuyin = 1 ");
+        strcat(*query, "zhuyin=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KANJI) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "kanji = 1 ");
+        strcat(*query, "kanji=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_KATAKANA) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "katakana = 1 ");
+        strcat(*query, "katakana=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_HIRAGANA) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "hiragana = 1 ");
+        strcat(*query, "hiragana=1");
     }
 
     if (cj->filter_flags & CANGJIE_FILTER_SYMBOLS) {
         strcat_or_operator(&first, *query);
-        strcat(*query, "symbol = 1 ");
+        strcat(*query, "symbol=1");
     }
 
     strcat(*query, ") ");
