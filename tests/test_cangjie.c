@@ -68,6 +68,65 @@ void test_cangjie_get_characters_single_result() {
 }
 
 
+void test_cangjie_get_characters_results_order() {
+    Cangjie *cj;
+    CangjieCharList *l;
+    CangjieCharList *cur;
+
+    int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
+    assert(ret == CANGJIE_OK);
+
+    assert(cj->version == CANGJIE_VERSION_3);
+    assert(cj->filter_flags == CANGJIE_FILTER_BIG5);
+
+    ret = cangjie_get_characters(cj, "h*i", &l);
+    assert(ret == CANGJIE_OK);
+
+    cur = l;
+    assert(strcmp(cur->c->chchar, "\xE5\x87\xA1") == 0); // 凡
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE4\xB9\x88") == 0); // 么
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE4\xB8\x9F") == 0); // 丟
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE5\xA4\x99") == 0); // 夙
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE8\x88\x9F") == 0); // 舟
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE5\x8D\xB5") == 0); // 卵
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE6\x88\x91") == 0); // 我
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE7\xA7\x81") == 0); // 私
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE7\x9A\x84") == 0); // 的
+    assert(cur->next != NULL);
+
+    cur = cur->next;
+    assert(strcmp(cur->c->chchar, "\xE5\xBE\x85") == 0); // 待
+    assert(cur->next != NULL);
+
+    cangjie_char_list_free(l);
+    cangjie_free(cj);
+}
+
+
 void test_cangjie_get_characters_by_shortcode() {
     Cangjie *cj;
     CangjieCharList *l;
@@ -138,6 +197,7 @@ int main() {
 
     test_cangjie_new();
     test_cangjie_get_characters_single_result();
+    test_cangjie_get_characters_results_order();
     test_cangjie_get_characters_by_shortcode();
     test_cangjie_get_characters_multiple_queries();
     return 0;
