@@ -8680,7 +8680,7 @@
 吋 1 1 0 0 1 0 0 0 0 rdi rdi NA 22698
 同 1 1 0 0 1 0 0 0 0 bmr bmr NA 22702
 名 1 1 0 0 1 0 0 0 0 nir nir NA 22695
-后 1 1 0 0 1 0 0 0 0 hmr,hovie hmr NA 22692
+后 1 1 0 0 1 0 0 0 0 hmr hmr NA 22692
 吏 1 1 0 0 1 0 0 0 0 jlk jlk NA 22703
 吐 1 1 0 0 1 0 0 0 0 rg rg NA 22700
 向 1 1 0 0 1 0 0 0 0 hbr hbr NA 22696
@@ -11622,7 +11622,7 @@
 徉 1 1 0 0 1 0 0 0 0 hotq hotq NA 21276
 徊 1 1 0 0 1 0 0 0 0 howr howr NA 21280
 律 1 1 0 0 1 0 0 0 0 holq holq NA 21279
-後 1 1 0 0 1 0 0 0 0 hmr,hovie hovie NA 21277
+後 1 1 0 0 1 0 0 0 0 hovie hovie NA 21277
 徍 1 0 0 0 1 0 0 0 0 hogg hogg NA 0
 徎 1 0 0 0 1 0 0 0 0 horhg hormg NA 0
 徏 1 0 0 0 1 0 0 0 0 hoylh hoylh NA 0
@@ -15633,7 +15633,7 @@
 漮 1 1 0 0 1 0 0 0 0 eile eile NA 8011
 漯 1 1 0 0 1 0 0 0 0 ewvf ewvf NA 17492
 漰 1 1 0 0 1 0 0 0 0 eubb eubb NA 7960
-漱 1 1 0 0 1 0 0 0 0 edlk,edlo edlo,xedlo NA 17498
+漱 1 1 0 0 1 0 0 0 0 edlo edlo,xedlo NA 17498
 漲 1 1 0 0 1 0 0 0 0 ensv ensv NA 17496
 漳 1 1 0 0 1 0 0 0 0 eytj eytj NA 17547
 漴 1 0 1 0 1 0 0 0 0 eujf eujf NA 0
@@ -16794,7 +16794,7 @@
 玷 1 1 0 0 1 0 0 0 0 mgyr mgyr NA 21055
 玸 1 1 0 0 1 0 0 0 0 mgpru mgpru NA 12778
 玹 1 1 0 0 1 0 0 0 0 mgyvi mgyvi NA 12788
-玺 1 0 1 0 1 0 0 0 0 mbmgi nfmgi NA 0
+玺 1 0 1 0 1 0 0 0 0 nfmgi nfmgi NA 0
 玻 1 1 0 0 1 0 0 0 0 mgdhe mgdhe NA 21053
 玼 1 1 0 0 1 0 0 0 0 mgymp mgymp NA 12048
 玽 1 0 0 0 1 0 0 0 0 mgpr mgpr NA 0
@@ -18242,7 +18242,7 @@
 祟 1 1 0 0 1 0 0 0 0 uummf uummf NA 20309
 祠 1 1 0 0 1 0 0 0 0 ifsmr ifsmr NA 20310
 祡 1 1 0 0 1 0 0 0 0 ypmmf ypmmf NA 11005
-祢 1 0 1 0 1 0 0 0 0 ifmfb ifnf NA 0
+祢 1 0 1 0 1 0 0 0 0 ifnf ifnf NA 0
 祣 1 1 0 0 1 0 0 0 0 ifohv ifohv NA 11007
 祤 1 1 0 0 1 0 0 0 0 ifsmm ifsmm NA 11011
 祥 1 1 0 0 1 0 0 0 0 iftq iftq NA 19523
@@ -21580,9 +21580,9 @@
 虩 1 1 0 0 1 0 0 0 0 ffypu ffypn,ffypu NA 4357
 虪 1 1 0 0 1 0 0 0 0 yuolf ynolf,yuolf NA 2074
 虫 1 1 0 0 1 0 0 0 0 lmi lmi NA 22554
-虬 1 0 1 0 1 0 0 0 0 livl liu NA 0
+虬 1 0 1 0 1 0 0 0 0 liu liu NA 0
 虭 1 1 0 0 1 0 0 0 0 lish lish NA 13302
-虮 1 1 0 0 1 0 0 0 0 lihn,livii lihn NA 13301
+虮 1 1 0 0 1 0 0 0 0 lihn lihn NA 13301
 虯 1 1 0 0 1 0 0 0 0 livl livl NA 13303
 虰 1 1 0 0 1 0 0 0 0 limn limn NA 13304
 虱 1 1 0 0 1 0 0 0 0 nhli nhli NA 21523
@@ -22375,7 +22375,7 @@
 覄 1 0 0 0 1 0 0 0 0 mwoik mwoik NA 0
 覅 1 1 0 0 1 0 0 0 0 mvphh mvphh NA 8645
 覆 1 1 0 0 1 0 0 0 0 mwhoe mwhoe NA 15406
-覇 1 0 1 0 1 0 0 0 0 mbtjb mbtjb,mwtjb,xmbtj NA 0
+覇 1 0 1 0 1 0 0 0 0 mwtjb mwtjb,xmbtj NA 0
 覈 1 1 0 0 1 0 0 0 0 mwhsk mwhsk NA 3789
 覉 1 0 1 0 1 0 0 0 0 mbtjr mbtjr,mwtjr NA 0
 覊 1 0 1 0 1 0 0 0 0 mbtjf mbtjf,mwtjf NA 0
