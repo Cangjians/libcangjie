@@ -6817,7 +6817,7 @@
 䱺 䱺 1 0 0 0 0 0 0 0 0 nfumt nfumt NA 0
 䱻 䱻 1 0 1 0 0 0 0 0 0 nfbbb nfbbb NA 0
 䱼 䱼 1 0 0 0 0 0 0 0 0 nfstv nfstv NA 0
-䱽 䲝 1 0 1 0 0 0 0 0 0 nfomr nfoir NA 0
+䱽 䲝 1 0 1 0 0 0 0 0 0 nfoir nfoir NA 0
 䱾 䱾 1 0 0 0 0 0 0 0 0 nflwv nfllv NA 0
 䱿 䱿 1 0 0 0 0 0 0 0 0 nfjjl nfjjl NA 0
 䲀 䲀 1 0 0 0 0 0 0 0 0 ginwf ginwf NA 0
@@ -8124,7 +8124,7 @@
 凟 凟 1 0 1 0 1 0 0 0 0 imgwc imgwc NA 0
 几 几 1 1 0 0 1 0 0 0 0 hn hn NA 23218
 凡 凡 1 1 0 0 1 0 0 0 0 hni hni NA 23204
-凢 凢 1 0 1 0 1 0 0 0 0 hn hhn,xhhn NA 0
+凢 凢 1 0 1 0 1 0 0 0 0 hhn hhn,xhhn NA 0
 凣 凣 1 0 0 0 1 0 0 0 0 lhn lhn NA 0
 凤 凤 1 0 1 0 1 0 0 0 0 hne hne NA 0
 凥 凥 1 0 0 0 1 0 0 0 0 shn shn NA 0
@@ -8584,7 +8584,7 @@
 厫 厫 1 0 1 0 1 0 0 0 0 mgsk mgsk,mqsk NA 0
 厬 厬 1 1 0 0 1 0 0 0 0 mahr mahr NA 8313
 厭 厌 1 1 0 0 1 0 0 0 0 mabk mabk NA 17729
-厮 厮 1 0 1 0 1 0 0 0 0 itcl mtcl NA 0
+厮 厮 1 0 1 0 1 0 0 0 0 mtcl mtcl NA 0
 厯 厯 1 0 0 0 1 0 0 0 0 mduii mddi NA 0
 厰 厂 1 0 1 0 1 0 0 0 0 mfbk mfbk,xmfbk NA 0
 厱 厱 1 0 0 0 1 0 0 0 0 momo momo NA 0
@@ -17300,7 +17300,7 @@
 疱 疱 1 0 1 0 1 0 0 0 0 depru kpru NA 0
 疲 疲 1 1 0 0 1 0 0 0 0 kdhe kdhe NA 20374
 疳 疳 1 1 0 0 1 0 0 0 0 ktm ktm NA 20373
-疴 疴 1 0 1 0 1 0 0 0 0 knlr kmnr,xkmnr NA 0
+疴 疴 1 0 1 0 1 0 0 0 0 kmnr kmnr,xkmnr NA 0
 疵 疵 1 1 0 0 1 0 0 0 0 kymp kymp NA 19539
 疶 疶 1 1 0 0 1 0 0 0 0 kpt kpt NA 12022
 疷 疷 1 0 0 0 1 0 0 0 0 khpm khpm,khvi NA 0
@@ -21073,7 +21073,7 @@
 葮 葮 1 1 0 0 1 0 0 0 0 thje thje NA 8671
 葯 葯 1 1 0 0 1 0 0 0 0 tvfi tvfi NA 8684
 葰 葰 1 1 0 0 1 0 0 0 0 toie toie NA 8689
-葱 葱 1 0 1 0 1 0 0 0 0 tphp tpkp NA 0
+葱 葱 1 0 1 0 1 0 0 0 0 tpkp tpkp NA 0
 葲 葲 1 0 1 0 1 0 0 0 0 thae thae NA 0
 葳 葳 1 1 0 0 1 0 0 0 0 tihv tihv NA 8708
 葴 葴 1 1 0 0 1 0 0 0 0 tihr tihr NA 8709
@@ -22134,7 +22134,7 @@
 袓 袓 1 1 0 0 1 0 0 0 0 lbm lbm NA 10748
 袔 袔 1 0 0 0 1 0 0 0 0 lmnr lmnr NA 0
 袕 袕 1 1 0 0 1 0 0 0 0 ljc ljc NA 10764
-袖 袖 1 1 0 0 1 0 0 0 0 iflw,llw llw NA 19371
+袖 袖 1 1 0 0 1 0 0 0 0 llw llw NA 19371
 袗 袗 1 1 0 0 1 0 0 0 0 lohh lohh NA 10752
 袘 袘 1 1 0 0 1 0 0 0 0 lopd lopd NA 10756
 袙 袙 1 1 0 0 1 0 0 0 0 lha lha NA 10754
