@@ -30,6 +30,16 @@ install it with `yum`:
 $ sudo yum install libcangjie
 ```
 
+## Gentoo
+
+Libcangjie is included in the Gentoo repositories. It is currently masked.
+You will need to add "app-i18n/libcangjie" to your /etc/portage/package.accept_keywords 
+or use autounmask. Once unmasked install as root with :
+
+```
+$ emerge app-i18n/libcangjie
+```
+
 Note that if you need the development headers, then you should also install
 the `libcangjie-devel` package.
 
