@@ -9183,7 +9183,7 @@
 嘂 嘂 1 1 0 0 1 0 0 0 0 rrvlr rrvlr NA 8303
 嘃 嘃 1 0 0 0 1 0 0 0 0 rilb rilb NA 0
 嘄 嘄 1 1 0 0 1 0 0 0 0 rhad rhad NA 8300
-嘅 嘅 1 0 1 0 1 0 0 0 0 rhpu raiu,rhpu NA 0
+嘅 嘅 1 0 1 0 1 0 0 0 0 rhpu,raiu raiu,rhpu NA 0
 嘆 叹 1 1 0 0 1 0 0 0 0 rtlo rtlo NA 17722
 嘇 嘇 1 0 0 0 1 0 0 0 0 riih riih NA 0
 嘈 嘈 1 1 0 0 1 0 0 0 0 rtwa rtwa NA 17715
