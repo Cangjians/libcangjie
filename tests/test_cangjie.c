@@ -173,6 +173,9 @@ void test_cangjie_get_characters_multiple_queries() {
     Cangjie *cj;
     CangjieCharList *l;
     CangjieCharList *l2;
+    CangjieCharList *l3;
+    CangjieCharList *cur;
+    int cnt;
     int ret = cangjie_new(&cj, CANGJIE_VERSION_3, CANGJIE_FILTER_BIG5);
     assert(ret == CANGJIE_OK);
 
@@ -186,12 +189,25 @@ void test_cangjie_get_characters_multiple_queries() {
     ret = cangjie_get_characters(cj, "dmlm", &l2);
     assert(ret == CANGJIE_OK);
 
+    ret = cangjie_get_characters(cj, "ab*", &l3);
+    assert(ret == CANGJIE_OK);
+
     assert(strcmp(l2->c->chchar, "\xE6\xA4\x8F") == 0); // 椏
     assert(strcmp(l2->c->code, "dmlm") == 0);
     assert(l2->c->frequency == 10253);
     assert(l2->next == NULL);
-
     cangjie_char_list_free(l2);
+
+    assert(strcmp(l3->c->chchar, "\xE6\x98\x8E") == 0); // 明
+    assert(strcmp(l3->c->code, "ab") == 0);
+    assert(l3->next != NULL);
+    assert(strcmp(l3->next->c->chchar, "\xE5\x86\x92") == 0); // 冒
+    assert(strcmp(l3->next->c->code, "abu") == 0);
+
+    for (cnt = 1, cur = l3; (cur->next != NULL); (cur = cur->next), cnt++) {}
+    assert(cnt == 14);
+    cangjie_char_list_free(l3);
+
     cangjie_free(cj);
 }
 

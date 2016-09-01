@@ -230,7 +230,7 @@ int cangjie_get_characters(Cangjie          *cj,
         return CANGJIE_INVALID;
     }
 
-    if (input_code[0] == '*' || input_code[strlen(input_code) - 1] == '*') {
+    if (input_code[0] == '*') {
         return CANGJIE_INVALID;
     }
 
