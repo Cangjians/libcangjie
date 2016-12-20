@@ -254,8 +254,8 @@
 ☆ NA 0 0 0 0 0 0 0 0 1 yyybi yyybi,za NA 0
 ♀ NA 0 0 0 0 0 0 0 0 1 yyybr yyybr NA 0
 ♂ NA 0 0 0 0 0 0 0 0 1 yyybq yyybq NA 0
-、 NA 0 0 0 0 0 0 0 1 0 zxac zxac , 3
-。 NA 0 0 0 0 0 0 0 1 0 zxad zxad . 2
+、 NA 0 0 0 0 0 0 0 1 0 i,xi,zxac i,xi,zxac  , 3
+。 NA 0 0 0 0 0 0 0 1 0 xr,yyyco,zxad xr,yyyco,zxad . 2
 〇 NA 0 0 0 0 0 0 0 0 1 NA xxxxx NA 0
 〈 NA 0 0 0 0 0 0 0 1 0 yyyae,zxby yyyae,za,zxby ' 6
 〉 NA 0 0 0 0 0 0 0 1 0 yyyaf,zxca yyyaf,za,zxca ' 5
@@ -866,7 +866,7 @@
 㔻 㔻 1 0 0 0 0 0 0 0 0 mfj mfj NA 0
 㔼 㔼 1 0 0 0 0 0 0 0 0 qgj qgj NA 0
 㔽 㔽 1 0 0 0 0 0 0 0 0 ywr ywr NA 0
-㔾 㔾 1 0 1 0 0 0 0 0 0 su su NA 0
+㔾 㔾 1 0 1 0 0 0 0 0 0 su,suxx su,xxsu NA 0
 㔿 㔿 1 0 0 0 0 0 0 0 0 mul mvl NA 0
 㕀 㕀 1 0 0 0 0 0 0 0 0 lwsu lwsu NA 0
 㕁 㕁 1 0 0 0 0 0 0 0 0 kisl kisl NA 0
@@ -1822,7 +1822,7 @@
 㣷 㣷 1 0 0 0 0 0 0 0 0 hojpn hojpn NA 0
 㣸 㣸 1 0 0 0 0 0 0 0 0 hotom hotom NA 0
 㣹 㣹 1 0 0 0 0 0 0 0 0 hoigp hoiop NA 0
-㣺 㣺 1 0 1 0 0 0 0 0 0 pi pi NA 0
+㣺 㣺 1 0 1 0 0 0 0 0 0 pi,pixx pi,xxpi NA 0
 㣻 㣻 1 0 0 0 0 0 0 0 0 kp kp NA 0
 㣼 㣼 1 0 0 0 0 0 0 0 0 pshi pshi NA 0
 㣽 㣽 1 0 0 0 0 0 0 0 0 vp vp NA 0
@@ -2076,7 +2076,7 @@
 㧵 㧵 1 0 0 0 0 0 0 0 0 qmfr qmfr NA 0
 㧶 㧶 1 0 0 0 0 0 0 0 0 qhxh qhxh NA 0
 㧷 㧷 1 0 0 0 0 0 0 0 0 qmkr qmkr NA 0
-㧸 㧸 1 0 1 0 0 0 0 0 0 qyrn qyrn NA 0
+㧸 㧸 1 0 1 0 0 0 0 0 0 qyrn,qyrxx qyrn,xqyrn NA 0
 㧹 㧹 1 0 0 0 0 0 0 0 0 qami qami NA 0
 㧺 㧺 1 0 0 0 0 0 0 0 0 qea qea NA 0
 㧻 㧻 1 0 1 0 0 0 0 0 0 qmso qmso NA 0
@@ -2235,7 +2235,7 @@
 㪔 㪔 1 0 0 0 0 0 0 0 0 ddye ddye NA 0
 㪕 㪕 1 0 0 0 0 0 0 0 0 yjye yjye NA 0
 㪖 㪖 1 0 0 0 0 0 0 0 0 veye neye,veye NA 0
-㪗 㪗 1 0 1 0 0 0 0 0 0 yrye yrye NA 0
+㪗 㪗 1 0 1 0 0 0 0 0 0 yrye,yryxx yrye,xyrye NA 0
 㪘 㪘 1 0 0 0 0 0 0 0 0 oook oook,ooye NA 0
 㪙 㪙 1 0 0 0 0 0 0 0 0 wdok wdok NA 0
 㪚 㪚 1 0 0 0 0 0 0 0 0 taok taok NA 0
@@ -2609,7 +2609,7 @@
 㰊 㰊 1 0 0 0 0 0 0 0 0 dggf dggf NA 0
 㰋 㰋 1 0 0 0 0 0 0 0 0 dyhc dyhc NA 0
 㰌 㰌 1 0 0 0 0 0 0 0 0 dmbg dmbg NA 0
-㰍 㰍 1 0 1 0 0 0 0 0 0 ypd ypd NA 0
+㰍 㰍 1 0 1 0 0 0 0 0 0 ypd,ypdxx ypd,xxypd NA 0
 㰎 㰎 1 0 0 0 0 0 0 0 0 duos duos NA 0
 㰏 㰏 1 0 0 0 0 0 0 0 0 dhyb dhyb NA 0
 㰐 㰐 1 0 0 0 0 0 0 0 0 dnlb dnlb NA 0
@@ -3071,7 +3071,7 @@
 㷘 㷘 1 0 0 0 0 0 0 0 0 fird fird NA 0
 㷙 㷙 1 0 0 0 0 0 0 0 0 ftbn ftbn NA 0
 㷚 㷚 1 0 0 0 0 0 0 0 0 fyrn fyrn NA 0
-㷛 㷛 1 0 1 0 0 0 0 0 0 odf odf NA 0
+㷛 㷛 1 0 1 0 0 0 0 0 0 odf,odfxx odf,xxodf NA 0
 㷜 㷜 1 0 0 0 0 0 0 0 0 fyck fyck NA 0
 㷝 㷝 1 0 0 0 0 0 0 0 0 fjck fjck NA 0
 㷞 㷞 1 0 0 0 0 0 0 0 0 fmad fmad NA 0
@@ -3104,7 +3104,7 @@
 㷹 㷹 1 0 0 0 0 0 0 0 0 ftyj ftyj NA 0
 㷺 㷺 1 0 0 0 0 0 0 0 0 nkf nkf NA 0
 㷻 㷻 1 0 0 0 0 0 0 0 0 fotf fotf NA 0
-㷼 㷼 1 0 1 0 0 0 0 0 0 tlpf tlpf NA 0
+㷼 㷼 1 0 1 0 0 0 0 0 0 tlpf,tlpxx tlpf,xxtlp NA 0
 㷽 㷽 1 0 1 0 0 0 0 0 0 ftgr fttr NA 0
 㷾 㷾 1 0 0 0 0 0 0 0 0 fypo fypo NA 0
 㷿 𤈷 1 0 0 0 0 0 0 0 0 fomo fomo NA 0
@@ -3276,7 +3276,7 @@
 㺥 㺥 1 0 0 0 0 0 0 0 0 khnri khnri NA 0
 㺦 㺦 1 0 0 0 0 0 0 0 0 khsjt khsjt NA 0
 㺧 㺧 1 0 0 0 0 0 0 0 0 khrrr khrrr NA 0
-㺨 㺨 1 0 1 0 0 0 0 0 0 mgi mgi NA 0
+㺨 㺨 1 0 1 0 0 0 0 0 0 mgi,mgxxx mgi,xxxmgi NA 0
 㺩 㺩 1 0 1 0 0 0 0 0 0 mgvl mgvl NA 0
 㺪 㺪 1 0 1 0 0 0 0 0 0 mgy mgy NA 0
 㺫 㺫 1 0 0 0 0 0 0 0 0 mgln mgln NA 0
@@ -5876,7 +5876,7 @@
 䣍 䣍 1 0 0 0 0 0 0 0 0 kvnl kunl NA 0
 䣎 䣎 1 0 0 0 0 0 0 0 0 vwnl vwnl NA 0
 䣏 䣏 1 0 0 0 0 0 0 0 0 otcl otcl NA 0
-䣐 䣐 1 0 1 0 0 0 0 0 0 tknl tknl NA 0
+䣐 䣐 1 0 1 0 0 0 0 0 0 tknl,tknxx tknl,xxtkn NA 0
 䣑 䣑 1 0 0 0 0 0 0 0 0 mgnl mgnl NA 0
 䣒 䣒 1 0 0 0 0 0 0 0 0 lonl lonl NA 0
 䣓 䣓 1 0 0 0 0 0 0 0 0 mbnl mbnl NA 0
@@ -6875,7 +6875,7 @@
 䲴 䲴 1 0 0 0 0 0 0 0 0 fhaf fhaf NA 0
 䲵 䲵 1 0 0 0 0 0 0 0 0 fhhaf fhhaf NA 0
 䲶 䲶 1 0 0 0 0 0 0 0 0 mmuf muhaf NA 0
-䲷 䲷 1 0 1 0 0 0 0 0 0 hfd hfd NA 0
+䲷 䲷 1 0 1 0 0 0 0 0 0 hfd,hfdxx hfd,xxhfd NA 0
 䲸 䲸 1 0 0 0 0 0 0 0 0 olhaf olhaf NA 0
 䲹 䲹 1 0 0 0 0 0 0 0 0 mmhaf mmhaf NA 0
 䲺 䲺 1 0 0 0 0 0 0 0 0 tmhaf tmhaf NA 0
@@ -6917,8 +6917,8 @@
 䳞 䳞 1 0 0 0 0 0 0 0 0 qqhaf qqhaf NA 0
 䳟 䳟 1 0 0 0 0 0 0 0 0 abhf abhf NA 0
 䳠 䳠 1 0 0 0 0 0 0 0 0 hmhaf hmhaf NA 0
-䳡 䳡 1 0 1 0 0 0 0 0 0 oghaf oghaf NA 0
-䳢 䳢 1 0 1 0 0 0 0 0 0 tchaf tchaf NA 0
+䳡 䳡 1 0 1 0 0 0 0 0 0 oghaf,oghxx oghaf,xxogh NA 0
+䳢 䳢 1 0 1 0 0 0 0 0 0 tchaf,tchxx tchaf,xxtch NA 0
 䳣 䳣 1 0 0 0 0 0 0 0 0 jphaf jshaf NA 0
 䳤 䳤 1 0 0 0 0 0 0 0 0 fbhaf fbhaf NA 0
 䳥 䳥 1 0 0 0 0 0 0 0 0 uihaf uihaf NA 0
@@ -6964,7 +6964,7 @@
 䴍 䴍 1 0 0 0 0 0 0 0 0 bcbcf bcbcf NA 0
 䴎 䴎 1 0 0 0 0 0 0 0 0 wwwf wwwf NA 0
 䴏 䴏 1 0 0 0 0 0 0 0 0 tfhaf tfhaf NA 0
-䴐 䴐 1 0 1 0 0 0 0 0 0 jchaf jchaf NA 0
+䴐 䴐 1 0 1 0 0 0 0 0 0 jchaf,jchxx jchaf,xxjch NA 0
 䴑 䴑 1 0 0 0 0 0 0 0 0 wmhaf wmhaf NA 0
 䴒 䴒 1 0 0 0 0 0 0 0 0 mmhaf mohaf NA 0
 䴓 䴓 1 0 0 0 0 0 0 0 0 mbhsm mbpym NA 0
@@ -7243,7 +7243,7 @@
 乮 乮 1 0 0 0 1 0 0 0 0 hln hln NA 0
 乯 乯 1 0 0 0 1 0 0 0 0 hdn hfdn NA 0
 买 买 1 0 0 0 1 0 0 0 0 nyk nyk NA 0
-乱 乱 1 0 0 0 1 0 0 0 0 hru hru NA 0
+乱 乱 1 0 0 0 1 0 0 0 0 hru,hrux xhru,hru NA 0
 乲 乲 1 0 0 0 1 0 0 0 0 ion ion NA 0
 乳 乳 1 1 0 0 1 0 0 0 0 bdu bdu NA 22073
 乴 乴 1 0 0 0 1 0 0 0 0 qln qln NA 0
@@ -7415,7 +7415,7 @@
 会 会 1 0 1 0 1 0 0 0 0 ommi ommi NA 0
 伛 伛 1 0 0 0 1 0 0 0 0 osk osk,xosk NA 0
 伜 伜 1 0 0 0 1 0 0 0 0 oknj oknj NA 0
-伝 传 1 1 0 0 1 0 0 0 0 ommi ommi,xommi NA 14347
+伝 传 1 1 0 0 1 0 0 0 0 ommi ommi NA 14347
 伞 伞 1 0 0 0 1 0 0 0 0 ofj ofj NA 0
 伟 伟 1 0 0 0 1 0 0 0 0 oqs oqs NA 0
 传 传 1 0 0 0 1 0 0 0 0 oqni oqni NA 0
@@ -7448,7 +7448,7 @@
 伻 伻 1 1 0 0 1 0 0 0 0 omfj omfj NA 14180
 似 似 1 1 0 0 1 0 0 0 0 ovio ovio NA 22530
 伽 伽 1 1 0 0 1 0 0 0 0 oksr oksr NA 22535
-伾 伾 1 1 0 0 1 0 0 0 0 omfm omfm,xomfm NA 14175
+伾 伾 1 1 0 0 1 0 0 0 0 omfm omfm NA 14175
 伿 伿 1 1 0 0 1 0 0 0 0 orc orc NA 14167
 佀 佀 1 0 0 0 1 0 0 0 0 orlr orlr NA 0
 佁 佁 1 1 0 0 1 0 0 0 0 oir oir NA 14171
@@ -8021,7 +8021,7 @@
 典 典 1 1 0 0 1 0 0 0 0 tbc tbc NA 22041
 兹 兹 1 0 1 0 1 0 0 0 0 tvii tvii NA 0
 兺 兺 1 0 0 0 1 0 0 0 0 cshp cshp,xxcsh NA 0
-养 养 1 0 0 0 1 0 0 0 0 tqll toll NA 0
+养 养 1 0 0 0 1 0 0 0 0 tqll toll,xtoll NA 0
 兼 兼 1 1 0 0 1 0 0 0 0 txc txc NA 20769
 兽 兽 1 0 0 0 1 0 0 0 0 cwmr cwmr NA 0
 兾 兾 1 0 0 0 1 0 0 0 0 cwtc cwtc NA 0
@@ -8143,7 +8143,7 @@
 凲 凲 1 0 0 0 1 0 0 0 0 hnhhc hntxc NA 0
 凳 凳 1 1 0 0 1 0 0 0 0 nomrn,nomtn nomrn,nthn NA 17733
 凴 凭 1 0 1 0 1 0 0 0 0 ifhn ifhn NA 0
-凵 凵 1 1 0 0 1 0 0 0 0 vl vl,xvl NA 14461
+凵 凵 1 1 0 0 1 0 0 0 0 vl vl NA 14461
 凶 凶 1 1 0 0 1 0 0 0 0 uk uk NA 23103
 凷 块 1 0 0 0 1 0 0 0 0 ug ug NA 0
 凸 凸 1 1 0 0 1 0 0 0 0 bss bss NA 22949
@@ -8184,9 +8184,9 @@
 创 创 1 0 0 0 1 0 0 0 0 ouln ouln NA 0
 刜 刜 1 1 0 0 1 0 0 0 0 lnln lnln NA 14163
 初 初 1 1 0 0 1 0 0 0 0 lsh lsh NA 21522
-刞 刞 1 1 0 0 1 0 0 0 0 bmln bmln,xbmln NA 14162
+刞 刞 1 1 0 0 1 0 0 0 0 bmln bmln NA 14162
 刟 刟 1 0 1 0 1 0 0 0 0 srln srln,xsrln NA 0
-删 删 1 0 1 0 1 0 0 0 0 bmln bmln NA 0
+删 删 1 0 1 0 1 0 0 0 0 bmln,bmlnx bmln,xbmln NA 0
 刡 刡 1 1 0 0 1 0 0 0 0 rpln rpln NA 14161
 刢 刢 1 0 0 0 1 0 0 0 0 oiln oiln,xoiln NA 0
 刣 刣 1 0 0 0 1 0 0 0 0 irln irln NA 0
@@ -8549,7 +8549,7 @@
 厈 厈 1 0 0 0 1 0 0 0 0 mmj mmj NA 0
 厉 厉 1 0 0 0 1 0 0 0 0 mms mms NA 0
 厊 厊 1 1 0 0 1 0 0 0 0 mmvh mmvh NA 14331
-压 压 1 0 0 0 1 0 0 0 0 mgi mgi,xmgi NA 0
+压 压 1 0 0 0 1 0 0 0 0 mgi,mgixx mgi,xxmgi NA 0
 厌 厌 1 0 0 0 1 0 0 0 0 mik mik NA 0
 厍 厍 1 0 0 0 1 0 0 0 0 mkq mkq,xmkq NA 0
 厎 厎 1 1 0 0 1 0 0 0 0 mhpm mhpm,mhvi NA 14155
@@ -8965,7 +8965,7 @@
 唨 唨 1 0 1 0 1 0 0 0 0 rnlm rnlm NA 0
 唩 唩 1 0 0 0 1 0 0 0 0 rhdv rhdv NA 0
 唪 唪 1 1 0 0 1 0 0 0 0 rqkq rqkq NA 11592
-唫 唫 1 0 1 0 1 0 0 0 0 rc rc,xxrc NA 0
+唫 唫 1 0 1 0 1 0 0 0 0 rc,rcxx rc,xxrc NA 0
 唬 唬 1 1 0 0 1 0 0 0 0 ryphn,rypu rypn,rypu NA 19994
 唭 唭 1 1 0 0 1 0 0 0 0 rtmc rtmc NA 11544
 售 售 1 1 0 0 1 0 0 0 0 ogr ogr NA 19996
@@ -9063,7 +9063,7 @@
 喊 喊 1 1 0 0 1 0 0 0 0 rihr rihr NA 19235
 喋 喋 1 1 0 0 1 0 0 0 0 rptd rptd NA 19227
 喌 喌 1 1 0 0 1 0 0 0 0 rrill rrill NA 10569
-喍 喍 1 1 0 0 1 0 0 0 0 rypd rypd,xrypd NA 9448
+喍 喍 1 1 0 0 1 0 0 0 0 rypd rypd NA 9448
 喎 㖞 1 1 0 0 1 0 0 0 0 rbbr rbbr NA 10564
 喏 喏 1 1 0 0 1 0 0 0 0 rtkr rtkr NA 10576
 喐 喐 1 0 1 0 1 0 0 0 0 rkbl rkbl NA 0
@@ -9195,7 +9195,7 @@
 嘎 嘎 1 1 0 0 1 0 0 0 0 rmui rmui NA 17719
 嘏 嘏 1 1 0 0 1 0 0 0 0 jrrye jrrse NA 8307
 嘐 嘐 1 1 0 0 1 0 0 0 0 rsmh rsmh NA 17714
-嘑 嘑 1 0 1 0 1 0 0 0 0 rypd rypd NA 0
+嘑 嘑 1 0 1 0 1 0 0 0 0 rypd,rypdx rypd,xrypd NA 0
 嘒 嘒 1 1 0 0 1 0 0 0 0 rqjm rqjm,rqjs NA 8309
 嘓 啯 1 1 0 0 1 0 0 0 0 rwim rwim NA 8304
 嘔 呕 1 1 0 0 1 0 0 0 0 rsrr rsrr NA 17723
@@ -9688,7 +9688,7 @@
 埻 埻 1 1 0 0 1 0 0 0 0 gyrd gyrd NA 11538
 埼 埼 1 1 0 0 1 0 0 0 0 gkmr gkmr NA 11516
 埽 埽 1 1 0 0 1 0 0 0 0 gsmb gsmb NA 11530
-埾 埾 1 0 1 0 1 0 0 0 0 seg seg,xxseg NA 0
+埾 埾 1 0 1 0 1 0 0 0 0 seg,segxx seg,xxseg NA 0
 埿 埿 1 0 0 0 1 0 0 0 0 epg epg NA 0
 堀 堀 1 1 0 0 1 0 0 0 0 gsuu gsuu NA 11532
 堁 堁 1 1 0 0 1 0 0 0 0 gwd gwd NA 11513
@@ -10478,7 +10478,7 @@
 嬑 嬑 1 0 1 0 1 0 0 0 0 vytp vytp NA 0
 嬒 嬒 1 0 0 0 1 0 0 0 0 voma voma NA 0
 嬓 嬓 1 1 0 0 1 0 0 0 0 vhsk vhsk NA 6249
-嬔 嬔 1 1 0 0 1 0 0 0 0 vnum vnum,xvnum NA 6250
+嬔 嬔 1 1 0 0 1 0 0 0 0 vnum vnum NA 6250
 嬕 嬕 1 0 1 0 1 0 0 0 0 vwlj vwlj NA 0
 嬖 嬖 1 1 0 0 1 0 0 0 0 sjv sjv NA 6247
 嬗 嬗 1 1 0 0 1 0 0 0 0 vywm vywm NA 6254
@@ -10560,7 +10560,7 @@
 季 季 1 1 0 0 1 0 0 0 0 hdnd hdnd NA 21897
 孤 孤 1 1 0 0 1 0 0 0 0 ndhvo ndhvo NA 21898
 孥 孥 1 1 0 0 1 0 0 0 0 vend vend NA 13673
-学 学 1 0 1 0 1 0 0 0 0 fbnd fbnd NA 0
+学 学 1 0 1 0 1 0 0 0 0 fbnd,fbndx fbnd,xfbnd NA 0
 孧 孧 1 0 0 0 1 0 0 0 0 vsnd vsnd NA 0
 孨 孨 1 0 1 0 1 0 0 0 0 ndndd ndndd NA 0
 孩 孩 1 1 0 0 1 0 0 0 0 ndyvo ndyvo NA 21306
@@ -11016,7 +11016,7 @@
 崫 崫 1 0 0 0 1 0 0 0 0 suu usuu,xusuu NA 0
 崬 岽 1 0 1 0 1 0 0 0 0 udw udw,xudw NA 0
 崭 崭 1 0 0 0 1 0 0 0 0 ukql ukql NA 0
-崮 崮 1 1 0 0 1 0 0 0 0 uwjr uwjr,xuwjr NA 11387
+崮 崮 1 1 0 0 1 0 0 0 0 uwjr uwjr NA 11387
 崯 崯 1 0 1 0 1 0 0 0 0 uc uc,xuc NA 0
 崰 崰 1 1 0 0 1 0 0 0 0 uvvw uvvw NA 11391
 崱 崱 1 1 0 0 1 0 0 0 0 ubcn ubcn NA 10456
@@ -11124,7 +11124,7 @@
 嶗 崂 1 1 0 0 1 0 0 0 0 uffs uffs NA 7260
 嶘 嶘 1 0 0 0 1 0 0 0 0 udii udii NA 0
 嶙 嶙 1 1 0 0 1 0 0 0 0 ufdq ufdq NA 7261
-嶚 嶚 1 1 0 0 1 0 0 0 0 ukcf ukcf,xukcf NA 7251
+嶚 嶚 1 1 0 0 1 0 0 0 0 ukcf ukcf NA 7251
 嶛 嶛 1 0 0 0 1 0 0 0 0 ukcf ukcf NA 0
 嶜 嶜 1 1 0 0 1 0 0 0 0 umua umua NA 7253
 嶝 嶝 1 1 0 0 1 0 0 0 0 unot unot NA 17044
@@ -11150,7 +11150,7 @@
 嶱 嶱 1 1 0 0 1 0 0 0 0 utav utav NA 6240
 嶲 嶲 1 1 0 0 1 0 0 0 0 uogs uogs NA 6232
 嶳 嶳 1 0 0 0 1 0 0 0 0 umog umog,xumog NA 0
-嶴 岙 1 1 0 0 1 0 0 0 0 hku hku,xhku NA 6229
+嶴 岙 1 1 0 0 1 0 0 0 0 hku hku NA 6229
 嶵 嶵 1 1 0 0 1 0 0 0 0 uwly uwly NA 6237
 嶶 嶶 1 0 1 0 1 0 0 0 0 uhok uhok NA 0
 嶷 嶷 1 1 0 0 1 0 0 0 0 upko upko NA 5349
@@ -11219,7 +11219,7 @@
 巶 巶 1 0 0 0 1 0 0 0 0 srru srru NA 0
 巷 巷 1 1 0 0 1 0 0 0 0 tcru,tcsu tcru NA 21293
 巸 巸 1 0 0 0 1 0 0 0 0 slru slru NA 0
-巹 巹 1 1 0 0 1 0 0 0 0 nemsu nemsu,xnems NA 13072
+巹 巹 1 1 0 0 1 0 0 0 0 nemsu nemsu NA 13072
 巺 巺 1 0 0 0 1 0 0 0 0 rvmc rumc NA 0
 巻 巻 1 0 0 0 1 0 0 0 0 fqsu fqsu,xfqsu NA 0
 巼 巼 1 0 0 0 1 0 0 0 0 aurp aurp NA 0
@@ -12096,7 +12096,7 @@
 慣 惯 1 1 0 0 1 0 0 0 0 pwjc pwjc NA 17594
 慤 悫 1 0 1 0 1 0 0 0 0 gep gep NA 0
 慥 慥 1 1 0 0 1 0 0 0 0 pyhr pyhr NA 8174
-慦 慦 1 1 0 0 1 0 0 0 0 ikp ikp,xikp NA 7189
+慦 慦 1 1 0 0 1 0 0 0 0 ikp ikp NA 7189
 慧 慧 1 1 0 0 1 0 0 0 0 qjsmp qjsmp NA 17028
 慨 慨 1 1 0 0 1 0 0 0 0 paiu paiu NA 19088
 慩 慩 1 0 0 0 1 0 0 0 0 pyjj pyjj NA 0
@@ -12677,7 +12677,7 @@
 推 推 1 1 0 0 1 0 0 0 0 qog qog NA 19774
 掩 掩 1 1 0 0 1 0 0 0 0 qklu qklu NA 19779
 措 措 1 1 0 0 1 0 0 0 0 qta qta NA 19781
-掫 掫 1 1 0 0 1 0 0 0 0 qsje qsje,xqsje NA 11343
+掫 掫 1 1 0 0 1 0 0 0 0 qsje,qsjex qsje,xqsje NA 11343
 掬 掬 1 1 0 0 1 0 0 0 0 qpfd qpfd NA 19769
 掭 掭 1 1 0 0 1 0 0 0 0 qhkp qhkp,qmkp NA 11346
 掮 掮 1 1 0 0 1 0 0 0 0 qhsb,qisb qhsb,qisb NA 11333
@@ -12830,9 +12830,9 @@
 摁 摁 1 1 0 0 1 0 0 0 0 qwkp qwkp NA 9233
 摂 摄 1 0 0 0 1 0 0 0 0 qsjo qsjo NA 0
 摃 摃 1 1 0 0 1 0 0 0 0 qmbc qmbc NA 9245
-摄 摄 1 0 0 0 1 0 0 0 0 qsje qsje NA 0
+摄 摄 1 0 0 0 1 0 0 0 0 qsje,qsjex qsje,xqsje NA 0
 摅 摅 1 0 0 0 1 0 0 0 0 qypp qypp,xqypp NA 0
-摆 摆 1 0 0 0 1 0 0 0 0 qwli qwli NA 0
+摆 摆 1 0 0 0 1 0 0 0 0 qwli,qwlix qwli,xqwli NA 0
 摇 摇 1 0 0 0 1 0 0 0 0 qbou qbou,xqbou NA 0
 摈 摈 1 0 0 0 1 0 0 0 0 qjoc qjoc NA 0
 摉 摉 1 0 0 0 1 0 0 0 0 qjcn qjcn,xqjcn NA 0
@@ -12963,7 +12963,7 @@
 擆 擆 1 0 0 0 1 0 0 0 0 qtja qtja NA 0
 擇 择 1 1 0 0 1 0 0 0 0 qwlj qwlj NA 16418
 擈 擈 1 0 0 0 1 0 0 0 0 qtcd qtcd NA 0
-擉 擉 1 1 0 0 1 0 0 0 0 qwli qwli,xqwli NA 6167
+擉 擉 1 1 0 0 1 0 0 0 0 qwli qwli NA 6167
 擊 击 1 1 0 0 1 0 0 0 0 jeq jeq NA 15939
 擋 挡 1 1 0 0 1 0 0 0 0 qfbw qfbw NA 16423
 擌 擌 1 0 0 0 1 0 0 0 0 qhko qhko NA 0
@@ -13041,7 +13041,7 @@
 攔 拦 1 1 0 0 1 0 0 0 0 qanw qanw NA 15002
 攕 攕 1 1 0 0 1 0 0 0 0 qoim qoim NA 3442
 攖 撄 1 1 0 0 1 0 0 0 0 qbcv qbcv NA 3443
-攗 攗 1 1 0 0 1 0 0 0 0 qipd qipd,xqipd NA 3444
+攗 攗 1 1 0 0 1 0 0 0 0 qipd qipd NA 3444
 攘 攘 1 1 0 0 1 0 0 0 0 qyrv qyrv NA 15003
 攙 搀 1 1 0 0 1 0 0 0 0 qnri qnri NA 15001
 攚 攚 1 0 0 0 1 0 0 0 0 qffr qffr NA 0
@@ -13628,7 +13628,7 @@
 束 束 1 1 0 0 1 0 0 0 0 dl dl NA 22282
 杠 杠 1 1 0 0 1 0 0 0 0 dm,dmx dm,xdm NA 22272
 条 条 1 0 1 0 1 0 0 0 0 hed hed NA 0
-杢 杢 1 0 1 0 1 0 0 0 0 dm dm,xxdm NA 0
+杢 杢 1 0 1 0 1 0 0 0 0 dm,dmxx dm,xxdm NA 0
 杣 杣 1 0 0 0 1 0 0 0 0 du du,xdu NA 0
 杤 杤 1 0 0 0 1 0 0 0 0 dms dms NA 0
 来 来 1 0 0 0 1 0 0 0 0 dt dt NA 0
@@ -14254,7 +14254,7 @@
 槑 槑 1 0 1 0 1 0 0 0 0 rdrd rdrd NA 0
 槒 槒 1 0 0 0 1 0 0 0 0 dyvw dyvw NA 0
 槓 槓 1 1 0 0 1 0 0 0 0 dmbc dmbc NA 17564
-槔 槔 1 1 0 0 1 0 0 0 0 dhaj dhaj,xdhaj NA 8045
+槔 槔 1 1 0 0 1 0 0 0 0 dhaj dhaj NA 8045
 槕 槕 1 0 1 0 1 0 0 0 0 dyad dyad NA 0
 槖 槖 1 0 1 0 1 0 0 0 0 gbmd gbmd NA 0
 槗 槗 1 0 0 0 1 0 0 0 0 dkrb dkrb NA 0
@@ -14522,7 +14522,7 @@
 櫝 椟 1 1 0 0 1 0 0 0 0 dgwc dgwc NA 15246
 櫞 橼 1 1 0 0 1 0 0 0 0 dvfo dvfo NA 3943
 櫟 栎 1 1 0 0 1 0 0 0 0 dvid dvid NA 3949
-櫠 櫠 1 1 0 0 1 0 0 0 0 dine dine,xdine NA 3954
+櫠 櫠 1 1 0 0 1 0 0 0 0 dine dine NA 3954
 櫡 櫡 1 1 0 0 1 0 0 0 0 dhja dhja NA 4575
 櫢 櫢 1 0 0 0 1 0 0 0 0 dlvk dlvk NA 0
 櫣 櫣 1 0 0 0 1 0 0 0 0 dtyj dytj,xxdyt NA 0
@@ -14891,7 +14891,7 @@
 汈 汈 1 0 0 0 1 0 0 0 0 esm esm NA 0
 汉 汉 1 0 1 0 1 0 0 0 0 ee ee NA 0
 汊 汊 1 1 0 0 1 0 0 0 0 eei eei NA 14275
-汋 汋 1 1 0 0 1 0 0 0 0 epi epi,xepi NA 14273
+汋 汋 1 1 0 0 1 0 0 0 0 epi epi NA 14273
 汌 汌 1 1 0 0 1 0 0 0 0 elll elll NA 14207
 汍 汍 1 1 0 0 1 0 0 0 0 ekni ekni NA 22585
 汎 汎 1 1 0 0 1 0 0 0 0 ehni ehni NA 22584
@@ -14943,8 +14943,8 @@
 汼 汼 1 0 0 0 1 0 0 0 0 ehq ehq,xehq NA 0
 汽 汽 1 1 0 0 1 0 0 0 0 eomn eomn NA 22186
 汾 汾 1 1 0 0 1 0 0 0 0 ecsh ecsh NA 22183
-汿 汿 1 0 1 0 1 0 0 0 0 enin enin NA 0
-沀 沀 1 1 0 0 1 0 0 0 0 enin enin,xenin NA 13434
+汿 汿 1 0 1 0 1 0 0 0 0 enin,eninx enin,xenin NA 0
+沀 沀 1 1 0 0 1 0 0 0 0 enin enin NA 13434
 沁 沁 1 1 0 0 1 0 0 0 0 ep ep NA 22199
 沂 沂 1 1 0 0 1 0 0 0 0 ehml ehml NA 22176
 沃 沃 1 1 0 0 1 0 0 0 0 ehk ehk NA 22185
@@ -15143,7 +15143,7 @@
 浄 浄 1 0 0 0 1 0 0 0 0 ensd ensd NA 0
 浅 浅 1 0 0 0 1 0 0 0 0 eij eij NA 0
 浆 浆 1 0 0 0 1 0 0 0 0 lee lne NA 0
-浇 浇 1 0 0 0 1 0 0 0 0 ejpu ejpu NA 0
+浇 浇 1 0 0 0 1 0 0 0 0 ejpu,ejpux ejpu,xejpu NA 0
 浈 浈 1 0 0 0 1 0 0 0 0 eybo eybo NA 0
 浉 浉 1 0 0 0 1 0 0 0 0 ellb ellb NA 0
 浊 浊 1 0 0 0 1 0 0 0 0 elmi elmi NA 0
@@ -15163,7 +15163,7 @@
 浘 浘 1 1 0 0 1 0 0 0 0 eshu eshu NA 12147
 浙 浙 1 1 0 0 1 0 0 0 0 eqhl,eqhml eqhl NA 20481
 浚 浚 1 1 0 0 1 0 0 0 0 eice eice NA 20411
-浛 浛 1 0 1 0 1 0 0 0 0 eomr eoir,xeoir NA 0
+浛 浛 1 0 1 0 1 0 0 0 0 eomr,eomxx eoir,xeoir NA 0
 浜 滨 1 0 1 0 1 0 0 0 0 eomc eomc NA 0
 浝 浝 1 0 0 0 1 0 0 0 0 eiuh eikh,eiuh,xeikh NA 0
 浞 浞 1 1 0 0 1 0 0 0 0 eryo eryo NA 12138
@@ -15573,7 +15573,7 @@
 滲 渗 1 1 0 0 1 0 0 0 0 eiih eiih NA 17487
 滳 滳 1 0 0 0 1 0 0 0 0 eycb eycb,xeycb NA 0
 滴 滴 1 1 0 0 1 0 0 0 0 eycb eycb NA 17543
-滵 滵 1 1 0 0 1 0 0 0 0 ejpu ejpu,xejpu NA 8018
+滵 滵 1 1 0 0 1 0 0 0 0 ejpu ejpu NA 8018
 滶 滶 1 1 0 0 1 0 0 0 0 egsk egsk,eqsk NA 7951
 滷 滷 1 1 0 0 1 0 0 0 0 eywi eywi NA 17485
 滸 浒 1 1 0 0 1 0 0 0 0 eyrj eyrj NA 8014
@@ -15633,7 +15633,7 @@
 漮 漮 1 1 0 0 1 0 0 0 0 eile eile NA 8011
 漯 漯 1 1 0 0 1 0 0 0 0 ewvf ewvf NA 17492
 漰 漰 1 1 0 0 1 0 0 0 0 eubb eubb NA 7960
-漱 漱 1 1 0 0 1 0 0 0 0 edlo edlo,xedlo NA 17498
+漱 漱 1 1 0 0 1 0 0 0 0 edlo edlo NA 17498
 漲 涨 1 1 0 0 1 0 0 0 0 ensv ensv NA 17496
 漳 漳 1 1 0 0 1 0 0 0 0 eytj eytj NA 17547
 漴 漴 1 0 1 0 1 0 0 0 0 eujf eujf NA 0
@@ -15793,7 +15793,7 @@
 濎 濎 1 1 0 0 1 0 0 0 0 ebul ebul NA 6097
 濏 濏 1 1 0 0 1 0 0 0 0 emgh emgh NA 6083
 濐 濐 1 0 0 0 1 0 0 0 0 eaja eaja NA 0
-濑 濑 1 0 0 0 1 0 0 0 0 edlc edlo NA 0
+濑 濑 1 0 0 0 1 0 0 0 0 edlc edlo,xedlo NA 0
 濒 濒 1 0 0 0 1 0 0 0 0 eyho eyho NA 0
 濓 濓 1 0 1 0 1 0 0 0 0 eyhc eytc NA 0
 濔 濔 1 1 0 0 1 0 0 0 0 emfb emfb NA 5230
@@ -16080,7 +16080,7 @@
 热 热 1 0 0 0 1 0 0 0 0 qif qif NA 0
 烮 烮 1 0 0 0 1 0 0 0 0 mnf mnf,xmnf NA 0
 烯 烯 1 1 0 0 1 0 0 0 0 fkkb fkkb NA 19601
-烰 烰 1 1 0 0 1 0 0 0 0 fbnd fbnd,xfbnd NA 11121
+烰 烰 1 1 0 0 1 0 0 0 0 fbnd fbnd NA 11121
 烱 烱 1 0 1 0 1 0 0 0 0 fbcr fbcr NA 0
 烲 烲 1 0 0 0 1 0 0 0 0 qlf qlf,xqlf NA 0
 烳 烳 1 1 0 0 1 0 0 0 0 fijb fijb NA 11119
@@ -16820,7 +16820,7 @@
 珑 珑 1 0 0 0 1 0 0 0 0 mgikp mgikp NA 0
 珒 珒 1 1 0 0 1 0 0 0 0 mglq mglq NA 12043
 珓 珓 1 1 0 0 1 0 0 0 0 mgyck mgyck NA 12052
-珔 珔 1 1 0 0 1 0 0 0 0 mgkld mgkld,xmgkl NA 12041
+珔 珔 1 1 0 0 1 0 0 0 0 mgkld,mgklx mgkld,xmgkl NA 12041
 珕 珕 1 0 1 0 1 0 0 0 0 mgkss mgkss NA 0
 珖 珖 1 1 0 0 1 0 0 0 0 mgfmu mgfmu NA 12049
 珗 珗 1 1 0 0 1 0 0 0 0 mghgu mghgu NA 12038
@@ -17124,7 +17124,7 @@
 甁 甁 1 0 0 0 1 0 0 0 0 hjhjn yjyjn NA 0
 甂 甂 1 1 0 0 1 0 0 0 0 hbmvn hbmvn,ibmvn NA 7913
 甃 甃 1 1 0 0 1 0 0 0 0 hfmvn hfmvn NA 7912
-甄 甄 1 1 0 0 1 0 0 0 0 mgmvn mgmvn,xmgmv NA 17468
+甄 甄 1 1 0 0 1 0 0 0 0 mgmvn mgmvn NA 17468
 甅 甅 1 0 1 0 1 0 0 0 0 mnmwg mnmwg NA 0
 甆 甆 1 0 0 0 1 0 0 0 0 tvin tvin NA 0
 甇 甇 1 1 0 0 1 0 0 0 0 ffbmn ffbmn NA 6930
@@ -17371,7 +17371,7 @@
 痸 痸 1 1 0 0 1 0 0 0 0 khbn khbn NA 8945
 痹 痹 1 1 0 0 1 0 0 0 0 kwml,kwt kwml NA 8946
 痺 痺 1 1 0 0 1 0 0 0 0 khhj khwj NA 18186
-痻 痻 1 1 0 0 1 0 0 0 0 khpa khpa,xkhpa NA 8943
+痻 痻 1 1 0 0 1 0 0 0 0 khpa khpa NA 8943
 痼 痼 1 1 0 0 1 0 0 0 0 kwjr kwjr NA 8947
 痽 痽 1 1 0 0 1 0 0 0 0 kog kog NA 8939
 痾 疴 1 1 0 0 1 0 0 0 0 knlr knlr NA 8948
@@ -17534,7 +17534,7 @@
 皛 皛 1 1 0 0 1 0 0 0 0 hahaa hahaa NA 6916
 皜 皜 1 1 0 0 1 0 0 0 0 hayrb hayrb NA 6919
 皝 皝 1 1 0 0 1 0 0 0 0 hgfmu hgfmu NA 6918
-皞 皞 1 1 0 0 1 0 0 0 0 hahaj hahaj,xhaha NA 6917
+皞 皞 1 1 0 0 1 0 0 0 0 hahaj hahaj NA 6917
 皟 𤾀 1 0 0 0 1 0 0 0 0 haqmc haqmc NA 0
 皠 皠 1 0 0 0 1 0 0 0 0 hauog hauog NA 0
 皡 皡 1 0 1 0 1 0 0 0 0 hahaj hahaj NA 0
@@ -18680,7 +18680,7 @@
 笕 笕 1 0 0 0 1 0 0 0 0 hbhu hbhu NA 0
 笖 笖 1 0 0 0 1 0 0 0 0 hvio hvio,xhvio NA 0
 笗 笗 1 0 0 0 1 0 0 0 0 hhey hhey NA 0
-笘 笘 1 1 0 0 1 0 0 0 0 hyr hyr,xhyr NA 10988
+笘 笘 1 1 0 0 1 0 0 0 0 hyr,hyrx hyr,xhyr NA 10988
 笙 笙 1 1 0 0 1 0 0 0 0 hhqm hhqm NA 19512
 笚 笚 1 1 0 0 1 0 0 0 0 hwl hwl NA 10979
 笛 笛 1 1 0 0 1 0 0 0 0 hlw hlw NA 19515
@@ -18924,7 +18924,7 @@
 簉 簉 1 1 0 0 1 0 0 0 0 hyhr hyhr NA 5114
 簊 簊 1 1 0 0 1 0 0 0 0 htcg htcg NA 5105
 簋 簋 1 1 0 0 1 0 0 0 0 havt havt NA 5117
-簌 簌 1 1 0 0 1 0 0 0 0 hdlo hdlo,xhdlo NA 15790
+簌 簌 1 1 0 0 1 0 0 0 0 hdlo hdlo NA 15790
 簍 篓 1 1 0 0 1 0 0 0 0 hlwv hllv NA 15793
 簎 簎 1 1 0 0 1 0 0 0 0 hqta hqta NA 5119
 簏 簏 1 1 0 0 1 0 0 0 0 hixp hixp NA 5124
@@ -19123,7 +19123,7 @@
 糐 糐 1 1 0 0 1 0 0 0 0 fdibi fdibi NA 5877
 糑 糑 1 1 0 0 1 0 0 0 0 fdnmm fdnmm NA 5876
 糒 糒 1 1 0 0 1 0 0 0 0 fdthb fdthb NA 5880
-糓 糓 1 0 1 0 1 0 0 0 0 gdhne gdhne,xxgdh NA 0
+糓 糓 1 0 1 0 1 0 0 0 0 gdhne,gdhxx gdhne,xxgdh NA 0
 糔 糔 1 1 0 0 1 0 0 0 0 fdeii fdeii NA 5879
 糕 糕 1 1 0 0 1 0 0 0 0 fdtgf fdtgf NA 16258
 糖 糖 1 1 0 0 1 0 0 0 0 fdilr fdilr NA 16257
@@ -19286,12 +19286,12 @@
 絳 绛 1 1 0 0 1 0 0 0 0 vfheq vfheq NA 18754
 絴 絴 1 0 0 0 1 0 0 0 0 vftq vftq NA 0
 絵 绘 1 0 0 0 1 0 0 0 0 vfomi vfomi NA 0
-絶 绝 1 0 0 0 1 0 0 0 0 vfnau vfnau NA 0
+絶 绝 1 0 0 0 1 0 0 0 0 vfnau,vfnax vfnau,xvfna NA 0
 絷 絷 1 0 0 0 1 0 0 0 0 givif qivif NA 0
 絸 絸 1 0 0 0 1 0 0 0 0 vfbuu vfbuu NA 0
 絹 绢 1 1 0 0 1 0 0 0 0 vfrb vfrb NA 18070
 絺 𫄨 1 1 0 0 1 0 0 0 0 vfkkb vfkkb NA 8802
-絻 絻 1 1 0 0 1 0 0 0 0 vfnau vfnau,xvfna NA 8800
+絻 絻 1 1 0 0 1 0 0 0 0 vfnau vfnau NA 8800
 絼 絼 1 1 0 0 1 0 0 0 0 vfbsh vfbsh NA 8798
 絽 絽 1 1 0 0 1 0 0 0 0 vfrhr vfrhr,vfrr NA 8794
 絾 絾 1 0 0 0 1 0 0 0 0 vfihs vfihs NA 0
@@ -19533,7 +19533,7 @@
 繪 绘 1 1 0 0 1 0 0 0 0 vfoma vfoma NA 15174
 繫 系 1 1 0 0 1 0 0 0 0 jevif jevif NA 15178
 繬 繬 1 0 1 0 1 0 0 0 0 vfgow vfgow NA 0
-繭 茧 1 1 0 0 1 0 0 0 0 tbli tbli,xtbli NA 15177
+繭 茧 1 1 0 0 1 0 0 0 0 tbli tbli NA 15177
 繮 繮 1 0 1 0 1 0 0 0 0 vfmwm vfmwm NA 0
 繯 缳 1 1 0 0 1 0 0 0 0 vfwlv vfwlv NA 3851
 繰 缲 1 1 0 0 1 0 0 0 0 vfrrd vfrrd NA 3853
@@ -19921,12 +19921,12 @@
 翮 翮 1 1 0 0 1 0 0 0 0 mbsmm mbsmm NA 16209
 翯 翯 1 1 0 0 1 0 0 0 0 smyrb smyrb NA 5851
 翰 翰 1 1 0 0 1 0 0 0 0 jjosm jjosm NA 16211
-翱 翱 1 1 0 0 1 0 0 0 0 hjsmm hjsmm,xhjsm NA 16210
+翱 翱 1 1 0 0 1 0 0 0 0 hjsmm hjsmm NA 16210
 翲 翲 1 1 0 0 1 0 0 0 0 mfsmm mfsmm NA 5081
 翳 翳 1 1 0 0 1 0 0 0 0 sesmm sesmm NA 15763
 翴 翴 1 1 0 0 1 0 0 0 0 smyjj smyjj NA 5082
 翵 翵 1 1 0 0 1 0 0 0 0 smhaf smhaf NA 4631
-翶 翶 1 0 0 0 1 0 0 0 0 hjsmm hjsmm,xxhjs NA 0
+翶 翶 1 0 0 0 1 0 0 0 0 hjsmm,hjsmx hjsmm,xhjsm NA 0
 翷 翷 1 1 0 0 1 0 0 0 0 fqsmm fqsmm NA 4421
 翸 翸 1 1 0 0 1 0 0 0 0 jcsmm jcsmm NA 4420
 翹 翘 1 1 0 0 1 0 0 0 0 gusmm gusmm NA 15426
@@ -20064,7 +20064,7 @@
 聽 听 1 1 0 0 1 0 0 0 0 sgjwp sgjwp NA 14681
 聾 聋 1 1 0 0 1 0 0 0 0 ypsj ypsj NA 14682
 聿 聿 1 1 0 0 1 0 0 0 0 lq lq NA 22568
-肀 肀 1 0 1 0 1 0 0 0 0 ll js,sj,xsj NA 0
+肀 肀 1 0 1 0 1 0 0 0 0 ll,llxx js,sj,xsj NA 0
 肁 肁 1 0 0 0 1 0 0 0 0 hslq hslq,islq NA 0
 肂 肂 1 1 0 0 1 0 0 0 0 mnlq mnlq NA 12228
 肃 肃 1 0 0 0 1 0 0 0 0 lx llfl NA 0
@@ -20213,7 +20213,7 @@
 脒 脒 1 0 1 0 1 0 0 0 0 bfdx bfd,xbfd NA 0
 脓 脓 1 0 0 0 1 0 0 0 0 blbv bhbv NA 0
 脔 脔 1 0 1 0 1 0 0 0 0 ycobo ycobo NA 0
-脕 脕 1 1 0 0 1 0 0 0 0 bnau bnau,xbnau NA 10865
+脕 脕 1 1 0 0 1 0 0 0 0 bnau bnau NA 10865
 脖 脖 1 1 0 0 1 0 0 0 0 bjbd bjbd NA 19482
 脗 脗 1 0 1 0 1 0 0 0 0 bphr bphr NA 0
 脘 脘 1 1 0 0 1 0 0 0 0 bjmu bjmu NA 10874
@@ -20415,7 +20415,7 @@
 臜 臜 1 0 0 0 1 0 0 0 0 bhuo bhuo NA 0
 臝 臝 1 1 0 0 1 0 0 0 0 yrbwn ynwd NA 3023
 臞 臞 1 1 0 0 1 0 0 0 0 bbug bbug NA 2682
-臟 脏 1 1 0 0 1 0 0 0 0 btis btis,xbtis NA 14680
+臟 脏 1 1 0 0 1 0 0 0 0 btis btis NA 14680
 臠 脔 1 1 0 0 1 0 0 0 0 vfobo vfobo NA 2172
 臡 臡 1 1 0 0 1 0 0 0 0 tgobo tgobo NA 2171
 臢 臜 1 1 0 0 1 0 0 0 0 bhuc bhuc NA 14630
@@ -20606,14 +20606,14 @@
 芛 芛 1 1 0 0 1 0 0 0 0 tsk tsk NA 13320
 芜 芜 1 0 0 0 1 0 0 0 0 tmku tmku NA 0
 芝 芝 1 1 0 0 1 0 0 0 0 tino tino NA 21539
-芞 芞 1 1 0 0 1 0 0 0 0 tomn tomn,xtomn NA 13315
+芞 芞 1 1 0 0 1 0 0 0 0 tomn tomn NA 13315
 芟 芟 1 1 0 0 1 0 0 0 0 thne thne NA 21535
 芠 芠 1 1 0 0 1 0 0 0 0 tyk tyk NA 13325
 芡 芡 1 1 0 0 1 0 0 0 0 tno tno NA 13311
 芢 芢 1 1 0 0 1 0 0 0 0 tomm tomm NA 13305
 芣 芣 1 1 0 0 1 0 0 0 0 tmf tmf NA 21528
 芤 芤 1 1 0 0 1 0 0 0 0 tndu tndu NA 13308
-芥 芥 1 1 0 0 1 0 0 0 0 toll toll,xtoll NA 21531
+芥 芥 1 1 0 0 1 0 0 0 0 toll toll NA 21531
 芦 芦 1 0 1 0 1 0 0 0 0 tis ths,tis NA 0
 芧 芧 1 1 0 0 1 0 0 0 0 tnin tnin NA 13318
 芨 芨 1 1 0 0 1 0 0 0 0 tnhe,tnno tnhe NA 13312
@@ -20651,7 +20651,7 @@
 苈 苈 1 0 0 0 1 0 0 0 0 tmksx tmks,xtmks NA 0
 苉 苉 1 0 0 0 1 0 0 0 0 tsc tsc NA 0
 苊 苊 1 0 1 0 1 0 0 0 0 tmsu tmsu NA 0
-苋 苋 1 0 0 0 1 0 0 0 0 tbhux tbhu NA 0
+苋 苋 1 0 0 0 1 0 0 0 0 tbhu,tbhux tbhu,xtbhu NA 0
 苌 苌 1 0 0 0 1 0 0 0 0 tsmv tpo NA 0
 苍 苍 1 0 0 0 1 0 0 0 0 tosu tosu NA 0
 苎 苎 1 0 0 0 1 0 0 0 0 tjmn tjm NA 0
@@ -20996,7 +20996,7 @@
 萡 萡 1 0 1 0 1 0 0 0 0 teha teha NA 0
 萢 萢 1 0 0 0 1 0 0 0 0 tepu tepu NA 0
 萣 萣 1 1 0 0 1 0 0 0 0 tjmo tjmo NA 9824
-萤 萤 1 0 1 0 1 0 0 0 0 tblmi tbli NA 0
+萤 萤 1 0 1 0 1 0 0 0 0 tblmi tbli,xtbli NA 0
 营 营 1 0 0 0 1 0 0 0 0 tbrr tbrr NA 0
 萦 萦 1 0 1 0 1 0 0 0 0 tbvf tbvf NA 0
 萧 萧 1 0 0 0 1 0 0 0 0 tlx tlll NA 0
@@ -21142,7 +21142,7 @@
 蒳 蒳 1 0 0 0 1 0 0 0 0 tvfb tvfb NA 0
 蒴 蒴 1 1 0 0 1 0 0 0 0 ttub ttub NA 7688
 蒵 蒵 1 0 0 0 1 0 0 0 0 tbvk tbvk NA 0
-蒶 蒶 1 1 0 0 1 0 0 0 0 tvfh tvfh,xtvfh NA 7668
+蒶 蒶 1 1 0 0 1 0 0 0 0 tvfh tvfh NA 7668
 蒷 蒷 1 0 0 0 1 0 0 0 0 trbc trbc NA 0
 蒸 蒸 1 1 0 0 1 0 0 0 0 tnef tnef NA 17313
 蒹 蒹 1 1 0 0 1 0 0 0 0 ttxc ttxc NA 7689
@@ -22307,7 +22307,7 @@
 襀 𫌀 1 0 0 0 1 0 0 0 0 lqmc lqmc NA 0
 襁 襁 1 1 0 0 1 0 0 0 0 lnii lnii,lnri NA 4938
 襂 襂 1 1 0 0 1 0 0 0 0 liih liih NA 4935
-襃 襃 1 0 1 0 1 0 0 0 0 yhdv xxyhd,yhdv NA 0
+襃 襃 1 0 1 0 1 0 0 0 0 yhdv,yhdxx yhdv,xxyhd NA 0
 襄 襄 1 1 0 0 1 0 0 0 0 yrrv yrrv NA 15686
 襅 襅 1 0 0 0 1 0 0 0 0 lwtj lwtj NA 0
 襆 襆 1 1 0 0 1 0 0 0 0 ltco ltco NA 4329
@@ -22366,7 +22366,7 @@
 襻 襻 1 1 0 0 1 0 0 0 0 lddq lddq NA 2164
 襼 襼 1 1 0 0 1 0 0 0 0 ltgi ltgi NA 2165
 襽 襽 1 0 0 0 1 0 0 0 0 ltaw ltaw NA 0
-襾 襾 1 1 0 0 1 0 0 0 0 mub mub,xmub NA 14191
+襾 襾 1 1 0 0 1 0 0 0 0 mub mub NA 14191
 西 西 1 1 0 0 1 0 0 0 0 mcw mcw NA 22550
 覀 覀 1 0 1 0 1 0 0 0 0 mllw mllw NA 0
 要 要 1 1 0 0 1 0 0 0 0 mwv mwv NA 20880
@@ -22425,7 +22425,7 @@
 覶 覶 1 1 0 0 1 0 0 0 0 bbbuu bbbuu NA 3787
 覷 觑 1 1 0 0 1 0 0 0 0 ymbuu ycbuu,ymbuu NA 3788
 覸 覸 1 0 0 0 1 0 0 0 0 aabuu aabuu NA 0
-覹 覹 1 1 0 0 1 0 0 0 0 buhok buhok,xbuho NA 3315
+覹 覹 1 1 0 0 1 0 0 0 0 buhok buhok NA 3315
 覺 觉 1 1 0 0 1 0 0 0 0 hbbuu hbbuu NA 14925
 覻 覻 1 0 0 0 1 0 0 0 0 ytbuu ytbuu NA 0
 覼 𫌨 1 0 1 0 1 0 0 0 0 mbbuu mbbuu NA 0
@@ -22811,7 +22811,7 @@
 謸 謸 1 0 0 0 1 0 0 0 0 yrgsk yrgsk,yrqsk NA 0
 謹 谨 1 1 0 0 1 0 0 0 0 yrtlm yrtlm NA 15402
 謺 謺 1 1 0 0 1 0 0 0 0 giymr giymr NA 4306
-謻 謻 1 1 0 0 1 0 0 0 0 yrhdn xyrhd,yrhdn NA 4308
+謻 謻 1 1 0 0 1 0 0 0 0 yrhdn xyrhd NA 4308
 謼 謼 1 1 0 0 1 0 0 0 0 yrypd yrypd NA 4317
 謽 謽 1 1 0 0 1 0 0 0 0 niymr niymr NA 4307
 謾 谩 1 1 0 0 1 0 0 0 0 yrawe yrawe NA 4316
@@ -22819,7 +22819,7 @@
 譀 譀 1 1 0 0 1 0 0 0 0 yrmjk yrmjk,yrnjk NA 3782
 譁 譁 1 1 0 0 1 0 0 0 0 yrtmj yrtmj NA 15151
 譂 譂 1 1 0 0 1 0 0 0 0 yrrrj yrrrj NA 3710
-譃 譃 1 0 1 0 1 0 0 0 0 yrypm xxyry,yrypc,yrypm NA 0
+譃 譃 1 0 1 0 1 0 0 0 0 yrypm,yryxx yrypc,yrypm,xxyry NA 0
 譄 譄 1 0 0 0 1 0 0 0 0 yrcwa yrcwa NA 0
 譅 譅 1 1 0 0 1 0 0 0 0 yrsim yrsim NA 2928
 譆 譆 1 1 0 0 1 0 0 0 0 yrgrr yrgrr NA 15144
@@ -24627,7 +24627,7 @@
 鉐 鉐 1 1 0 0 1 0 0 0 0 cmr cmr NA 8441
 鉑 铂 1 1 0 0 1 0 0 0 0 cha cha NA 17822
 鉒 鉒 1 1 0 0 1 0 0 0 0 cyg cyg NA 8464
-鉓 鉓 1 1 0 0 1 0 0 0 0 colb colb,xcolb NA 8438
+鉓 鉓 1 1 0 0 1 0 0 0 0 colb,colbx colb,xcolb NA 8438
 鉔 鉔 1 1 0 0 1 0 0 0 0 cslb cslb NA 8443
 鉕 钷 1 0 1 0 1 0 0 0 0 csr csr NA 0
 鉖 鉖 1 1 0 0 1 0 0 0 0 chey chey NA 8436
@@ -24675,7 +24675,7 @@
 銀 银 1 1 0 0 1 0 0 0 0 cav cav NA 17206
 銁 銁 1 0 1 0 1 0 0 0 0 cpa cpa NA 0
 銂 銂 1 1 0 0 1 0 0 0 0 cill cill NA 7445
-銃 铳 1 1 0 0 1 0 0 0 0 cyiu cyiu,xcyiu NA 8457
+銃 铳 1 1 0 0 1 0 0 0 0 cyiu cyiu NA 8457
 銄 銄 1 0 1 0 1 0 0 0 0 chbr chbr NA 0
 銅 铜 1 1 0 0 1 0 0 0 0 cbmr cbmr NA 17205
 銆 銆 1 1 0 0 1 0 0 0 0 cma cma NA 7438
@@ -24958,7 +24958,7 @@
 鎛 镈 1 1 0 0 1 0 0 0 0 cibi cibi NA 4200
 鎜 鎜 1 0 1 0 1 0 0 0 0 hec hec NA 0
 鎝 𨱏 1 1 0 0 1 0 0 0 0 ctor ctor NA 4199
-鎞 鎞 1 1 0 0 1 0 0 0 0 chwp chwp,xchwp NA 4194
+鎞 鎞 1 1 0 0 1 0 0 0 0 chwp chwp NA 4194
 鎟 鎟 1 1 0 0 1 0 0 0 0 ceed ceed NA 4189
 鎠 鎠 1 0 1 0 1 0 0 0 0 cwlm cwlm NA 0
 鎡 镃 1 1 0 0 1 0 0 0 0 ctvi ctvi NA 4850
@@ -26428,7 +26428,7 @@
 饙 饙 1 1 0 0 1 0 0 0 0 oijtc oijtc NA 3177
 饚 饚 1 0 0 0 1 0 0 0 0 oitgt oitgt NA 0
 饛 饛 1 1 0 0 1 0 0 0 0 oitbo oitbo NA 2632
-饜 餍 1 1 0 0 1 0 0 0 0 mkoiv mkoiv,xmkoi NA 14618
+饜 餍 1 1 0 0 1 0 0 0 0 mkoiv mkoiv NA 14618
 饝 饝 1 0 1 0 1 0 0 0 0 oiidr oiidr NA 0
 饞 馋 1 1 0 0 1 0 0 0 0 oinri oinri NA 14493
 饟 饟 1 1 0 0 1 0 0 0 0 oiyrv oiyrv NA 2150
