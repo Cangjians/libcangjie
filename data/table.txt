@@ -7160,11 +7160,11 @@
 丛 丛 1 0 0 0 1 0 0 0 0 oom oom NA 0
 东 东 1 0 1 0 1 0 0 0 0 kd kd NA 0
 丝 丝 1 0 0 0 1 0 0 0 0 vvm vvm NA 0
-丞 丞 1 1 0 0 1 0 0 0 0 nem nem,xnem NA 22814
-丟 丢 1 1 0 0 1 0 0 0 0 hgi mgi,xxmgi NA 22813
+丞 丞 1 1 0 0 1 0 0 0 0 nem nem NA 22814
+丟 丢 1 1 0 0 1 0 0 0 0 hgi hgi,mgi,xmgi NA 22813
 丠 丠 1 0 0 0 1 0 0 0 0 lpm lpm NA 0
 両 两 1 0 1 0 1 0 0 0 0 mub mub NA 0
-丢 丢 1 0 0 0 1 0 0 0 0 hgi hgi NA 0
+丢 丢 1 0 0 0 1 0 0 0 0 hgi,hgix hgi,xhgi NA 0
 丣 丣 1 0 0 0 1 0 0 0 0 mlls mlls NA 0
 两 两 1 0 1 0 1 0 0 0 0 moob moob NA 0
 严 严 1 0 0 0 1 0 0 0 0 mtch mtch NA 0
@@ -7487,7 +7487,7 @@
 佢 佢 1 1 0 0 1 0 0 0 0 oss oss NA 14179
 佣 佣 1 1 0 0 1 0 0 0 0 obq obq NA 22528
 佤 佤 1 1 0 0 1 0 0 0 0 omvn omvn NA 14176
-佥 佥 1 0 0 0 1 0 0 0 0 omro omfm NA 0
+佥 佥 1 0 0 0 1 0 0 0 0 omfm,omfmx omfm,xomfm NA 0
 佦 佦 1 0 0 0 1 0 0 0 0 omr omr,xomr NA 0
 佧 佧 1 1 0 0 1 0 0 0 0 oymy oymy NA 14174
 佨 佨 1 0 0 0 1 0 0 0 0 opru opru NA 0
@@ -10031,7 +10031,7 @@
 奒 奒 1 0 0 0 1 0 0 0 0 kyvo kyvo,xkyvo NA 0
 奓 奓 1 1 0 0 1 0 0 0 0 knin knin NA 13150
 奔 奔 1 1 0 0 1 0 0 0 0 kjt kjt NA 21916
-奕 奕 1 1 0 0 1 0 0 0 0 yck,yckx xyck,yck NA 21323
+奕 奕 1 1 0 0 1 0 0 0 0 yck,yckx yck,xyck NA 21323
 奖 奖 1 0 0 0 1 0 0 0 0 lek lnk NA 0
 套 套 1 1 0 0 1 0 0 0 0 ksmi ksmi NA 20657
 奘 奘 1 1 0 0 1 0 0 0 0 vgk vgk NA 20656
@@ -11909,7 +11909,7 @@
 您 您 1 1 0 0 1 0 0 0 0 ofp ofp NA 19844
 悩 悩 1 0 0 0 1 0 0 0 0 pfuk pfuk NA 0
 悪 恶 1 0 0 0 1 0 0 0 0 mmp mmp,xmmp NA 0
-悫 悫 1 0 0 0 1 0 0 0 0 gep gbhp NA 0
+悫 悫 1 0 0 0 1 0 0 0 0 gbhp gbhp NA 0
 悬 悬 1 0 0 0 1 0 0 0 0 bip bip NA 0
 悭 悭 1 0 0 0 1 0 0 0 0 pleg pleg NA 0
 悮 悮 1 0 0 0 1 0 0 0 0 prmk prmk NA 0
@@ -12315,7 +12315,7 @@
 戾 戾 1 1 0 0 1 0 0 0 0 hsik,isik hsik,isik NA 21805
 房 房 1 1 0 0 1 0 0 0 0 hsyhs,isyhs hsyhs,isyhs NA 21806
 所 所 1 1 0 0 1 0 0 0 0 hshml hshml NA 21804
-扁 扁 1 1 0 0 1 0 0 0 0 hsbt,isbtx hsbt,isbt,xisbt NA 21259
+扁 扁 1 1 0 0 1 0 0 0 0 hsbt,isbtx hsbt,xisbt NA 21259
 扂 扂 1 1 0 0 1 0 0 0 0 hsyr hsyr,isyr NA 13037
 扃 扃 1 1 0 0 1 0 0 0 0 hsbr,isbr hsbr,isbr NA 13036
 扄 扄 1 0 0 0 1 0 0 0 0 hshbr hshbr,ishbr NA 0
@@ -15621,7 +15621,7 @@
 漢 汉 1 1 0 0 1 0 0 0 0 etlo etlo NA 17536
 漣 涟 1 1 0 0 1 0 0 0 0 eyjj eyjj NA 17495
 漤 漤 1 0 1 0 1 0 0 0 0 eddv eddv NA 0
-漥 漥 1 1 0 0 1 0 0 0 0 jcegg ejcg,xejcg NA 8015
+漥 漥 1 1 0 0 1 0 0 0 0 ejcg ejcg NA 8015
 漦 漦 1 1 0 0 1 0 0 0 0 jkme jkme NA 7109
 漧 漧 1 1 0 0 1 0 0 0 0 ejjn ejjn NA 8006
 漨 漨 1 0 0 0 1 0 0 0 0 eyhj eyhj NA 0
@@ -21169,7 +21169,7 @@
 蓎 蓎 1 1 0 0 1 0 0 0 0 tilr tilr NA 7694
 蓏 蓏 1 1 0 0 1 0 0 0 0 thoo thoo,xxxth NA 7667
 蓐 蓐 1 1 0 0 1 0 0 0 0 tmvi tmvi NA 7682
-蓑 蓑 1 1 0 0 1 0 0 0 0 tyrv,tywv tywv NA 17308
+蓑 蓑 1 1 0 0 1 0 0 0 0 tywv tywv NA 17308
 蓒 蓒 1 1 0 0 1 0 0 0 0 tjjj tjjj NA 7663
 蓓 蓓 1 1 0 0 1 0 0 0 0 toyr toyr NA 17311
 蓔 蓔 1 1 0 0 1 0 0 0 0 ttgf ttgf NA 7664
