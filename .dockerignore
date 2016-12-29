@@ -43,3 +43,13 @@ gcov-report.txt
 
 # -- Log files -----------------------
 *.log
+
+# -- Travis config --------------------
+.travis.yml
+
+# -- Git files ------------------------
+.git?
+.gitignore
+
+# -- editorconfig ---------------------
+.editorconfig
