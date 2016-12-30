@@ -1,5 +1,13 @@
 language: c
+sudo: required
+env:
+  - TARGET=local
+  - TARGET=docker
+services:
+  - docker
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install libsqlite3-dev
-script: ./autogen.sh && make && make check && make distcheck
+  - if [ ${TARGET}="local" ];  then sudo apt-get update && sudo apt-get install libsqlite3-dev; fi
+  - if [ ${TARGET}="docker" ]; then sudo docker build -t "cangjians/libcangjie:latest" . ; fi
+script:
+  - if [ ${TARGET}="local" ];  then ./autogen.sh && make && make check && make distcheck; fi
+  - if [ ${TARGET}="docker" ]; then docker run -it --rm "cangjians/libcangjie:latest" check distcheck; fi
