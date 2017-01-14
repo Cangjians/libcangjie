@@ -1,4 +1,4 @@
-FROM cangjians/build-essential:ubuntu-16.04
+FROM cangjians/build-essential
 MAINTAINER Cangjians (https://cangjians.github.io)
 
 # basic environment for building
@@ -8,7 +8,8 @@ WORKDIR /usr/local/src/libcangjie
 COPY "." "./"
 
 # build the library
-RUN ./autogen.sh --prefix=/usr && \
+RUN echo -e "\n\nOS=$(cat /var/version)\n---------------\n" && \
+  ./autogen.sh --prefix=/usr && \
   make && make install
 
 ENTRYPOINT ["make"]
