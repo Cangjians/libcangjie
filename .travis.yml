@@ -4,6 +4,7 @@ env:
   - TARGET=local
   - TARGET=docker OS=ubuntu-16.04
   - TARGET=docker OS=fedora-25
+  - TARGET=docker OS=opensuse-leap
 services:
   - docker
 before_install:
