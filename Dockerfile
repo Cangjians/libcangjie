@@ -12,5 +12,5 @@ RUN echo -e "\n\nOS=$(cat /var/version)\n---------------\n" && \
   ./autogen.sh --prefix=/usr && \
   make && make install
 
-ENTRYPOINT ["make"]
-CMD ["check", "distcheck"]
+ENTRYPOINT []
+CMD ["make", "check", "distcheck"]
