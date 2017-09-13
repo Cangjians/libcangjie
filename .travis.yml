@@ -12,6 +12,7 @@ env:
 services:
   - docker
 before_install:
+  - sudo apt-get update && sudo apt-get -y install docker-ce
   - docker pull "cangjians/build-essential:${OS}"
   - docker build --build-arg OS=${OS} --tag "cangjians/libcangjie:${OS}" .
 script:
