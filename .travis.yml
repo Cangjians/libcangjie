@@ -13,4 +13,4 @@ before_install:
   - docker tag "cangjians/build-essential:${OS}" "cangjians/build-essential:latest"
   - docker build --tag "cangjians/libcangjie" .
 script:
-  - docker run --interactive --tty --rm "cangjians/libcangjie" make check distcheck
+  - docker run --rm "cangjians/libcangjie" make check distcheck
