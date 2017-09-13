@@ -10,7 +10,6 @@ services:
   - docker
 before_install:
   - docker pull "cangjians/build-essential:${OS}"
-  - docker tag "cangjians/build-essential:${OS}" "cangjians/build-essential:latest"
-  - docker build --tag "cangjians/libcangjie" .
+  - docker build --build-arg OS=${OS} --tag "cangjians/libcangjie:${OS}" .
 script:
-  - docker run --rm "cangjians/libcangjie" make distcheck
+  - docker run --rm "cangjians/libcangjie:${OS}" make distcheck

@@ -1,4 +1,5 @@
-FROM cangjians/build-essential
+ARG OS
+FROM cangjians/build-essential:${OS}
 MAINTAINER Cangjians (https://cangjians.github.io)
 
 # basic environment for building
