@@ -1,29 +1,15 @@
 language: c
 sudo: required
 env:
-  - TARGET=local
-  - TARGET=docker OS=ubuntu-16.04
-  - TARGET=docker OS=fedora-25
-  - TARGET=docker OS=opensuse-leap
+  - OS=ubuntu-16.04
+  - OS=fedora-25
+  - OS=opensuse-leap
 services:
   - docker
 before_install:
-  - | # before_install: local
-    if [ "${TARGET}" = "local"  ]; then
-      sudo apt-get update && sudo apt-get install libsqlite3-dev
-    fi
-  - | # before_install: docker
-    if [ "${TARGET}" = "docker" ]; then
-      sudo docker pull "cangjians/build-essential:${OS}"
-      sudo docker tag "cangjians/build-essential:${OS}" "cangjians/build-essential:latest"
-      sudo docker build -t "cangjians/libcangjie" .
-    fi
+  - |
+    sudo docker pull "cangjians/build-essential:${OS}"
+    sudo docker tag "cangjians/build-essential:${OS}" "cangjians/build-essential:latest"
+    sudo docker build -t "cangjians/libcangjie" .
 script:
-  - | # script: local
-    if [ "${TARGET}" = "local"  ]; then
-      ./autogen.sh && make && make check && make distcheck
-    fi
-  - | # script: docker
-    if [ "${TARGET}" = "docker" ]; then
-      docker run -it --rm "cangjians/libcangjie" make check distcheck
-    fi
+  - docker run -it --rm "cangjians/libcangjie" make check distcheck
