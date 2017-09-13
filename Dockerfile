@@ -11,5 +11,3 @@ COPY "." "./"
 RUN echo -e "\n\nOS=$(cat /var/version)\n---------------\n" && \
   ./autogen.sh --prefix=/usr && \
   make && make install
-
-CMD ["make", "check", "distcheck"]
