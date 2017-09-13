@@ -9,6 +9,5 @@ WORKDIR /usr/local/src/libcangjie
 COPY "." "./"
 
 # build the library
-RUN echo -e "\n\nOS=$(cat /var/version)\n---------------\n" && \
-  ./autogen.sh --prefix=/usr && \
+RUN ./autogen.sh --prefix=/usr && \
   make && make install

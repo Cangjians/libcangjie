@@ -15,4 +15,5 @@ before_install:
   - docker pull "cangjians/build-essential:${OS}"
   - docker build --build-arg OS=${OS} --tag "cangjians/libcangjie:${OS}" .
 script:
+  - docker run --rm "cangjians/libcangjie:${OS}" bash -c '. /usr/lib/os-release && echo $PRETTY_NAME'
   - docker run --rm "cangjians/libcangjie:${OS}" make distcheck
