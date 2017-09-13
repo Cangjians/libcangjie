@@ -1,5 +1,18 @@
 language: c
+sudo: required
+branches:
+  only:
+    - master
+env:
+  - OS=fedora-latest
+  - OS=ubuntu-devel
+  - OS=ubuntu-latest
+  - OS=ubuntu-lts
+services:
+  - docker
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install libsqlite3-dev
-script: ./autogen.sh && make && make check && make distcheck
+  - sudo apt-get update && sudo apt-get -y install docker-ce
+  - docker pull "cangjians/build-essential:${OS}"
+  - docker build --build-arg OS=${OS} --tag "cangjians/libcangjie:${OS}" .
+script:
+  - docker run --rm "cangjians/libcangjie:${OS}" make distcheck
