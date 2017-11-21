@@ -76,6 +76,7 @@ int insert_line(sqlite3 *db, char *line, int i) {
     char *code;
     sqlite3_stmt *stmt;
     int ret;
+    uint32_t active_frequency;
 
     // Parse the line
     char *chchar = strtok_r(line, " ", &saveptr);
@@ -142,20 +143,24 @@ int insert_line(sqlite3 *db, char *line, int i) {
     }
     sqlite3_finalize(stmt);
 
+    active_frequency = frequency;
     if (strcmp(cj3_codes, "NA") != 0) {
         code = strtok_r(cj3_codes, ",", &saveptr);
         while (code != NULL) {
-            query = sqlite3_mprintf(insert_codes, i, 3, code, frequency);
+            query = sqlite3_mprintf(insert_codes, i, 3, code, active_frequency);
+            active_frequency = 0;
             sqlite3_exec(db, query, NULL, NULL, NULL);
             sqlite3_free(query);
             code = strtok_r(NULL, ",", &saveptr);
         }
     }
 
+    active_frequency = frequency;
     if (strcmp(cj5_codes, "NA") != 0) {
         code = strtok_r(cj5_codes, ",", &saveptr);
         while (code != NULL) {
-            query = sqlite3_mprintf(insert_codes, i, 5, code, frequency);
+            query = sqlite3_mprintf(insert_codes, i, 5, code, active_frequency);
+            active_frequency = 0;
             sqlite3_exec(db, query, NULL, NULL, NULL);
             sqlite3_free(query);
             code = strtok_r(NULL, ",", &saveptr);
