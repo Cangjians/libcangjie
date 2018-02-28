@@ -352,16 +352,6 @@
 ㆵ NA 0 0 0 1 0 0 0 0 0 NA NA NA 0
 ㆶ NA 0 0 0 1 0 0 0 0 0 NA NA NA 0
 ㆷ NA 0 0 0 1 0 0 0 0 0 NA NA NA 0
-㈠ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈡ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈢ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈣ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈤ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈥ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈦ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈧ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈨ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
-㈩ NA 0 0 0 0 0 0 0 0 1 NA zbd NA 0
 㐀 㐀 1 0 0 0 0 0 0 0 0 tm tm NA 0
 㐁 㐁 1 0 0 0 0 0 0 0 0 mow mow NA 0
 㐂 㐂 1 0 0 0 0 0 0 0 0 ppp ppp NA 0
