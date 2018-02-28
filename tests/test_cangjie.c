@@ -143,23 +143,11 @@ void test_cangjie_get_characters_by_shortcode() {
     cur = l;
     assert(strcmp(cur->c->chchar, "\xE3\x80\x81") == 0); // 、
     assert(strcmp(cur->c->code, ",") == 0);
-    assert(cur->c->frequency == 3);
-    assert(cur->next != NULL);
-
-    cur = cur->next;
-    assert(strcmp(cur->c->chchar, "\xEF\xBC\x8C") == 0); // ，
-    assert(strcmp(cur->c->code, ",") == 0);
-    assert(cur->c->frequency == 2);
-    assert(cur->next != NULL);
-
-    cur = cur->next;
-    assert(strcmp(cur->c->chchar, "\xEF\xB8\x91") == 0); // ︑
-    assert(strcmp(cur->c->code, ",") == 0);
     assert(cur->c->frequency == 1);
     assert(cur->next != NULL);
 
     cur = cur->next;
-    assert(strcmp(cur->c->chchar, "\xEF\xB8\x90") == 0); // ︐
+    assert(strcmp(cur->c->chchar, "\xEF\xBC\x8C") == 0); // ，
     assert(strcmp(cur->c->code, ",") == 0);
     assert(cur->c->frequency == 0);
     assert(cur->next == NULL);
