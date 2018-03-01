@@ -17,9 +17,7 @@
 … NA 0 0 0 0 0 0 0 1 0 yyych,zxal yyych,za,zxal NA 0
 ※ NA 0 0 0 0 0 0 0 1 0 yyybp yyybp,za NA 0
 ℃ NA 0 0 0 0 0 0 0 0 1 yyyce yyyce NA 0
-℅ NA 0 0 0 0 0 0 0 0 1 yyycb yyycb NA 0
 ℉ NA 0 0 0 0 0 0 0 0 1 yyycf yyycf NA 0
-№ NA 0 0 0 0 0 0 0 0 1 NA za NA 0
 ← NA 0 0 0 0 0 0 0 0 1 yyyat yyyat,za NA 0
 ↑ NA 0 0 0 0 0 0 0 0 1 NA za NA 0
 → NA 0 0 0 0 0 0 0 0 1 yyyas yyyas,za NA 0
