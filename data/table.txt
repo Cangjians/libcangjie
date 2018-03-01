@@ -11,8 +11,8 @@
 ˊ NA 0 0 0 1 0 0 0 0 0 yyyym yyyym NA 0
 ˋ NA 0 0 0 1 0 0 0 0 0 yyyyo yyyyo NA 0
 ˙ NA 0 0 0 1 0 0 0 0 0 yyyby yyyby NA 0
-– NA 0 0 0 0 0 0 0 0 1 zxaw zxaw NA 0
-— NA 0 0 0 0 0 0 0 0 1 zxay zxay NA 0
+– NA 0 0 0 0 0 0 0 1 0 zxaw zxaw NA 0
+— NA 0 0 0 0 0 0 0 1 0 zxay zxay NA 0
 ‘ NA 0 0 0 0 0 0 0 1 0 yyybu,zxcr yyybu,za,zxcr NA 0
 ’ NA 0 0 0 0 0 0 0 1 0 yyybt,zxcs yyybt,za,zxcs NA 0
 “ NA 0 0 0 0 0 0 0 1 0 yyybw,zxct yyybw,za,zxct NA 0
@@ -21,7 +21,7 @@
 … NA 0 0 0 0 0 0 0 1 0 yyych,zxal yyych,za,zxal NA 0
 ′ NA 0 0 0 0 0 0 0 0 1 zxcy zxcy NA 0
 ‵ NA 0 0 0 0 0 0 0 0 1 zxcx zxcx NA 0
-※ NA 0 0 0 0 0 0 0 0 1 yyybp yyybp,za NA 0
+※ NA 0 0 0 0 0 0 0 1 0 yyybp yyybp,za NA 0
 ℃ NA 0 0 0 0 0 0 0 0 1 yyyce yyyce NA 0
 ℅ NA 0 0 0 0 0 0 0 0 1 yyycb yyycb NA 0
 ℉ NA 0 0 0 0 0 0 0 0 1 yyycf yyycf NA 0
