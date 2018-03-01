@@ -1,6 +1,5 @@
 # See the README.table.md file in this folder for details about this data.
 
-? NA 0 0 0 0 0 0 0 1 0 zxaf,zxbb NA NA 0
 § NA 0 0 0 0 0 0 0 0 1 yyybs yyybs NA 0
 ° NA 0 0 0 0 0 0 0 0 1 yyycg yyycg NA 0
 ˇ NA 0 0 0 1 0 0 0 0 0 yyyyn yyyyn NA 0
