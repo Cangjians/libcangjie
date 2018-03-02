@@ -4,6 +4,7 @@ branches:
   only:
     - master
 env:
+  - OS=fedora-rawhide
   - OS=fedora-latest
   - OS=ubuntu-devel
   - OS=ubuntu-latest
