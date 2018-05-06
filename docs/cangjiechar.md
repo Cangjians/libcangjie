@@ -21,19 +21,19 @@ The `chchar` member is the character that the user actually wants, and the
 For example, in Cangjie, the character (`chchar`) "木" has the `code` "d".
 
 The `simpchar` member is the Simplified Chinese equivalent character of
-the character in `chchar` field. 
+the character in `chchar` field.
 
 1. If the character is not a Chinese character, it would be an empty string.
 
 2. If the character is its own Simplified Chinese equivalent character,
 this will be of the same value as `chchar`.
 
-3. If the character only exists in Simplified Chinese, this will be the 
+3. If the character only exists in Simplified Chinese, this will be the
 same value as `chchar`.
 
 4. If the character has a distinct Simplified Chinese equivalent character,
-this will be that equivalent character. For example, the CangjieChar with 
-`chchar` equals to "後" has the `simpchar` "后". The one with `chchar` 
+this will be that equivalent character. For example, the CangjieChar with
+`chchar` equals to "後" has the `simpchar` "后". The one with `chchar`
 equals to "木" has `simpchar` "木".
 
 Finally, the `frequency` member is a useful measure to order the characters
