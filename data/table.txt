@@ -14805,13 +14805,8 @@
 氍 氍 1 1 0 0 1 0 0 0 0 bghqu bghqu NA 2776
 氎 氎 1 0 0 0 1 0 0 0 0 wmhqu wmhqu NA 0
 氏 氏 1 1 0 0 1 0 0 0 0 hvp hvp NA 23051
-
-# Setting the frequency for this character when queried with 'hvpi' to 0
-# allows us to be more compatible with the default Cangjie input method on
-# that "other Operating System" ;)
 氐 氐 1 1 0 0 1 0 0 0 0 hpm hpm NA 22844
 氐 氐 1 1 0 0 1 0 0 0 0 hvpi hvpi NA 0
-
 民 民 1 1 0 0 1 0 0 0 0 rvp rvp NA 22845
 氒 氒 1 0 0 0 1 0 0 0 0 hpj hpj NA 0
 氓 氓 1 1 0 0 1 0 0 0 0 yvrvp yvrvp NA 21665
