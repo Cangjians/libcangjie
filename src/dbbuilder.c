@@ -102,12 +102,6 @@ int insert_line(sqlite3 *db, char *line, int i) {
         strcpy(short_code, " ");
     }
 
-    if ((strcmp(cj3_codes, "NA") == 0) && (strcmp(cj5_codes, "NA") == 0) \
-                                       && (strcmp(short_code, "NA") == 0)) {
-        // This character is useless in the database
-        return CANGJIE_OK;
-    }
-
     // Check whether this character already exists in the database
     query = sqlite3_mprintf(select_index, chchar);
     if (query == NULL) {

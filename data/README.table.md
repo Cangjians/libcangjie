@@ -29,7 +29,7 @@ The format of the data in this table is as follows:
 
 1. The actual character the user desires to input.
 
-2. The Simplified Chinese equivalent character of the actual 
+2. The Simplified Chinese equivalent character of the actual
    character. For example, for the line where the actual
    character is "後", this field should be "后".
 
