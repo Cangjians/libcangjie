@@ -12187,7 +12187,7 @@
 拑 拑 1 1 0 0 1 0 0 0 0 qtm qtm NA 13578
 拒 拒 1 1 0 0 1 0 0 0 0 qss qss NA 21796
 拓 拓 1 1 0 0 1 0 0 0 0 qmr qmr NA 21793
-拔 拔 1 1 0 0 1 0 0 0 0 qike,qikk qike,qikk NA 21792
+拔 拔 1 1 0 0 1 0 0 0 0 qikk,qike qikk,qike NA 21792
 拕 拕 1 0 1 0 1 0 0 0 0 qjp qjp NA 0
 拖 拖 1 1 0 0 1 0 0 0 0 qopd qopd NA 21778
 拗 拗 1 1 0 0 1 0 0 0 0 qvis qvis NA 21777
