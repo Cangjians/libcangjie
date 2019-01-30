@@ -7819,7 +7819,7 @@
 凁 凁 1 0 0 0 1 0 0 0 0 imdl imdl NA 0
 凂 凂 1 0 0 0 1 0 0 0 0 imnau imnau NA 0
 凃 涂 1 0 1 0 1 0 0 0 0 imomd imomd NA 0
-凄 凄 1 1 0 0 1 0 0 0 0 imjln,imjlv imjlv NA 12509
+凄 凄 1 1 0 0 1 0 0 0 0 imjlv,imjln imjlv NA 12509
 凅 凅 1 1 0 0 1 0 0 0 0 imwjr imwjr NA 12508
 准 准 1 1 0 0 1 0 0 0 0 imog imog NA 20763
 凇 凇 1 0 1 0 1 0 0 0 0 ydci imdci NA 0
