@@ -21855,7 +21855,7 @@
 袏 袏 1 0 1 0 1 0 0 0 0 lkm lkm NA 0
 袐 袐 1 0 1 0 1 0 0 0 0 lph lph NA 0
 袑 袑 1 1 0 0 1 0 0 0 0 lshr lshr NA 10759
-袒 袒 1 1 0 0 1 0 0 0 0 ifam,lam lam NA 19372
+袒 袒 1 1 0 0 1 0 0 0 0 lam,ifam lam NA 19372
 袓 袓 1 1 0 0 1 0 0 0 0 lbm lbm NA 10748
 袔 袔 1 0 0 0 1 0 0 0 0 lmnr lmnr NA 0
 袕 袕 1 1 0 0 1 0 0 0 0 ljc ljc NA 10764
