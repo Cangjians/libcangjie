@@ -14678,7 +14678,7 @@
 沆 沆 1 1 0 0 1 0 0 0 0 eyhn eyhn NA 22181
 沇 沇 1 1 0 0 1 0 0 0 0 eihu eihu NA 13929
 沈 沈 1 1 0 0 1 0 0 0 0 elbu elbu NA 22198
-沉 沈 1 1 0 0 1 0 0 0 0 ebhn,ebhu ebhn,ebhu,xebhu NA 22197
+沉 沈 1 1 0 0 1 0 0 0 0 ebhu,ebhn ebhu,xebhu,ebhn NA 22197
 沊 沊 1 1 0 0 1 0 0 0 0 lue lue NA 13436
 沋 沋 1 1 0 0 1 0 0 0 0 eiku eiku NA 13936
 沌 沌 1 1 0 0 1 0 0 0 0 epu epu NA 22190
