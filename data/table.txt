@@ -9664,7 +9664,7 @@
 壶 壶 1 0 0 0 1 0 0 0 0 gbtc gbtc NA 0
 壷 壶 1 0 0 0 1 0 0 0 0 gblm gblm,xgblm NA 0
 壸 壸 1 0 0 0 1 0 0 0 0 gbmc gbmc,xgbmc NA 0
-壹 壹 1 1 0 0 1 0 0 0 0 gbmm,gbmt gbmt NA 19202
+壹 壹 1 1 0 0 1 0 0 0 0 gbmt,gbmm gbmt NA 19202
 壺 壶 1 1 0 0 1 0 0 0 0 gblm gblm NA 19201
 壻 壻 1 0 1 0 1 0 0 0 0 gnob gnob NA 0
 壼 壸 1 1 0 0 1 0 0 0 0 gbmm gbmm NA 9421
