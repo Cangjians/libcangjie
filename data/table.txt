@@ -12163,7 +12163,7 @@
 抹 抹 1 1 0 0 1 0 0 0 0 qdj qdj NA 21797
 抺 抺 1 0 0 0 1 0 0 0 0 qjd qjd NA 0
 抻 抻 1 1 0 0 1 0 0 0 0 qlwl qlwl NA 13570
-押 押 1 1 0 0 1 0 0 0 0 qwj,qwl qwl NA 21787
+押 押 1 1 0 0 1 0 0 0 0 qwl,qwj qwl NA 21787
 抽 抽 1 1 0 0 1 0 0 0 0 qlw qlw NA 21788
 抾 抾 1 1 0 0 1 0 0 0 0 qgi qgi NA 13577
 抿 抿 1 1 0 0 1 0 0 0 0 qrvp qrvp NA 21799
