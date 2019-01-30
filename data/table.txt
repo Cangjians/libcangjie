@@ -23207,7 +23207,7 @@
 跗 跗 1 1 0 0 1 0 0 0 0 rmodi rmodi NA 9669
 跘 跘 1 1 0 0 1 0 0 0 0 rmfq rmfq NA 9679
 跙 跙 1 1 0 0 1 0 0 0 0 rmbm rmbm NA 9671
-跚 跚 1 1 0 0 1 0 0 0 0 rmbbm,rmbt rmbbm,rmbt NA 18594
+跚 跚 1 1 0 0 1 0 0 0 0 rmbt,rmbbm rmbt,rmbbm NA 18594
 跛 跛 1 1 0 0 1 0 0 0 0 rmdhe rmdhe NA 18591
 跜 跜 1 1 0 0 1 0 0 0 0 rmsp rmsp NA 9674
 距 距 1 1 0 0 1 0 0 0 0 rmss rmss NA 18596
