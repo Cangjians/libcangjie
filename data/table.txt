@@ -12183,7 +12183,7 @@
 拍 拍 1 1 0 0 1 0 0 0 0 qha qha NA 21783
 拎 拎 1 1 0 0 1 0 0 0 0 qoii qoii NA 21774
 拏 拏 1 1 0 0 1 0 0 0 0 veq veq NA 13035
-拐 拐 1 1 0 0 1 0 0 0 0 qrks,qrsh qrks,qrsh NA 21786
+拐 拐 1 1 0 0 1 0 0 0 0 qrsh,qrks qrsh,qrks NA 21786
 拑 拑 1 1 0 0 1 0 0 0 0 qtm qtm NA 13578
 拒 拒 1 1 0 0 1 0 0 0 0 qss qss NA 21796
 拓 拓 1 1 0 0 1 0 0 0 0 qmr qmr NA 21793
