@@ -27528,7 +27528,7 @@
 麸 麸 1 0 0 0 1 0 0 0 0 jnqo qeqo NA 0
 麹 麹 1 0 0 0 1 0 0 0 0 qepfd qepfd NA 0
 麺 面 1 0 0 0 1 0 0 0 0 qemwl qemwl NA 0
-麻 麻 1 1 0 0 1 0 0 0 0 idd,ijcc idd,ijcc NA 19260
+麻 麻 1 1 0 0 1 0 0 0 0 ijcc,idd ijcc,idd NA 19260
 麼 么 1 1 0 0 1 0 0 0 0 idvi icvi,idvi NA 17164
 麽 么 1 0 1 0 1 0 0 0 0 idhix idhi NA 0
 麾 麾 1 1 0 0 1 0 0 0 0 idhqu ichqu,idhqu NA 16475
