@@ -9574,7 +9574,7 @@
 墜 坠 1 1 0 0 1 0 0 0 0 nog nog NA 17061
 墝 墝 1 1 0 0 1 0 0 0 0 gggu gggu,xgggu NA 7284
 增 增 1 1 0 0 1 0 0 0 0 gcwa gcwa NA 17063
-墟 墟 1 1 0 0 1 0 0 0 0 gypc,gypm gypc,gypm NA 17064
+墟 墟 1 1 0 0 1 0 0 0 0 gypm,gypc gypm,gypc NA 17064
 墠 墠 1 1 0 0 1 0 0 0 0 grrj grrj NA 7282
 墡 墡 1 1 0 0 1 0 0 0 0 gtgr gtgr,gttr NA 7277
 墢 墢 1 0 0 0 1 0 0 0 0 gnoe gnoe NA 0
