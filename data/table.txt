@@ -8930,7 +8930,7 @@
 嘘 嘘 1 0 0 0 1 0 0 0 0 rypc rypc NA 0
 嘙 嘙 1 0 0 0 1 0 0 0 0 reev reev NA 0
 嘚 嘚 1 0 0 0 1 0 0 0 0 rhoi rhoi NA 0
-嘛 嘛 1 1 0 0 1 0 0 0 0 ridd,rijc ridd,rijc NA 17726
+嘛 嘛 1 1 0 0 1 0 0 0 0 rijc,ridd rijc,ridd NA 17726
 嘜 唛 1 1 0 0 1 0 0 0 0 rjon rjon NA 8306
 嘝 嘝 1 1 0 0 1 0 0 0 0 rnbj rnbj NA 8301
 嘞 嘞 1 0 1 0 1 0 0 0 0 rtjs rtjs NA 0
