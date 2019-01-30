@@ -7876,7 +7876,7 @@
 出 出 1 1 0 0 1 0 0 0 0 uu uu NA 22950
 击 击 1 0 0 0 1 0 0 0 0 qu qu NA 0
 凼 凼 1 0 1 0 1 0 0 0 0 ue ue,xue NA 0
-函 函 1 1 0 0 1 0 0 0 0 neu,nue une NA 22039
+函 函 1 1 0 0 1 0 0 0 0 nue,neu une NA 22039
 凾 凾 1 0 1 0 1 0 0 0 0 mure unre NA 0
 凿 凿 1 0 0 0 1 0 0 0 0 tcutj tcuj NA 0
 刀 刀 1 1 0 0 1 0 0 0 0 sh sh NA 23217
