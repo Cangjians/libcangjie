@@ -9289,7 +9289,7 @@
 坿 坿 1 0 1 0 1 0 0 0 0 godi godi NA 0
 垀 垀 1 1 0 0 1 0 0 0 0 ghfd ghfd NA 13766
 垁 垁 1 0 0 0 1 0 0 0 0 gok gok,xxgok NA 0
-垂 垂 1 1 0 0 1 0 0 0 0 hjtg,hjtm hjtm NA 21331
+垂 垂 1 1 0 0 1 0 0 0 0 hjtm,hjtg hjtm NA 21331
 垃 垃 1 1 0 0 1 0 0 0 0 gyt gyt NA 21929
 垄 垄 1 0 0 0 1 0 0 0 0 ipg ipg,xipg NA 0
 垅 垅 1 0 0 0 1 0 0 0 0 gikp gikp NA 0
